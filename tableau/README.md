@@ -51,7 +51,7 @@
 ### Example Data
 
 * We will use a small dataset of vehicles as an example[[1]](#acknowledgements).
-* Download the dataset from (right-click and "Save As"): [https://github.com/atet/learn/tree/master/tableau/data/mtcars.csv](https://github.com/atet/learn/tree/master/tableau/data/mtcars.csv)
+* Download the dataset from (right-click and "Save As"): [https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv](https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv)
 
 ![.img/mtcars.png](.img/mtcars.png)
 
