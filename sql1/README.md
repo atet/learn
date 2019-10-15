@@ -35,7 +35,7 @@
 * [](#)
 * [](#)
 * [](#)
-* [SQLite vs. other SQL implementations](#sqlite-vs-other-sqlimplementations)
+* [SQLite vs. other SQL implementations](#sqlite-vs-other-sql-implementations)
 
 --------------------------------------------------------------------------------------------------
 
