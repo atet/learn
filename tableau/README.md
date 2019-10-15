@@ -13,6 +13,7 @@
 ### Table of Contents
 
 * [Installation](#installation)
+* [Example Data](#example-data)
 * [](#)
 * [](#)
 * [](#)
@@ -33,15 +34,27 @@
 * [](#)
 * [](#)
 * [](#)
-* [](#)
-* [](#)
-* [Limitations](#limitations)
+* [Limitations of Tableau Public](#limitations-of-tableau-public)
+* [Acknowledgements](#acknowledgements)
 
 --------------------------------------------------------------------------------------------------
 
 ### Installation
 
-* Download and install Tableau Public from [https://public.tableau.com/en-us/s/download](https://public.tableau.com/en-us/s/download).
+* Download and install Tableau Public from: [https://public.tableau.com/en-us/s/download](https://public.tableau.com/en-us/s/download)
+* I am using Tableau Public version 2019.3 for this tutorial.
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+### Example Data
+
+* We will use a small dataset of vehicles as an example[[1]](#acknowledgements).
+* Download the dataset from (right-click and "Save As"): [https://github.com/atet/learn/tree/master/tableau/data/mtcars.csv](https://github.com/atet/learn/tree/master/tableau/data/mtcars.csv)
+
+![.img/mtcars.png](.img/mtcars.png)
+
 
 [Back to Top](#table-of-contents)
 
@@ -167,26 +180,22 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 
+### Limitations of Tableau Public
+
+* Tableau Public is a free version of the subscription-based Tableau Desktop and does not have full functionality. Limitations include:
+   * Data can only be uploaded as a spreadsheet (e.g. Excel files). Database connections are disabled.
+   * Limit of 10 million rows.
+   * Automation is disabled.
+   * Everything is saved/published to their cloud and can be seen by the public. Local "save to desktop" is disabled.
+* For a details of limitations: [https://community.tableau.com/docs/DOC-9135](https://community.tableau.com/docs/DOC-9135).
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 
+### Acknowledgements
 
-[Back to Top](#table-of-contents)
-
---------------------------------------------------------------------------------------------------
-
-### Limitations
-
-* Tableau Public is a free version of the subscription-based Tableau Desktop.
-* Comparison of the two versions, for a full list see [click here]().
-
-Public (Free) | Desktop (Subscription)
---- | ---
-
+1. mtcars data set from R, [Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html)
 
 [Back to Top](#table-of-contents)
 
