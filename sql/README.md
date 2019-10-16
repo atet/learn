@@ -1,6 +1,6 @@
 ﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [sql](https://github.com/atet/learn/tree/master/sql)
 
-[![logo_sqlite](.img/logo_sqlite.png)](#logo_sqlite)
+[![.img/logo_sqlite.png](.img/logo_sqlite.png)](#nolink)
 
 # Introduction to SQL
 
@@ -46,12 +46,12 @@
 * Download the "Windows (portable), 32-bit" version: [https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/SQLiteStudio-3.2.1.zip](https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/SQLiteStudio-3.2.1.zip)
    * Note: This link may break as new versions are released.
 
-[![step01a](.img/step01a.png)](#step01a)
+[![.img/step01a.png](.img/step01a.png)](#nolink)
 
 * Unzip the file find and run "SQLiteStudio.exe".
 * Choose your language setting and you will be presented with your working environment.
 
-[![step01b](.img/step01b.png)](#step01b)
+[![.img/step01b.png](.img/step01b.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -63,7 +63,7 @@
 * Click here for the dataset (right-click and "Save as..." then save as _mtcars.csv_): <a href="https://raw.githubusercontent.com/atet/learn/master/sql/data/mtcars.csv" target="_blank">https://raw.githubusercontent.com/atet/learn/master/sql/data/mtcars.csv</a>
 * This Comma Separated Values (CSV) file contains 32 records of vehicles and 12 attributes describing them (e.g. "id" = name, "mpg" = miles per gallon, etc.):
 
-[![.img/step02.png](.img/step02.png)](#)
+[![.img/step02.png](.img/step02.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -78,7 +78,7 @@
    * Click on OK
    * Connect to this newly created database
 
-[![.img/step03a.png](.img/step03a.png)](#)
+[![.img/step03a.png](.img/step03a.png)](#nolink)
 
 * Second, load the _mtcars.csv_ file as a new _table_ in the database:
    * Note: A database can have multiple tables in it, analogous to an Excel workbook having multiple worksheets
@@ -89,11 +89,11 @@
    * Navigate to where you downloaded the _mtcars.csv_
    * Click Finish
 
-[![.img/step03b.png](.img/step03b.png)](#)
+[![.img/step03b.png](.img/step03b.png)](#nolink)
 
 * You will get a console message that "Imported data to the table 'mtcars' successfully." and _mtcars_ is now seen in the heirarchy of the database you created.
 
-[![.img/step03c.png](.img/step03c.png)](#)
+[![.img/step03c.png](.img/step03c.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -104,7 +104,7 @@
 * You can view the imported _mtcars_ data in tabular format by selecting the table on the left-hand side, Data tab, and Grid view tab.
 * You will execute SQL queries when you select "Create a view".
 
-[![.img/step04a.png](.img/step04a.png)](#)
+[![.img/step04a.png](.img/step04a.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -119,12 +119,12 @@
    * Press the green "Commit the view changes" button
    * A confirmation window "Queries to be executed" will pop up, select OK
 
-[![.img/step05a.png](.img/step05a.png)](#)
+[![.img/step05a.png](.img/step05a.png)](#nolink)
 
 * You will get a console message that "Committed changes for view 'all' (named before '') successfully." and the _all_ view is now seen in the heirarchy of the database you created.
 * You can navigate this view as you would a table.
 
-[![.img/step05b.png](.img/step05b.png)](#)
+[![.img/step05b.png](.img/step05b.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -140,7 +140,7 @@
 * The query here means that you want to `SELECT` all rows (and columns), this is represented by the wildcard asterisk `*`, from table `mtcars`.
 * We basically copied everything from the _mtcars_ table into the _all_ view.
 
-[![.img/step06a.png](.img/step06a.png)](#)
+[![.img/step06a.png](.img/step06a.png)](#nolink)
 
 _**Figure 6.a.** `SELECT`ing everything._
 
@@ -149,7 +149,7 @@ _**Figure 6.a.** `SELECT`ing everything._
 * You can subset rows (a.k.a. observations) by their values.
 * E.g. Select vehicles that have six of more engine cylinders.
 
-[![.img/step06b.png](.img/step06b.png)](#)
+[![.img/step06b.png](.img/step06b.png)](#nolink)
 
 _**Figure 6.b.** Only returning rows that meet some criteria._
 
@@ -158,7 +158,7 @@ _**Figure 6.b.** Only returning rows that meet some criteria._
 * You can subset only the columns (a.k.a. variables) that you need.
 * E.g. Select only vehicle name and fuel efficiency, we don't need the rest of the columns.
 
-[![.img/step06c.png](.img/step06c.png)](#)
+[![.img/step06c.png](.img/step06c.png)](#nolink)
 
 _**Figure 6.c.** Only returning required columns._
 
@@ -167,7 +167,7 @@ _**Figure 6.c.** Only returning required columns._
 * You can make new columns (a.k.a. variables) based on calculations.
 * E.g. Add a new column that multiplies the "disp" column (cubic inches) by 0.0164 to yield displacement in liters.
 
-[![.img/step06d.png](.img/step06d.png)](#)
+[![.img/step06d.png](.img/step06d.png)](#nolink)
 
 _**Figure 6.d.** Add new columns with values calculated from other variables._
 
@@ -178,7 +178,7 @@ _**Figure 6.d.** Add new columns with values calculated from other variables._
    * Fewer observations: Individual vehicles will be summarized by grouping them by cylinder count.
    * New columns: Median displacement.
 
-[![.img/step06e.png](.img/step06e.png)](#)
+[![.img/step06e.png](.img/step06e.png)](#nolink)
 
 _**Figure 6.e.** Summarizing groups into fewer values and variables._
 
