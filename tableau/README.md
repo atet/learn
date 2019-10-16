@@ -7,7 +7,7 @@
 * Estimated time to completion: 15 minutes.
 * This quick introduction to <a href="https://en.wikipedia.org/wiki/Tableau_Software" target="_blank">Tableau software</a> is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
 * You are here because you want to use Tableau to visualize data from a data source (e.g. database, spreadsheet, etc.).
-* We will be using <a href="https://public.tableau.com/en-us/s/" target="_blank">Tableau Public (Free)</a> to perform basic operations, advanced material is not covered here.
+* We will be using <a href="https://public.tableau.com/en-us/s/" target="_blank">Tableau Public (Free)</a> to perform basic operations; advanced material is not covered here.
 
 --------------------------------------------------------------------------------------------------
 
@@ -32,7 +32,7 @@
 ### 0. Requirements
 
 * This tutorial was developed on Microsoft Windows 10.
-* Tableau is also available for MacOS 10.13+, I'm sure the steps are very similar if not exactly the same.
+* Tableau is also available for MacOS 10.13+.
 
 [Back to Top](#table-of-contents)
 
@@ -102,7 +102,7 @@
 * Drag "mpg" into Rows.
 * Tableau automatically made a useless visualization by using the _sum_ of "wt" and "mpg" (which results in a single data point).
 * **This is not how we wanted to visualize this**: Right-click on both "wt" and "mpg" and change from *Measure (Sum)* to *Dimension*.
-* After those changes, Tableau has automatically resized the window to fit all 35 data points.
+* After those changes, Tableau has automatically resized the window to fit all 32 data points.
 
 ![.img/step05c.png](.img/step05c.png)
 
@@ -161,8 +161,6 @@ How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overvie
    * Automation is disabled.
    * Everything is saved/published to their cloud and can be seen by the public. Local "save to desktop" is disabled.
 * For a details of limitations: <a href="https://community.tableau.com/docs/DOC-9135" target="_blank">https://community.tableau.com/docs/DOC-9135</a>
-
-
 
 [Back to Top](#table-of-contents)
 
