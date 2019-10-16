@@ -1,6 +1,6 @@
 ﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [sql](https://github.com/atet/learn/tree/master/sql)
 
-[![.img/logo_sqlite.png](.img/logo_sqlite.png)](#)
+[![logo_sqlite](.img/logo_sqlite.png)](#logo_sqlite)
 
 # Introduction to SQL
 
@@ -46,12 +46,12 @@
 * Download the "Windows (portable), 32-bit" version: [https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/SQLiteStudio-3.2.1.zip](https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/SQLiteStudio-3.2.1.zip)
    * Note: This link may break as new versions are released.
 
-[![.img/step01a.png](.img/step01a.png)](#)
+[![step01a](.img/step01a.png)](#step01a)
 
 * Unzip the file find and run "SQLiteStudio.exe".
 * Choose your language setting and you will be presented with your working environment.
 
-[![.img/step01b.png](.img/step01b.png)](#)
+[![step01b](.img/step01b.png)](#step01b)
 
 [Back to Top](#table-of-contents)
 
