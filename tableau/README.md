@@ -14,6 +14,7 @@
 ### Table of Contents
 
 #### Introduction
+* [0. Requirements](#0-requirements)
 * [1. Installation](#1-installation)
 * [2. Example Data](#2-example-data)
 * [3. Loading Data](#3-loading-data)
@@ -25,6 +26,15 @@
 #### Supplemental
 * [Limitations of Tableau Public](#limitations-of-tableau-public)
 * [Acknowledgements](#acknowledgements)
+
+--------------------------------------------------------------------------------------------------
+
+### 0. Requirements
+
+* This tutorial was developed on Microsoft Windows 10.
+* Tableau is also available for MacOS 10.13+, I'm sure the steps are very similar if not exactly the same.
+
+[Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
