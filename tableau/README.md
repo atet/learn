@@ -163,3 +163,5 @@ How-To Videos | [https://public.tableau.com/en-us/s/resources?qt-overview_resour
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
+
+<center>Copyright © 2019-∞ Athit Kao, <a href="http://www.athitkao.com/tos.html">Terms and Conditions</a></center>
