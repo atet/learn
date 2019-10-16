@@ -1,6 +1,6 @@
 # [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [tableau](https://github.com/atet/learn/tree/master/tableau)
 
-![.img/logo_tableau.png](.img/logo_tableau.png)
+[![.img/logo_tableau.png](.img/logo_tableau.png)](#nolink)
 
 # Introduction to Tableau
 
@@ -57,7 +57,7 @@
 * Click here for the dataset (right-click and "Save as..." then save as _mtcars.csv_): <a href="https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv" target="_blank">https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv</a>
 * This Comma Separated Values (CSV) file contains 32 records of vehicles and 12 attributes describing them (e.g. "id" = name, "mpg" = miles per gallon, etc.):
 
-![.img/step02.png](.img/step02.png)
+[![.img/step02.png](.img/step02.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -69,7 +69,7 @@
 * On left-hand side, click on "Text file".
 * Navigate to where you saved _mtcars.csv_ and open it.
 
-![.img/step03.png](.img/step03.png)
+[![.img/step03.png](.img/step03.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -80,7 +80,7 @@
 * Once the _mtcars.csv_ data is loaded, you will be looking at the Source Data tab.
 * Navigate to worksheet **Sheet1** at the bottom to make our first visualization.
 
-![.img/step04.png](.img/step04.png)
+[![.img/step04.png](.img/step04.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -92,19 +92,19 @@
 * The 32 individual records are represented by just the attribute's column name here for simplicity.
 * This worksheet is where visualizations are made.
 
-![.img/step05a.png](.img/step05a.png)
+[![.img/step05a.png](.img/step05a.png)](#nolink)
 
 * Let's make a **scatter plot** to explore the relationship between a vehicle's weight ("wt") and its fuel efficiency ("mpg").
 * Drag "wt" into Columns.
 
-![.img/step05b.png](.img/step05b.png)
+[![.img/step05b.png](.img/step05b.png)](#nolink)
 
 * Drag "mpg" into Rows.
 * Tableau automatically made a useless visualization by using the _sum_ of "wt" and "mpg" (which results in a single data point).
 * **This is not how we wanted to visualize this**: Right-click on both "wt" and "mpg" and change from *Measure (Sum)* to *Dimension*.
 * After those changes, Tableau has automatically resized the window to fit all 32 data points.
 
-![.img/step05c.png](.img/step05c.png)
+[![.img/step05c.png](.img/step05c.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -116,12 +116,12 @@
 * Go to "Save to Tableau Public As..."
 * A window will pop up to log into your account if you have not done so already.
 
-![.img/step06a.png](.img/step06a.png)
+[![.img/step06a.png](.img/step06a.png)](#nolink)
 
 * Once you save, your work will automatically be published to your cloud account and accessible to the public.
 * My example here has been published to: <a href="https://public.tableau.com/profile/atet.kao#!/vizhome/mtcars_15711875697030/Sheet1?publish=yes" target="_blank">https://public.tableau.com/profile/atet.kao#!/vizhome/mtcars_15711875697030/Sheet1?publish=yes</a>
 
-![.img/step06b.png](.img/step06b.png)
+[![.img/step06b.png](.img/step06b.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -131,7 +131,7 @@
 
 * Tableau will allow you to add a title, rename axes, change colors, add a trend line, etc.
 
-![.img/step07.png](.img/step07.png)
+[![.img/step07.png](.img/step07.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
