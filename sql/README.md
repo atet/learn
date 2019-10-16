@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [sql](https://github.com/atet/learn/tree/master/sql)
+﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [sql](https://github.com/atet/learn/tree/master/sql)
 
 ![.img/logo_sqlite.png](.img/logo_sqlite.png)
 
@@ -186,3 +186,5 @@
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
+
+<p align="center">Copyright © 2019-∞ Athit Kao, <a href="http://www.athitkao.com/tos.html" target="_blank">Terms and Conditions</a></p>

@@ -5,9 +5,9 @@
 # Introduction to Tableau
 
 * Estimated time to completion: 15 minutes.
-* This quick introduction to [Tableau software](https://en.wikipedia.org/wiki/Tableau_Software) is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
+* This quick introduction to <a href="https://en.wikipedia.org/wiki/Tableau_Software" target="_blank">Tableau software</a> is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
 * You are here because you want to use Tableau to visualize data from a data source (e.g. database, spreadsheet, etc.).
-* We will be using [Tableau Public (Free)](https://public.tableau.com/en-us/s/) to perform basic operations, advanced material is not covered here.
+* We will be using <a href="https://public.tableau.com/en-us/s/" target="_blank">Tableau Public (Free)</a> to perform basic operations, advanced material is not covered here.
 
 --------------------------------------------------------------------------------------------------
 
@@ -30,9 +30,9 @@
 
 ### 1. Installation
 
-* Download and install Tableau Public from: [https://public.tableau.com/en-us/s/download](https://public.tableau.com/en-us/s/download)
+* Download and install Tableau Public from: <a href="https://public.tableau.com/en-us/s/download" target="_blank">https://public.tableau.com/en-us/s/download</a>
 * I am using Tableau Public version 2019.3 for this tutorial.
-* You must sign up for a free account with Tableau Public (https://public.tableau.com) to save and publish your work.
+* You must sign up for a free account with Tableau Public (<a href="https://public.tableau.com" target="_blank">https://public.tableau.com</a>) to save and publish your work.
    * NOTE: A regular Tableau account will not work with Tableau Public, they are two separate accounts.
 
 #### After downloading and installing Tableau Public and registering for an account, you should be able to publish your first Tableau visualization within the next 10 minutes.
@@ -44,7 +44,7 @@
 ### 2. Example Data
 
 * We will use a small dataset of vehicles as an example[[1]](#acknowledgements).
-* Click here for the dataset (right-click and "Save as..." then save as _mtcars.csv_): [https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv](https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv)
+* Click here for the dataset (right-click and "Save as..." then save as _mtcars.csv_): <a href="https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv" target="_blank">https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv</a>
 * This Comma Separated Values (CSV) file contains 32 records of vehicles and 12 attributes describing them (e.g. "id" = name, "mpg" = miles per gallon, etc.):
 
 ![.img/step02.png](.img/step02.png)
@@ -109,7 +109,7 @@
 ![.img/step06a.png](.img/step06a.png)
 
 * Once you save, your work will automatically be published to your cloud account and accessible to the public.
-* My example here has been published to: [https://public.tableau.com/profile/atet.kao#!/vizhome/mtcars_15711875697030/Sheet1?publish=yes](https://public.tableau.com/profile/atet.kao#!/vizhome/mtcars_15711875697030/Sheet1?publish=yes)
+* My example here has been published to: <a href="https://public.tableau.com/profile/atet.kao#!/vizhome/mtcars_15711875697030/Sheet1?publish=yes" target="_blank">https://public.tableau.com/profile/atet.kao#!/vizhome/mtcars_15711875697030/Sheet1?publish=yes</a>
 
 ![.img/step06b.png](.img/step06b.png)
 
@@ -136,8 +136,8 @@
 
 Description | Link
 --- | ---
-Sample Data | [https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources](https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources)
-How-To Videos | [https://public.tableau.com/en-us/s/resources?qt-overview_resources=0#qt-overview_resources](https://public.tableau.com/en-us/s/resources?qt-overview_resources=0#qt-overview_resources)
+Sample Data | <a href="https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources" target="_blank">https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources</a>
+How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overview_resources=0#qt-overview_resources" target="_blank">https://public.tableau.com/en-us/s/resources?qt-overview_resources=0#qt-overview_resources</a>
 
 [Back to Top](#table-of-contents)
 
@@ -150,7 +150,9 @@ How-To Videos | [https://public.tableau.com/en-us/s/resources?qt-overview_resour
    * Limit of 10 million rows.
    * Automation is disabled.
    * Everything is saved/published to their cloud and can be seen by the public. Local "save to desktop" is disabled.
-* For a details of limitations: [https://community.tableau.com/docs/DOC-9135](https://community.tableau.com/docs/DOC-9135).
+* For a details of limitations: <a href="https://community.tableau.com/docs/DOC-9135" target="_blank">https://community.tableau.com/docs/DOC-9135</a>
+
+
 
 [Back to Top](#table-of-contents)
 
@@ -158,10 +160,12 @@ How-To Videos | [https://public.tableau.com/en-us/s/resources?qt-overview_resour
 
 ### Acknowledgements
 
-1. mtcars data set from R: [Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html)
+1. mtcars data set from R: <a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html" target="_blank">Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.</a>
+
+<a href="" target="_blank"></a>
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-<center>Copyright © 2019-∞ Athit Kao, <a href="http://www.athitkao.com/tos.html">Terms and Conditions</a></center>
+<p align="center">Copyright © 2019-∞ Athit Kao, <a href="http://www.athitkao.com/tos.html" target="_blank">Terms and Conditions</a></p>
