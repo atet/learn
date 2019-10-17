@@ -88,9 +88,9 @@
 
 ### 5. Your First Visualization
 
-* Tableau has organized the data on the left-hand side as **Dimensions** or **Measures**.
-* The 32 individual records are represented by just the attribute's column name here for simplicity.
 * This worksheet is where visualizations are made.
+* Tableau has automatically organized the data on the left-hand side as **Dimensions** or **Measures**.
+* The 32 individual records are represented by just the attribute's column name here for simplicity.
 
 [![.img/step05a.png](.img/step05a.png)](#nolink)
 
@@ -100,7 +100,7 @@
 [![.img/step05b.png](.img/step05b.png)](#nolink)
 
 * Drag "mpg" into Rows.
-* Tableau automatically made a useless visualization by using the _sum_ of "wt" and "mpg" (which results in a single data point).
+* Tableau automatically made an incorrect visualization by using the _sum_ of "wt" and "mpg" (which results in a single data point).
 * **This is not how we wanted to visualize this**: Right-click on both "wt" and "mpg" and change from *Measure (Sum)* to *Dimension*.
 * After those changes, Tableau has automatically resized the window to fit all 32 data points.
 
