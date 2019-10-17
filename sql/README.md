@@ -91,7 +91,7 @@
 
 [![.img/step03b.png](.img/step03b.png)](#nolink)
 
-* You will get a console message that "Imported data to the table 'mtcars' successfully." and _mtcars_ is now seen in the heirarchy of the database you created.
+* You will get a console message that "_Imported data to the table 'mtcars' successfully._" and _mtcars_ is now seen in the heirarchy of the database you created.
 
 [![.img/step03c.png](.img/step03c.png)](#nolink)
 
@@ -121,7 +121,7 @@
 
 [![.img/step05a.png](.img/step05a.png)](#nolink)
 
-* You will get a console message that "Committed changes for view 'all' (named before '') successfully." and the _all_ view is now seen in the heirarchy of the database you created.
+* You will get a console message that "_Committed changes for view 'all' (named before '') successfully._" and the _all_ view is now seen in the heirarchy of the database you created.
 * You can navigate this view as you would a regular table.
 
 [![.img/step05b.png](.img/step05b.png)](#nolink)
@@ -164,7 +164,7 @@ _**Figure 6.** Concept of `SELECT`ing everything. Basically viewing the entire t
 SELECT * FROM mtcars WHERE cyl >= "6";
 ```
 
-* E.g. Select vehicles that have six of more engine cylinders (column "cyl").
+* E.g. Select vehicles that have six or more engine cylinders (column "cyl").
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
 
