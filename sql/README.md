@@ -49,7 +49,7 @@
 [![.img/step01a.png](.img/step01a.png)](#nolink)
 
 * Unzip the file find and run "SQLiteStudio.exe".
-* Choose your language setting and you will be presented with your working environment.
+* After choosing your language setting and you will be presented with your working environment.
 
 [![.img/step01b.png](.img/step01b.png)](#nolink)
 
@@ -76,14 +76,14 @@
    * Leave Database type as default SQLite 3
    * Give your File a name (this will also be the database name)
    * Click on OK
-   * Connect to this newly created database
+   * You must connect to this newly created _database_ to work on it
 
 [![.img/step03a.png](.img/step03a.png)](#nolink)
 
 * Second, load the _mtcars.csv_ file as a new _table_ in the database:
    * Note: A database can have multiple tables in it, analogous to an Excel workbook having multiple worksheets
    * Select "Import"
-   * Give the incoming table a name, (e.g. "mtcars")
+   * Give the incoming data a table name, (e.g. "mtcars")
    * Make sure you select "First line represents CSV column names"
    * Click Next
    * Navigate to where you downloaded the _mtcars.csv_
@@ -115,14 +115,14 @@
 * Once you select "Create a view", a new bottom tab will appear for the new view.
 * We are going to make a view that basically selects all the data from the _mtcars_ table.
    * Name the view "all"
-   * In the text box, type out `SELECT * from mtcars;` (make sure you have the semicolon at the end)
+   * In the text box, type out `SELECT * FROM mtcars;` (make sure you have the semicolon at the end)
    * Press the green "Commit the view changes" button
    * A confirmation window "Queries to be executed" will pop up, select OK
 
 [![.img/step05a.png](.img/step05a.png)](#nolink)
 
 * You will get a console message that "Committed changes for view 'all' (named before '') successfully." and the _all_ view is now seen in the heirarchy of the database you created.
-* You can navigate this view as you would a table.
+* You can navigate this view as you would a regular table.
 
 [![.img/step05b.png](.img/step05b.png)](#nolink)
 
@@ -132,55 +132,21 @@
 
 ### 6. Data Manipulation Concept
 
-* We will go through four common data manipulation operations/queries here.
-* The general concept is that you have data in your database _tables_ and you are generating a customized _view_ that was manipulated by your queries.
+* The general concept is that you have data in your database **tables** and you are generating a customized **view** that was manipulated by your queries.
 
-#### 6.a. What does "`SELECT * from mtcars;`" mean?
+#### What did "`SELECT * FROM mtcars;`" mean?
 
-* The query here means that you want to `SELECT` all rows (and columns), this is represented by the wildcard asterisk `*`, from table `mtcars`.
-* We basically copied everything from the _mtcars_ table into the _all_ view.
+* This query means that you want to `SELECT` all rows (and columns), this is represented by the wildcard `*` (asterisk), `FROM` table `mtcars`.
 
-[![.img/step06a.png](.img/step06a.png)](#nolink)
+```{sql}
+SELECT * FROM mtcars;
+```
 
-_**Figure 6.a.** `SELECT`ing everything._
+* We are basically viewing everything from the _mtcars_ **table** in the _all_ **view**.
 
-#### 6.b. Subsetting rows
+[![.img/step06.png](.img/step06.png)](#nolink)
 
-* You can subset rows (a.k.a. observations) by their values.
-* E.g. Select vehicles that have six of more engine cylinders.
-
-[![.img/step06b.png](.img/step06b.png)](#nolink)
-
-_**Figure 6.b.** Only returning rows that meet some criteria._
-
-#### 6.c. Subsetting columns
-
-* You can subset only the columns (a.k.a. variables) that you need.
-* E.g. Select only vehicle name and fuel efficiency, we don't need the rest of the columns.
-
-[![.img/step06c.png](.img/step06c.png)](#nolink)
-
-_**Figure 6.c.** Only returning required columns._
-
-#### 6.d. Make new columns
-
-* You can make new columns (a.k.a. variables) based on calculations.
-* E.g. Add a new column that multiplies the "disp" column (cubic inches) by 0.0164 to yield displacement in liters.
-
-[![.img/step06d.png](.img/step06d.png)](#nolink)
-
-_**Figure 6.d.** Add new columns with values calculated from other variables._
-
-#### 6.e. Summarize data
-
-* You can summarize many observations into fewer values while making new columns based on calculations.
-* E.g. Median displacement for vehicles grouped by cylinder count.
-   * Fewer observations: Individual vehicles will be summarized by grouping them by cylinder count.
-   * New columns: Median displacement.
-
-[![.img/step06e.png](.img/step06e.png)](#nolink)
-
-_**Figure 6.e.** Summarizing groups into fewer values and variables._
+_**Figure 6.** Concept of `SELECT`ing everything. Basically viewing the entire table._
 
 [Back to Top](#table-of-contents)
 
@@ -188,7 +154,65 @@ _**Figure 6.e.** Summarizing groups into fewer values and variables._
 
 ### 7. Data Manipulation Queries
 
-* TODO: May combine short example commands with above section.
+* We will go through four common data manipulation operations/queries here.
+
+#### 7.a. Subsetting rows
+
+* You can subset rows (a.k.a. observations) by their values.
+
+```{sql}
+SELECT * FROM mtcars WHERE cyl >= "6";
+```
+
+* E.g. Select vehicles that have six of more engine cylinders (column "cyl").
+
+[![.img/step07a.png](.img/step07a.png)](#nolink)
+
+_**Figure 7.a.** Only returning rows that meet some criteria._
+
+#### 7.b. Subsetting columns
+
+* You can subset only the columns (a.k.a. variables) that you need.
+
+```{sql}
+SELECT id, mpg FROM mtcars;
+```
+
+* E.g. Select only vehicle name (column "id") and fuel efficiency (column "mpg"), we don't need the rest of the columns.
+
+[![.img/step07b.png](.img/step07b.png)](#nolink)
+
+_**Figure 7.b.** Only returning required columns._
+
+#### 7.c. Make new columns
+
+* You can make new columns (a.k.a. variables) based on calculations.
+
+```{sql}
+SELECT id, disp, (disp * 0.0164) AS disp2 FROM mtcars;
+```
+
+* E.g. Add a new column _disp2_ that multiplies the _disp_ column (cubic inches) by 0.0164 to give displacement in liters. Show only columns _id_, _disp_, and new displacement in liters `AS` column _disp2_.
+
+[![.img/step07c.png](.img/step07c.png)](#nolink)
+
+_**Figure 7.c.** Add new columns with values calculated from other variables._
+
+#### 7.d. Summarize data
+
+* You can summarize many observations into fewer values while making new columns based on calculations.
+
+```{sql}
+SELECT cyl, AVG(disp) AS meandisp FROM mtcars GROUP BY cyl;
+```
+
+* E.g. Mean (average) displacement for vehicles grouped by cylinder count.
+   * Fewer observations: Individual vehicles will be summarized by grouping them by cylinder count.
+   * New columns: Mean displacement.
+
+[![.img/step07d.png](.img/step07d.png)](#nolink)
+
+_**Figure 7.d.** Summarizing groups into fewer values and variables._
 
 [Back to Top](#table-of-contents)
 
