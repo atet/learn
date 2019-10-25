@@ -80,6 +80,8 @@
 
 [![.img/step03.png](.img/step03.png)](#nolink)
 
+* `git add .` (have this in this section or the next?)
+
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
