@@ -31,7 +31,7 @@
 ### 0. Requirements
 * This tutorial was developed on Microsoft Windows 10.
 * Git GUI is also available for MacOS and Linux.
-* GitHub's platform can also be accessed through a web browser in other desktop operating systems.
+* GitHub's platform can also be accessed through most web browsers.
 
 [Back to Top](#table-of-contents)
 
@@ -41,7 +41,7 @@
 
 #### Git GUI
 
-* We will use Git Graphical User Interface (GUI) to interface with GitHub: [https://git-scm.com/download/](https://git-scm.com/download/)
+* We will use Git GUI to interface with GitHub: [https://git-scm.com/download/](https://git-scm.com/download/)
 * Download the "64-bit Git for Windows Portable" version: [https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/PortableGit-2.23.0-64-bit.7z.exe](https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/PortableGit-2.23.0-64-bit.7z.exe)
    * Note: This link may break as new versions are released.
 
@@ -65,9 +65,15 @@
 
 ### 2. New Repository
 
+#### Create a New Repository on GitHub
+
 * We will create a new **repository** and **initialize** it to begin using the _repos_ (short for repository).
 
 [![.img/step02.png](.img/step02.png)](#nolink)
+
+#### Clone Repository to Local Computer
+
+* We just created the repository on GitHub's platform, let's **clone** that repository so it also exists on your local computer.
 
 [Back to Top](#table-of-contents)
 
@@ -104,7 +110,11 @@
 
 ### 5. Typical Workflow
 
-* The
+* Identify breakpoints in a project and organize your efforts (and commits) around them:
+   * "Initial commit of project framework including X, Y, and Z."
+   * "Implemented backend code to allow users to sort GUI results table."
+   * "Fixed login bug #2 that caused 'Unknown User' error."
+* Once you start getting used to the version control workflow, you'll notice it's mostly just `add` → `commit` → `push`.
 
 [![.img/step05.png](.img/step05.png)](#nolink)
 
@@ -115,11 +125,11 @@
 ### Epilogue
 
 * Anyone can incorporate Git into their development workflow and immediately gain benefits:
-   * **Redundancy and Backup**: Files will be located in multiple places (on the GitHub platform, your computer, collaborators, etc.)
+   * **Redundancy and Backup**: Copies of your files will exist in multiple locations (on the GitHub platform, your computer, collaborators, etc.)
    * **Versioning**: Revert back to any previous version of your repos
 * This was a quick introduction, but Git can be more powerful (and complex):
-   * **Branching**: Collaborators can work on their own branch without affecting anyone else's and submit changes for your review
-   * **Command Line Access**: Quickly commit-push through a terminal instead of drag-dropping
+   * **Branching**: Collaborators can work on their own branch without affecting anyone else's and submit changes for review
+   * **Command Line Access**: Quickly add-commit-push through a terminal instead of GUI drag-dropping
 
 [Back to Top](#table-of-contents)
 
@@ -140,7 +150,7 @@ Git Commands Cheatsheet | [https://github.github.com/training-kit/downloads/gith
 ### GitHub vs. other Git platforms
 
 * Git and GitHub are two different systems that work together:
-   * Think of GitHub as a service like Microsoft OneDrive or Dropbox, both providing cloud storage that can be accessed from a common operating system like Windows
+   * Think of GitHub as a service like Dropbox or OneDrive, both providing cloud storage that can be accessed from the Windows operating system
    * Think of Git as that common operating system that can access different service providers
 * GitHub is a popular service provider that will host your repository online, but there are many others that can be accessed with the same Git GUI and use the same workflow:
 
