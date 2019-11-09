@@ -23,15 +23,16 @@
 
 #### Supplemental
 * [Epilogue](#Epilogue)
-* [Troubleshooting](#troubleshooting)
+* [Additional Tutorials](#additional-tutorials)
 * [GitHub vs. other Git platforms](#gitHub-vs-other-git-platforms)
 
 --------------------------------------------------------------------------------------------------
 
 ### 0. Requirements
 * This tutorial was developed on Microsoft Windows 10.
-* Git GUI is also available for MacOS and Linux.
-* GitHub's platform can also be accessed through most web browsers.
+* You are using two platforms hand-in-hand:
+   * **Git GUI** downloaded on your computer (also available for MacOS and Linux).
+   * **GitHub Website** accessed through most web browsers.
 
 [Back to Top](#table-of-contents)
 
@@ -41,16 +42,16 @@
 
 #### Git GUI
 
-* We will use Git GUI to interface with GitHub: [https://git-scm.com/download/](https://git-scm.com/download/)
+* We will use Git GUI to interface with GitHub's Website.
 * Download the "64-bit Git for Windows Portable" version: [https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/PortableGit-2.23.0-64-bit.7z.exe](https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/PortableGit-2.23.0-64-bit.7z.exe)
-   * Note: This link may break as new versions are released.
+   * Note: This link may break as new versions are released, if so go to: [https://git-scm.com/download/](https://git-scm.com/download/)
 
 [![.img/step01a.png](.img/step01a.png)](#nolink)
 
 * Unzip the file find and run "".
 * After choosing your language setting and you will be presented with your working environment.
 
-#### GitHub
+#### GitHub Website
 
 * You must sign up for a free account with GitHub at [www.github.com](www.github.com) and sign in.
 
@@ -68,12 +69,21 @@
 #### Create a New Repository on GitHub
 
 * We will create a new **repository** and **initialize** it to begin using the _repos_ (short for repository).
+* After you log in, click on the green "New" button:
 
-[![.img/step02.png](.img/step02.png)](#nolink)
+[![.img/step02a.png](.img/step02a.png)](#nolink)
+
+* Give your repository a name (e.g. "TEST"), click on "Initialize this repository with a README" (this is important), and then click the green "Create repository" button.
+
+[![.img/step02b.png](.img/step02b.png)](#nolink)
+
+* After your new reposity is created, click on the green "Clone or download" button on the top right and copy the information you see here "Clone with SSH", e.g. git@github.com:atet/TEST.git
 
 #### Clone Repository to Local Computer
 
 * We just created the repository on GitHub's platform, let's **clone** that repository so it also exists on your local computer.
+
+[![.img/step02b.png](.img/step02b.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -111,9 +121,9 @@
 ### 5. Typical Workflow
 
 * Identify breakpoints in a project and organize your efforts (and commits) around them:
-   * "Initial commit of project framework including X, Y, and Z."
-   * "Implemented backend code to allow users to sort GUI results table."
-   * "Fixed login bug #2 that caused 'Unknown User' error."
+   * "_Initial commit of project framework including X, Y, and Z._"
+   * "_Implemented backend code to allow users to sort GUI results table._"
+   * "_Fixed login bug #2 that caused QA's 'Unknown User' error._"
 * Once you start getting used to the version control workflow, you'll notice it's mostly just `add` → `commit` → `push`.
 
 [![.img/step05.png](.img/step05.png)](#nolink)
@@ -129,15 +139,15 @@
    * **Versioning**: Revert back to any previous version of your repos
 * This was a quick introduction, but Git can be more powerful (and complex):
    * **Branching**: Collaborators can work on their own branch without affecting anyone else's and submit changes for review
-   * **Command Line Access**: Quickly add-commit-push through a terminal instead of GUI drag-dropping
+   * **Command Line Access**: Quickly `add` → `commit` → `push` through a terminal instead of GUI drag-dropping
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### Troubleshooting
+### Additional Tutorials
 
-Task | Link
+Title | Link
 --- | ---
 Git Concepts | [https://git-scm.com/book/en/v1/Getting-Started-Git-Basics](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics)
 GitHub's Web-GUI Introduction | [https://guides.github.com/activities/hello-world/](https://guides.github.com/activities/hello-world/)
@@ -152,7 +162,7 @@ Git Commands Cheatsheet | [https://github.github.com/training-kit/downloads/gith
 * Git and GitHub are two different systems that work together:
    * Think of GitHub as a service like Dropbox or OneDrive, both providing cloud storage that can be accessed from the Windows operating system
    * Think of Git as that common operating system that can access different service providers
-* GitHub is a popular service provider that will host your repository online, but there are many others that can be accessed with the same Git GUI and use the same workflow:
+* GitHub is a popular service provider that will host your repository online, but there are many others that can be accessed with the same Git GUI or Git through command line and use the same workflow:
 
 Company | Service | Website
 --- | --- | ---
