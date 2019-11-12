@@ -2,7 +2,7 @@
 
 [![.img/logo_git.png](.img/logo_git.png)](#nolink)
 
-# Introduction to Git (Incomplete)
+# Introduction to Git
 
 * _Git and run_ in 15 minutes.
 * This quick introduction to [Git](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics) is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
@@ -17,9 +17,12 @@
 * [0. Requirements](#0-requirements)
 * [1. Installation](#1-installation)
 * [2. New Repository](#2-new-repository)
-* [3. Add Files](#3-add-files)
-* [4. Saving Changes](#4-saving-changes)
-* [5. Typical Workflow](#5-typical-workflow)
+* [3. Clone Repository](#3-clone-repository)
+* [4. Setup Connection](#4-setup-connection)
+* [5. Adding Changes](#5-adding-changes)
+* [6. Committing Changes](#6-committing-changes)
+* [7. Pushing Changes](#7-pushing-changes)
+* [8. Typical Workflow](#8-typical-workflow)
 
 #### Supplemental
 * [Epilogue](#Epilogue)
@@ -33,6 +36,7 @@
 * You are using two platforms hand-in-hand:
    * **Git GUI** downloaded on your computer (also available for MacOS and Linux).
    * **GitHub Website** accessed through most web browsers.
+* You will have to go back and forth between the Git GUI program and the GitHub Website a few times during initial setup.
 
 [Back to Top](#table-of-contents)
 
@@ -48,16 +52,22 @@
 
 [![.img/step01a.png](.img/step01a.png)](#nolink)
 
-* Unzip the file find and run "".
-* After choosing your language setting and you will be presented with your working environment.
+* Run the downloaded file and have it extract to your desktop.
+
+[![.img/step01b.png](.img/step01b.png)](#nolink)
+
+* Open Windows File Explorer and navigate to where you extracted PortableGit, navigate to `..\PortableGit\cmd\git-gui.exe` and run it.
+* Move on to the GitHub website, you will come back to this later.
+
+[![.img/step01c.png](.img/step01c.png)](#nolink)
 
 #### GitHub Website
 
 * You must sign up for a free account with GitHub at [www.github.com](www.github.com) and sign in.
 
-[![.img/step01b.png](.img/step01b.png)](#nolink)
+[![.img/step01d.png](.img/step01d.png)](#nolink)
 
-**After downloading and installing Git GUI and registering for a GitHub account, you should be able to complete a typical Git workflow within the next 10 minutes.**
+**After downloading and installing Git GUI and registering for a GitHub account, you should be able to setup your Git credentials within the next 5 minutes.**
 
 [Back to Top](#table-of-contents)
 
@@ -77,56 +87,136 @@
 
 [![.img/step02b.png](.img/step02b.png)](#nolink)
 
-* After your new reposity is created, click on the green "Clone or download" button on the top right and copy the information you see here "Clone with SSH", e.g. git@github.com:atet/TEST.git
+* After your new reposity is created, click on the green "Clone or download" button on the top right and **copy the information you see here under "Clone with SSH"**, e.g. `git@github.com:atet/TEST.git`
 
-#### Clone Repository to Local Computer
-
-* We just created the repository on GitHub's platform, let's **clone** that repository so it also exists on your local computer.
-
-[![.img/step02b.png](.img/step02b.png)](#nolink)
+[![.img/step02c.png](.img/step02c.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 3. Add Files
+### 3. Clone Repository
 
-* You can think of each repos as all the content that comprises a single project.
-* Drag and drop all the files you want to include in your project in this folder
+* We just created the repository on GitHub's website, let's **clone** that repository so it also exists on your local computer.
+* Go back to the Git GUI program and select "Clone Existing Repository"
 
-[![.img/step03.png](.img/step03.png)](#nolink)
+[![.img/step03a.png](.img/step03a.png)](#nolink)
 
-* `git add .` (have this in this section or the next?)
+* Paste the information from GitHub to "Source Location", e.g. `git@github.com:atet/TEST.git`
+* Choose a "Target Directory" for where the files will go locally, e.g. filepath to your desktop, then **manually add the name of the new folder to be created but does not yet exist**, e.g. "/TEST".
+   * Git GUI will not let you use a directory that already exists, a new directory must be created here.
+
+[![.img/step03b.png](.img/step03b.png)](#nolink)
+
+* Once you click "Clone" button, Git GUI will download the repos you just made on GitHub to your local Target Directory.
+
+[![.img/step03c.png](.img/step03c.png)](#nolink)
+
+* Now a copy of your repos from GitHub exists locally on your computer.
+* Below is what your working environment on Git GUI will look like.
+
+[![.img/step03d.png](.img/step03d.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 4. Saving Changes
+### 4. Setup Connection
 
-* By **commit**ing changes, you are telling the Git system that these new, deleted, and/or modified files are ready to be incorporated in the main repository.
-   * You will not see any changes on GitHub at this point.
+* After cloning your repos, you must set up your Git GUI and GitHub website account to securely communicate with each other.
+
+#### Setup GitHub Account Credentials in Git GUI
+* Go to Edit → Options...
+* On the left-hand side, under "TEST Repository", enter your GitHub website Username and Email Address associated with your account.
+* Click "Save".
 
 [![.img/step04a.png](.img/step04a.png)](#nolink)
 
-* By **push**ing all your commits, everything gets incorporated to the master branch.
-   * You will now be able to see all your commits on GitHub now.
+#### Generate Git GUI SSH Key
+* Go to Help → Show SSH Key.
+* Click on "Generate Key" then "Copy To Clipboard".
 
 [![.img/step04b.png](.img/step04b.png)](#nolink)
+
+#### Register Git GUI SSH Key with GitHub Account:
+* Click on the top-right profile picture and select Settings.
+* Click on "SSH and GPG keys" on left-hand side.
+* Click on green "New SSH key" button on top-right.
+* Give this new key a Title and paste the key into the Key area.
+* Click on "Add SSH key".
+
+[![.img/step04c.png](.img/step04c.png)](#nolink)
+
+**After setting up your credentials between your Git GUI and GitHub account, you should be able to complete a typical Git workflow within the next 5 minutes.**
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 5. Typical Workflow
+### 5. `Add`ing changes
 
+* Here, we will just make a simple change to the `README.md` file:
+   * Navigate to where you cloned the `TEST` repos
+   * Right-click and open `README.md` file in Notepad
+   * Type out "HELLO WORLD!" at the bottom and save
+
+[![.img/step05a.png](.img/step05a.png)](#nolink)
+
+* `Add` these changes to your record of changes:
+   * In the Git GUI, click on "Rescan" and our addition of "HELLO WORLD!" in the `README.md` file will be shown in the top-right window pane
+
+[![.img/step05b.png](.img/step05b.png)](#nolink)
+
+* Click on "Stage Changed" and it will be added to the list of changes on the bottom-left that will be sent to the master repository on GitHub when you `push` it later.
+
+[![.img/step05c.png](.img/step05c.png)](#nolink)
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+### 6. `Commit`ting Changes
+
+* By **commit**ting changes, you are telling the Git system that these new, deleted, and/or modified files are ready to be incorporated in the main repository.
+   * Add a message relating to the changes you just made, e.g. `Added "HELLO WORLD!" to README.md.`
+   * Click on "Commit"
+   * _You will not see any changes on GitHub at this point yet_
+
+[![.img/step06a.png](.img/step06a.png)](#nolink)
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+### 7. `Push`ing Changes
+
+* By **push**ing all your commits, everything gets incorporated to the master repository on GitHub:
+   * Click on "Push"
+   * Below is the popup window that comes up, click on "Push"
+
+[![.img/step07a.png](.img/step07a.png)](#nolink)
+
+* Another popup window will display the status of your `push` of local changes to the master on GitHub.
+   * If you setup your connection correctly on Step 4, there will not be any errors here
+
+[![.img/step07b.png](.img/step07b.png)](#nolink)
+
+* _You will now be able to see all your commits on GitHub now._
+
+[![.img/step07c.png](.img/step07c.png)](#nolink)
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+### 8. Typical Workflow
+
+* You can think of each repos as all the content that comprises a single project. You can add, change, and/or delete files in this project and these changes will be tracked.
 * Identify breakpoints in a project and organize your efforts (and commits) around them:
    * "_Initial commit of project framework including X, Y, and Z._"
    * "_Implemented backend code to allow users to sort GUI results table._"
    * "_Fixed login bug #2 that caused QA's 'Unknown User' error._"
 * Once you start getting used to the version control workflow, you'll notice it's mostly just `add` → `commit` → `push`.
-
-[![.img/step05.png](.img/step05.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -139,7 +229,7 @@
    * **Versioning**: Revert back to any previous version of your repos
 * This was a quick introduction, but Git can be more powerful (and complex):
    * **Branching**: Collaborators can work on their own branch without affecting anyone else's and submit changes for review
-   * **Command Line Access**: Quickly `add` → `commit` → `push` through a terminal instead of GUI drag-dropping
+   * **Command Line Access**: Quickly `add` → `commit` → `push` through a terminal instead of website drag-dropping or GUI button-pushing
 
 [Back to Top](#table-of-contents)
 
