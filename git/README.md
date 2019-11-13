@@ -27,7 +27,7 @@
 #### Supplemental
 * [Epilogue](#Epilogue)
 * [Additional Tutorials](#additional-tutorials)
-* [GitHub vs. other Git platforms](#gitHub-vs-other-git-platforms)
+* [GitHub vs. Other Git Platforms](#gitHub-vs-other-git-platforms)
 
 --------------------------------------------------------------------------------------------------
 
@@ -83,11 +83,11 @@
 
 [![.img/step02a.png](.img/step02a.png)](#nolink)
 
-* Give your repository a name (e.g. "TEST"), click on "Initialize this repository with a README" (this is important), and then click the green "Create repository" button.
+* Give your repos a name (e.g. "TEST"), click on "Initialize this repository with a README" (this is important), and then click the green "Create repository" button.
 
 [![.img/step02b.png](.img/step02b.png)](#nolink)
 
-* After your new reposity is created, click on the green "Clone or download" button on the top right and **copy the information you see here under "Clone with SSH"**, e.g. `git@github.com:atet/TEST.git`
+* After your new repos is created, click on the green "Clone or download" button on the top right and **copy the information you see here under "Clone with SSH"**, e.g. `git@github.com:atet/TEST.git`
 
 [![.img/step02c.png](.img/step02c.png)](#nolink)
 
@@ -123,11 +123,11 @@
 
 ### 4. Setup Connection
 
-* After cloning your repos, you must set up your Git GUI and GitHub website account to securely communicate with each other.
+* After cloning your repository, you must set up your Git GUI and GitHub website account to securely communicate with each other.
 
 #### Setup GitHub Account Credentials in Git GUI
 * Go to Edit → Options...
-* On the left-hand side, under "TEST Repository", enter your GitHub website Username and Email Address associated with your account.
+* On the left-hand side, enter your GitHub website Username and Email Address associated with your account.
 * Click "Save".
 
 [![.img/step04a.png](.img/step04a.png)](#nolink)
@@ -135,6 +135,7 @@
 #### Generate Git GUI SSH Key
 * Go to Help → Show SSH Key.
 * Click on "Generate Key" then "Copy To Clipboard".
+   * NOTE: Your key will be a difference sequence of characters than below
 
 [![.img/step04b.png](.img/step04b.png)](#nolink)
 
@@ -142,7 +143,7 @@
 * Click on the top-right profile picture and select Settings.
 * Click on "SSH and GPG keys" on left-hand side.
 * Click on green "New SSH key" button on top-right.
-* Give this new key a Title and paste the key into the Key area.
+* Give this new key a Title and paste your Git GUI key into the Key area.
 * Click on "Add SSH key".
 
 [![.img/step04c.png](.img/step04c.png)](#nolink)
@@ -178,7 +179,7 @@
 ### 6. `Commit`ting Changes
 
 * By **commit**ting changes, you are telling the Git system that these new, deleted, and/or modified files are ready to be incorporated in the main repository.
-   * Add a message relating to the changes you just made, e.g. `Added "HELLO WORLD!" to README.md.`
+   * Add a message relating to the changes you just made, e.g. `"Added "HELLO WORLD!" to README.md."`
    * Click on "Commit"
    * _You will not see any changes on GitHub at this point yet_
 
@@ -192,7 +193,7 @@
 
 * By **push**ing all your commits, everything gets incorporated to the master repository on GitHub:
    * Click on "Push"
-   * Below is the popup window that comes up, click on "Push"
+   * Below is the popup window that comes up, click on "Push" here also
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
 
@@ -247,7 +248,7 @@ Git Commands Cheatsheet | [https://github.github.com/training-kit/downloads/gith
 
 --------------------------------------------------------------------------------------------------
 
-### GitHub vs. other Git platforms
+### GitHub vs. Other Git Platforms
 
 * Git and GitHub are two different systems that work together:
    * Think of GitHub as a service like Dropbox or OneDrive, both providing cloud storage that can be accessed from the Windows operating system
