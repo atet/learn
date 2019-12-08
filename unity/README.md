@@ -31,10 +31,11 @@
 
 ### 0. Requirements
 
+* You do _NOT_ need to know how to program to complete this tutorial.
 * An Android mobile phone is required to test your application.
 * This tutorial was developed on Microsoft Windows 10, Unity 2019.2.15f1, and Visual Studio Code 1.38.1
    * Different versions of Unity may have slightly different menu placement, menu names, etc.
-   * Both Unity and Visual Studio Code is also available on Mac OS X and Linux
+   * Both Unity and Visual Studio Code is also available on Mac OS X and Linux.
 
 
 [Back to Top](#table-of-contents)
@@ -59,7 +60,7 @@
    
    [![.img/step01b.png](.img/step01b.png)](#nolink)
    
-   * On the left-hand menu, select "Installs" then click on the blue "ADD" button on the right, choose "Unity 2019.2.15f1", and click on "NEXT". 
+   * On the left-hand menu, select "Installs" then click on the blue "ADD" button on the right, choose "Unity 2019.2.15f1" (or latest if you do not see this version), and click on "NEXT". 
 
    [![.img/step01c.png](.img/step01c.png)](#nolink)
 
@@ -80,7 +81,7 @@
 
 ### 2. New Unity Project
 
-* On the left-hand menu, select "Projects" then click on the blue "NEW" button on the right, and choose "2019.2.15f1".
+* On the left-hand menu, select "Projects" then click on the blue "NEW" button on the right, and choose "2019.2.15f1" (or whichever version was installed).
 
 [![.img/step02a.png](.img/step02a.png)](#nolink)
 
@@ -89,8 +90,8 @@
 
 [![.img/step02b.png](.img/step02b.png)](#nolink)
 
-* Unity will take a few minutes to create your new empty project and you will be presented with the working environment.
-* Don't worry about all the different window panes and menu options for now, just follow along with the instructions.
+* After you project is created, you will be presented with the working environment.
+* **Don't worry about all the different window panes and menu options for now, just follow along with the instructions**.
 
 [![.img/step02c.png](.img/step02c.png)](#nolink)
 
@@ -115,7 +116,7 @@
 
    [![.img/step03b.png](.img/step03b.png)](#nolink)
 
-   * We must manually drag the button in the top-left window pane into where the white outline is. This brings the button into the actual view you will see when using the program (top-center window pane).
+   * We must manually drag the button in the top-left window pane into where the white outline is. This brings the button into the actual view you will see when using the program (this is simulated in the top-center window pane with blue background).
 
    [![.img/step03c.png](.img/step03c.png)](#nolink)
 
@@ -126,11 +127,11 @@
 
 3. **Create Script**
    * On the bottom-left window pane, right-click on "SampleScene" and select GameObject → Create Empty.
-   * On the bottom-left window pane, left-click on the newly created GameObject. Details of the GameObject are seen in the right-hand window pane, click on "Add Component" and in the small search bar, search for "script".
+   * On the bottom-left window pane, left-click on the newly created "GameObject". Details of the GameObject are seen in the right-hand window pane, click on "Add Component" and in the small search bar, search for "script", and click on "New Script".
 
    [![.img/step03e.png](.img/step03e.png)](#nolink)
 
-   * Click on New Script and name this new script "script". Click on "Create and Add".
+   * Name this new script "script". Click on "Create and Add".
 
    [![.img/step03f.png](.img/step03f.png)](#nolink)
 
@@ -138,7 +139,8 @@
 
    [![.img/step03g.png](.img/step03g.png)](#nolink)
 
-   * Unity will provide a template for every new script. If this is your first time opening a file in VSCode, it may download some extras to help read the specific programming alnguage you're using. Click on the "X" button on the bottom window pane once everything is finished.
+   * Unity will provide a default template for every new script.
+   * If this is your first time opening a file in VSCode, it may download some extras to help read the specific programming language you're using. Click on the "X" button on the bottom window pane once everything is finished downloading and installing.
    
    [![.img/step03h.png](.img/step03h.png)](#nolink)
    
@@ -175,8 +177,10 @@
    }
    ```
 
-   * Go back to Unity (Unity will take a moment to process the code you just saved in VSCode).
-   * You will now see two new fields appear in the right-hand window pane called "My Button" and "My Text", you must manually drag-and-drop from the bottom-left pane the "Button" to "My Button" and "Text" to "My Text".
+   * Go back to Unity.
+      * Unity will take a moment to process the code you just saved in VSCode.
+   * Clicking on "GameObject" again, you will now see two new boxes appear in the right-hand details window pane called "My Button" and "My Text" (these were not here before you copy-pasted and saved the script above).
+   * You must manually drag-and-drop from the bottom-left pane "Button" to "My Button" and "Text" to "My Text".
 
    [![.img/step03i.png](.img/step03i.png)](#nolink)
 
@@ -200,7 +204,7 @@
 [![.img/step04c.png](.img/step04c.png)](#nolink)
 
 * Test you application by pressing the button and watching the number in the text box increment. Stop playmode when you are done and make sure to save your Unity project (CTRL+S).
-* Don't worry about design elements right now (font sizes, etc.).
+* Don't worry about design elements right now (font sizes, colors, etc.).
 
 [![.img/step04d.png](.img/step04d.png)](#nolink)
 
@@ -213,16 +217,17 @@
 * Go to menu File → Build Settings... (CTRL+SHIFT+B)
 * Select "Android" on the bottom-left pane and click "Switch Platform" on the bottom-right.
    * Unity will take a few minutes to process this change.
-* Once it it done, the Unity icon will appear to the right of "Android".
+* Once done, the Unity icon will appear to the right of "Android".
 
 [![.img/step05a.png](.img/step05a.png)](#nolink)
 
-* Once Unity has been changed to build to the Android platform, click on "Build", name your file "test.apk", and navigate to your project folder and save the application.
+* Once Unity has been changed to build to the Android platform, click on "Build".
+* Navigate to your project folder, name your file "test.apk", and save the application.
    * Unity will take a few minutes to build your application to be ready for Android installation.
 
 [![.img/step05b.png](.img/step05b.png)](#nolink)
 
-* Now you have the test.apk file needed to install your application on an Android device
+* Now you have the test.apk file needed to install your application on an Android device.
 
 [![.img/step05c.png](.img/step05c.png)](#nolink)
 
@@ -232,29 +237,30 @@
 
 ### 6. Android Mobile Phone Installation
 
-**You should NEVER install unverified applications on your Android phone unless you have made them yourself and are confident that they do not contain viruses, etc. In the future, consider having test devices that are not linked to your social media, email accounts, etc.**
+**You should NEVER install unverified applications on your Android phone unless you have made them yourself and are confident that they do not contain viruses, etc. In the future, consider having test devices that are not linked to your social media, email accounts, SIM card, etc.**
 
 * Connect your Android phone to your computer to transfer the "test.apk" file over.
    * You may have to change the USB connection type to "Media (MTP)" in order to move files from your computer to your phone.
    * Through File Explorer on your computer, copy and paste "test.apk" on your phone (I made a folder named "Unity" to paste it into).
 * Once the file transfer is complete, you can disconnect your phone from your computer.
-* Android should have a program named "File Manager" or similar for you to explore files on your device. Navigate to where you placed "test.apk" on your phone, click on it to install.
+* Android should already have a program named "File Manager" or similar for you to explore files on your device. Navigate to where you placed "test.apk" on your phone, click on it to install.
 
 [![.img/step06a.png](.img/step06a.png)](#nolink)
 
 * By default, Android will prevent you from installing applications from unknown sources, we will temporarily allow this just to install our application.
-   * Install will be blocked but you can click on "Settings" to go to "Security Settings" where you can "Allow" applications from unknown sources (in this case, this is the application _you_ just made).
+   * Install will be blocked but you can click on "Settings" to go to "Security Settings".
    * Once in "Security Settings", go under "Phone Administration" and click on the checkbox for "Unknown sources".
+   * A pop up will appear and click on "Allow" applications from unknown sources (in this case, this is the application _you_ just made).
    * **REMEMBER: Come back to settings to change this back to blocking application installs from unknown sources when you are done with this tutorial.**
 
 [![.img/step06b.png](.img/step06b.png)](#nolink)
 
-* Press the back key to go back to File Manager and click on test.apk and "INSTALL" again on the bottom-right.
+* Press the back key to go back to File Manager and click on test.apk and "INSTALL" on the bottom-right again.
 * When the window about Play Protect pops up, select "INSTALL ANYWAYS".
 
 [![.img/step06c.png](.img/step06c.png)](#nolink)
 
-* Another popup window will ask for Play Protect scanning, you can ignore this and click on "DONT SEND".
+* Another popup window will ask for Play Protect scanning, you can click on "DONT SEND".
 * After a few moments, your test.apk is now installed as "New Unity Project".
 * Click on OPEN on the bottom-right to launch your application.
 
@@ -267,10 +273,13 @@
 ### 7. Playing Your First Android Application
 
 * If you launched your application directly after installing, you'll get the Unity splash screen and then be presented with your application.
+   * If you did not launch after install, find "New Unity Project" on your device.
 * Tap on the button and watch the numbers increment!
-   * The button and text box may be tiny and you may have to be careful where you click.
+   * The button and text box may be tiny and you may have to be careful where you click, but it should work.
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
+
+**Congratulations! You made a fully-functioning, stand-alone mobile application. There are so many avenues you can pursue from here: Learning C# programming language, become a game designer, make productivity apps to help you at work, and so much more. Now that you have a feel for the workflow of using Unity, the possibilities are endless...**
 
 [Back to Top](#table-of-contents)
 
@@ -311,7 +320,7 @@ GameDevTV 2D Unity Course (Paid) | <a href="https://www.gamedev.tv/p/complete-un
    * A: Yes, but once you develop a project in Unity, it can also be built for iOS, PS4, Xbox One, Windows, MacOS, etc. 
 * You will frequently go back and forth between manipulating objects in the Unity graphical user interface (GUI, referred to as "Unity") program and programming in Visual Studio Code (referred to as "VSCode").
 * Unity is essentailly free for you learn and to make applications for yourself, but there may be some strings attached once you start making money from it: <a href="https://unity3d.com/legal/terms-of-service/software" target="_blank">https://unity3d.com/legal/terms-of-service/software</a>
-* Drive: A colleague of mine (veteran software engineer) once told me while they were learning Unity:
+* Motivation: A colleague of mine (veteran software engineer) once told me while they were learning Unity:
 > Unity is.. peculiar...
 
 
