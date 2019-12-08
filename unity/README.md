@@ -2,7 +2,7 @@
 
 [![.img/logo_unity.png](.img/logo_unity.png)](#nolink)
 
-# Introduction to Unity (INCOMPLETE)
+# Introduction to Unity
 
 * Estimated time to completion: 15 minutes (after downloading required programs).
 * This quick introduction to Unity is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
@@ -18,10 +18,11 @@
 * [1. Installation](#1-installation)
 * [2. New Unity Project](#2-new-unity-project)
 * [3. Simple Application](#3-simple-application)
-* [4. Building for Android](#4-building-for-android)
-* [5. Android Mobile Phone Installation](#5-android-mobile-phone-installation)
-* [6. Playing Your First Android Application](#6-playing-your-first-android-application)
-* [7. Experiment](#7-experiment)
+* [4. Playmode Test](#4-playmode-test)
+* [5. Building for Android](#5-building-for-android)
+* [6. Android Mobile Phone Installation](#6-android-mobile-phone-installation)
+* [7. Playing Your First Android Application](#7-playing-your-first-android-application)
+* [8. Experiment](#8-experiment)
 
 #### Supplemental
 * [Unity Pro Tips](#unity-pro-tips)
@@ -105,7 +106,7 @@
 
 **Our application will be a button that increments the number shown above it when pressed. We can do this in three simple steps.**
 
-1. Create a Button
+1. **Create a Button**
    * On the bottom-left window pane, right-click on "SampleScene" and select GameObject → UI → Button.
 
    [![.img/step03a.png](.img/step03a.png)](#nolink)
@@ -118,12 +119,12 @@
 
    [![.img/step03c.png](.img/step03c.png)](#nolink)
 
-2. Create Text Box
+2. **Create Text Box**
    * On the bottom-left window pane, right-click on "SampleScene" and select GameObject → UI → Text. If the text box doesn't appear within the white outline, drag it above the button.
 
    [![.img/step03d.png](.img/step03d.png)](#nolink)
 
-3. Create Script
+3. **Create Script**
    * On the bottom-left window pane, right-click on "SampleScene" and select GameObject → Create Empty.
    * On the bottom-left window pane, left-click on the newly created GameObject. Details of the GameObject are seen in the right-hand window pane, click on "Add Component" and in the small search bar, search for "script".
 
@@ -141,7 +142,7 @@
    
    [![.img/step03h.png](.img/step03h.png)](#nolink)
    
-   * For now, just erase everything and copy-paste the code below:
+   * For now, just erase everything and copy-paste the code below and save the file (CTRL+S):
 
    ```cs
    using System.Collections;
@@ -174,38 +175,54 @@
    }
    ```
 
-[Back to Top](#table-of-contents)
+   * Go back to Unity (Unity will take a moment to process the code you just saved in VSCode).
+   * You will now see two new fields appear in the right-hand window pane called "My Button" and "My Text", you must manually drag-and-drop from the bottom-left pane the "Button" to "My Button" and "Text" to "My Text".
 
---------------------------------------------------------------------------------------------------
-
-### 4. Building for Android
-
-* Once the _mtcars.csv_ data is loaded, you will be looking at the Source Data tab.
-* Navigate to worksheet **Sheet1** at the bottom to make our first visualization.
-
-[![.img/step04.png](.img/step04.png)](#nolink)
+   [![.img/step03i.png](.img/step03i.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 5. Android Mobile Phone Installation
+### 4. Playmode Test
 
-* This worksheet is where visualizations are made.
-* Tableau has automatically organized the data on the left-hand side as **Dimensions** or **Measures**.
-* The 32 individual records are represented by just the attribute's column name here for simplicity.
+* Change the following two settings before playmode testing:
+   1. Go to menu Edit → Preferences... → Colors and change "Playmode tint" to a dark red.
+
+   [![.img/step04a.png](.img/step04a.png)](#nolink)
+      
+   2. Select "Maximize On Play" so that other window panes are hidden during playmode.
+   
+   [![.img/step04b.png](.img/step04b.png)](#nolink)
+
+* You can start (and stop) playmode testing by clicking on the top-center ▶ (Play) button.
+
+[![.img/step04c.png](.img/step04c.png)](#nolink)
+
+* Test you application by pressing the button and watching the number in the text box increment. Stop playmode when you are done and make sure to save your Unity project (CTRL+S).
+* Don't worry about design elements right now (font sizes, etc.).
+
+[![.img/step04d.png](.img/step04d.png)](#nolink)
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+### 5. Building for Android
+
+* Go to menu File → Build Settings... (CTRL+SHIFT+B)
+* Select "Android" on the bottom-left pane and click "Switch Platform" on the bottom-right.
+   * Unity will take a few minutes to process this change.
+* Once it it done, the Unity icon will appear to the right of "Android".
 
 [![.img/step05a.png](.img/step05a.png)](#nolink)
 
-* Let's make a **scatter plot** to explore the relationship between a vehicle's weight ("wt") and its fuel efficiency ("mpg").
-* Drag "wt" into Columns.
+* Once Unity has been changed to build to the Android platform, click on "Build", name your file "test.apk", and navigate to your project folder and save the application.
+   * Unity will take a few minutes to build your application to be ready for Android installation.
 
 [![.img/step05b.png](.img/step05b.png)](#nolink)
 
-* Drag "mpg" into Rows.
-* Tableau automatically made an incorrect visualization by using the _sum_ of "wt" and "mpg" (which results in a single data point).
-* **This is not how we wanted to visualize this**: Right-click on both "wt" and "mpg" and change from *Measure (Sum)* to *Dimension*.
-* After those changes, Tableau has automatically resized the window to fit all 32 data points.
+* Now you have the test.apk file needed to install your application on an Android device
 
 [![.img/step05c.png](.img/step05c.png)](#nolink)
 
@@ -213,34 +230,62 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 6. Playing Your First Android Application
+### 6. Android Mobile Phone Installation
 
-* Tableau Public will only allow you to save your analyses and visualization to their public cloud (everyone can see your work). This is the only option for the free Tableau Public software.
-* Go to "Save to Tableau Public As..."
-* A window will pop up to log into your account if you have not done so already.
+**You should NEVER install unverified applications on your Android phone unless you have made them yourself and are confident that they do not contain viruses, etc. In the future, consider having test devices that are not linked to your social media, email accounts, etc.**
+
+* Connect your Android phone to your computer to transfer the "test.apk" file over.
+   * You may have to change the USB connection type to "Media (MTP)" in order to move files from your computer to your phone.
+   * Through File Explorer on your computer, copy and paste "test.apk" on your phone (I made a folder named "Unity" to paste it into).
+* Once the file transfer is complete, you can disconnect your phone from your computer.
+* Android should have a program named "File Manager" or similar for you to explore files on your device. Navigate to where you placed "test.apk" on your phone, click on it to install.
 
 [![.img/step06a.png](.img/step06a.png)](#nolink)
 
-* Once you save, your work will automatically be published to your cloud account and accessible to the public.
-* My example here has been published to: <a href="https://public.tableau.com/profile/atet.kao#!/vizhome/mtcars_15711875697030/Sheet1?publish=yes" target="_blank">https://public.tableau.com/profile/atet.kao#!/vizhome/mtcars_15711875697030/Sheet1?publish=yes</a>
+* By default, Android will prevent you from installing applications from unknown sources, we will temporarily allow this just to install our application.
+   * Install will be blocked but you can click on "Settings" to go to "Security Settings" where you can "Allow" applications from unknown sources (in this case, this is the application _you_ just made).
+   * Once in "Security Settings", go under "Phone Administration" and click on the checkbox for "Unknown sources".
+   * **REMEMBER: Come back to settings to change this back to blocking application installs from unknown sources when you are done with this tutorial.**
 
 [![.img/step06b.png](.img/step06b.png)](#nolink)
+
+* Press the back key to go back to File Manager and click on test.apk and "INSTALL" again on the bottom-right.
+* When the window about Play Protect pops up, select "INSTALL ANYWAYS".
+
+[![.img/step06c.png](.img/step06c.png)](#nolink)
+
+* Another popup window will ask for Play Protect scanning, you can ignore this and click on "DONT SEND".
+* After a few moments, your test.apk is now installed as "New Unity Project".
+* Click on OPEN on the bottom-right to launch your application.
+
+[![.img/step06d.png](.img/step06d.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 7. Experiment
+### 7. Playing Your First Android Application
 
-* Play around with the software, make new worksheets with interesting visualizations.
-* Find new data on the internet and learn new ways to use Tableau.
-* If you are an Excel and/or R user, think about how your analysis workflow would be different using Tableau.
-* Resources:
+* If you launched your application directly after installing, you'll get the Unity splash screen and then be presented with your application.
+* Tap on the button and watch the numbers increment!
+   * The button and text box may be tiny and you may have to be careful where you click.
+
+[![.img/step07a.png](.img/step07a.png)](#nolink)
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+### 8. Experiment
+
+* _Didn't like how small the button and text were?_ **Make them larger.**
+* _Want more buttons and text boxes?_ **Make more!**
+* You can make almost anything from games to productivity apps in Unity, see the following for more tutorials:
 
 Description | Link
 --- | ---
-Sample Data | <a href="https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources" target="_blank">https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources</a>
-How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overview_resources=0#qt-overview_resources" target="_blank">https://public.tableau.com/en-us/s/resources?qt-overview_resources=0#qt-overview_resources</a>
+Unity Tutorials (Free) | <a href="https://learn.unity.com" target="_blank">https://learn.unity.com</a>
+GameDevTV 2D Unity Course (Paid) | <a href="https://www.gamedev.tv/p/complete-unity-developer-2d" target="_blank">https://www.gamedev.tv/p/complete-unity-developer-2d</a>
 
 [Back to Top](#table-of-contents)
 
@@ -250,12 +295,7 @@ How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overvie
 
 * There may be major differences between different versions of Unity. If you upgrade the Unity engine during development, you could break your application.
 * Q: I made some changes in Unity but it didn't seem to "Save" them.
-   * A: Any changes when Unity is in "Playmode" are not saved. I would recommend the following two changes:
-      1. Change "Playmode tint" (Edit → Preferences... → Colors) to a bright red to signify you're in playmode
-      [![.img/stepta.png](.img/stepta.png)](#nolink)
-      [![.img/steptb.png](.img/steptb.png)](#nolink)
-      2. Selecting "Maximize On Play" so that other window panes are hidden during playmode
-      [![.img/steptc.png](.img/steptc.png)](#nolink)
+   * A: Any changes when Unity is in "Playmode" are not saved. I would recommend the following two changes in the first part of [4. Playmode Test](#4-playmode-test).
 
 [Back to Top](#table-of-contents)
 
@@ -263,14 +303,15 @@ How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overvie
 
 ### Unity Pro Tips
 
+* **Clean Up**
+   * If you make changes to this application, you should uninstall the current version first before installing the updated version.
+   * On your Android device, go to Settings → DEVICE → Apps, find and select "New Unity Project" and click on "Uninstall".
+   * You may want to erase the test.apk or start numbering these files with some sort of versioning system as you make changes, e.g. test_V2.apk or test_2019-12-08.apk
 * Q: Why are we developing in Unity for an Android application, couldn't we have just used Android Studio?
    * A: Yes, but once you develop a project in Unity, it can also be built for iOS, PS4, Xbox One, Windows, MacOS, etc. 
 * You will frequently go back and forth between manipulating objects in the Unity graphical user interface (GUI, referred to as "Unity") program and programming in Visual Studio Code (referred to as "VSCode").
-
-* Unity is essentailly free for you to make applications for yourself. Commercial use is also free, but there may be some strings attached there: <a href="https:" target="_blank">https://</a>
-
-* Drive: A software engineer veteran colleague once told me
-
+* Unity is essentailly free for you learn and to make applications for yourself, but there may be some strings attached once you start making money from it: <a href="https://unity3d.com/legal/terms-of-service/software" target="_blank">https://unity3d.com/legal/terms-of-service/software</a>
+* Drive: A colleague of mine (veteran software engineer) once told me while they were learning Unity:
 > Unity is.. peculiar...
 
 
