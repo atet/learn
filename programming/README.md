@@ -25,7 +25,7 @@
 * [8. Other Languages](#8-other-languages)
 
 #### Supplemental
-* [Limitations of Tableau Public](#limitations-of-tableau-public)
+* [Epilogue](#epilogue)
 * [Acknowledgements](#acknowledgements)
 
 --------------------------------------------------------------------------------------------------
@@ -111,7 +111,7 @@ How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overvie
 
 --------------------------------------------------------------------------------------------------
 
-### Limitations of Tableau Public
+### Epilogue
 
 * 
 

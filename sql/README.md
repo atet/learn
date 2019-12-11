@@ -74,9 +74,9 @@
 * First, create a new _database_:
    * Click on "Add a database" or CTRL+O
    * Leave Database type as default SQLite 3
-   * Give your File a name (this will also be the database name)
+   * Give your File a name, e.g. "testdb" (this will also be the database name)
    * Click on OK
-   * You must connect to this newly created _database_ to work on it
+   * **IMPORTANT: You must connect to this newly created _database_ to work on it**
 
 [![.img/step03a.png](.img/step03a.png)](#nolink)
 
@@ -84,7 +84,7 @@
    * Note: A database can have multiple tables in it, analogous to an Excel workbook having multiple worksheets
    * Select "Import"
    * Give the incoming data a table name, (e.g. "mtcars")
-   * Make sure you select "First line represents CSV column names"
+   * **IMPORTANT: Make sure you select "First line represents CSV column names"**
    * Click Next
    * Navigate to where you downloaded the _mtcars.csv_
    * Click Finish
@@ -154,7 +154,7 @@ _**Figure 6.** Concept of `SELECT`ing everything. Basically viewing the entire t
 
 ### 7. Data Manipulation Queries
 
-* We will go through four common data manipulation operations/queries here.
+* We will go through four common data manipulation queries here.
 
 #### 7.a. Subsetting rows
 
@@ -249,9 +249,11 @@ More Concepts | [https://javajee.com/basic-sql-concepts](https://javajee.com/bas
 
 ### Troubleshooting
 
+* By downloading the "portable" version of SQLite in this tutorial, nothing gets installed on your system.
+
 Task | Link
 --- | ---
-Installation | [https://www.sqlitetutorial.net/download-install-sqlite/](https://www.sqlitetutorial.net/download-install-sqlite/)
+Installation SQLite Tools for Command Line | [https://www.sqlitetutorial.net/download-install-sqlite/](https://www.sqlitetutorial.net/download-install-sqlite/)
 
 [Back to Top](#table-of-contents)
 

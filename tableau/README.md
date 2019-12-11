@@ -22,6 +22,7 @@
 * [5. Your First Visualization](#5-your-first-visualization)
 * [6. Saving and Publishing](#6-saving-and-publishing)
 * [7. Customization](#7-customization)
+* [8. Experiment](#8-experiment)
 
 #### Supplemental
 * [Limitations of Tableau Public](#limitations-of-tableau-public)
