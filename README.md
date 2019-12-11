@@ -1,11 +1,11 @@
 ﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn)
 
-* Educational material I've authored for <a href="https://learn.athitkao.com" target="_blank">https://learn.athitkao.com</a>:
-   * <a href="https://github.com/atet/learn/blob/master/git/README.md#atet--learn--git" target="_blank">Introduction to Git</a>
-   * <a href="https://github.com/atet/learn/blob/master/sql/README.md#atet--learn--sql" target="_blank">Introduction to SQL</a>
-   * <a href="https://github.com/atet/learn/blob/master/tableau/README.md#atet--learn--tableau" target="_blank">Introduction to Tableau</a>
-   * <a href="https://github.com/atet/learn/blob/master/unity/README.md#atet--learn--unity" target="_blank">Introduction to Unity</a>
-   * <a href="https://github.com/atet/learn/tree/master/workshops" target="_blank">Workshop presentations (backups)</a>
+* Educational material I've authored for https://learn.athitkao.com:
+   * [Introduction to Git](https://github.com/atet/learn/blob/master/git/README.md#atet--learn--git)
+   * [Introduction to SQL](https://github.com/atet/learn/blob/master/sql/README.md#atet--learn--sql)
+   * [Introduction to Tableau](https://github.com/atet/learn/blob/master/tableau/README.md#atet--learn--tableau)
+   * [Introduction to Unity](https://github.com/atet/learn/blob/master/unity/README.md#atet--learn--unity) 
+   * [Workshop presentations (backups)](https://github.com/atet/learn/tree/master/workshops)
 
 --------------------------------------------------------------------------------------------------
 
