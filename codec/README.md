@@ -207,8 +207,12 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
    * The **file size is 2.84 MB (59% decrease!)** @ ~2,000 kbps bit rate
    * The **video quality is almost indistinguishable** from the original `output.mp4`
    * We got the **best of both worlds** here: Sufficient video quality for our needs and a huge reduction in file size
+   * What we just performed is called a **two-pass transcoding to get the average bit rate (ABR)** for video (audio stream was not changed)
 * **Explore this topic more with your own videos...**
-   * What we performed above is a **two-pass transcoding to get the average bit rate (ABR)** for video (audio stream was not changed)
+   * Think about the detail you actually need vs. what is practical
+   * Put yourself in the shoes of the end user: Would your experience be negatively affected if you are waiting forever to stream unnecessarily huge content to your phone?
+   * Does your end user have the same internet speeds as you?
+   * Is a large part of your day waiting for large video files to transfer, upload, backup, etc.?
 
 [Back to Top](#table-of-contents)
 
@@ -218,7 +222,31 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
 
 **The following are three important concepts that you should know**
 
-### **1: Bit Rate**
+### **1: Containers**
+
+* Video files are just containers of streams (video, audio, subtitles, etc.)
+* You many need to package multiple audio or text streams for different language translations of spoken content
+* Below to the left is a representation of a generic file while the right describes the `output.mp4` container we made earlier: 
+
+[![.img/step07a.png](.img/step07a.png)](#nolink)
+
+* The streams within could be encoded using different codecs, each with their own advantages
+
+### **2: Transcoding Performance**
+
+* The process of transcoding can be CPU intensive, especially if you are processing many large files (e.g. 100+ 4K videos from your vacation)
+* **`ffmpeg` should automatically be using the optimal amount of threads for your computer's CPU**
+* We will simulate a single-core CPU vs. a quad-core CPU to exemplify this point by transcoding a 4K video to 1080p:
+
+Threads | Processing FPS | Time Elapsed (sec.) | Command
+--- | --- | --- | ---
+1 | 6 | 184 | `ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 1 "test.mp4"`
+4 | 8.1 | **137 (25% less time)** | `ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 4 "test.mp4"`
+
+* Having 2x cores doesn't necessarily mean a 2x increase in video processing power, _but it will help_, so do your research if this is important to you
+* If you want to try this yourself, you can download the video here<sup>[[4]](#acknowledgements)</sup> (this is a big file @ 114 MB!): [From The Air - 9798.mp4](https://pixabay.com/videos/download/video-9798_large.mp4?attachment) 
+
+### **3: Bit Rate**
 
 * Think of video as just a slide show of individual pictures
    * Each picture has a resolution and some level of compression which yields its total file size
@@ -236,29 +264,26 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
 
 [![.img/tdb.png](.img/tdb.png)](#nolink)
 
-### **2: Containers**
+* There are general recommendations for what bit rates specific resolutions and frame rates should have
+* The following are Google's recommendations for videos being uploaded to YouTube: https://support.google.com/youtube/answer/1722171?hl=en
+   * Container: MP4
+   * Aspect Ratio: 16:9
+   * Audio Codec: AAC
+   * Audio Bit Rate (kbps): 128 (Mono), 384 (Stereo), 512 (5.1 Surround)
+   * Video Frame Rate: Same as original (supports 24-60+)
+   * Video Codec: H.264
+   * Video Bit Rate (VBR):
 
-* Video files are just containers of streams (video, audio, subtitles, etc.)
-* You many need to package multiple audio or text streams for different language translations of spoken content
-* Below to the left is a representation of a generic file while the right describes the `output.mp4` container we made earlier: 
+Pixel Resolution | kbps @ 24-30 FPS | Filesize MB/min @ 24-30 FPS | VBR (kbps) @ 48-60 FPS | Filesize MB/min @ 48-60 FPS
+--- | --- | --- | --- | ---
+3840x2160 (4K, Ultra-HD) | 45,000 | 338 | 68,000 | 510
+2560x1440 (2K, 1440p) | 16,000 | 120 | 24,000 | 180 
+1920x1080 (1080p, Full-HD) | 8,000 | 60 | 12,000 | 90
+1280x720 (720p, HD) | 5,000 | 38 | 7,500 | 56
+854x480 (FWVGA) | 2,500 | 19 | 4,000 | 30
+640x360 (VGA) | 1,000 | 8 | 1,500 | 11
 
-[![.img/step07a.png](.img/step07a.png)](#nolink)
-
-* The streams within could be encoded using different codecs, each with their own advantages
-
-### **3: Transcoding Performance**
-
-* The process of transcoding can be CPU intensive, especially if you are processing many large files (e.g. 100+ 4K videos from your vacation)
-* **`ffmpeg` should automatically be using the optimal amount of threads for your computer's CPU**
-* We will simulate a single-core CPU vs. a quad-core CPU to exemplify this point by transcoding a 4K video to 1080p:
-
-Threads | Processing FPS | Time Elapsed (sec.) | Command
---- | --- | --- | ---
-1 | 6 | 184 | `ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 1 "test.mp4"`
-4 | 8.1 | **137 (25% less time)** | `ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 4 "test.mp4"`
-
-* Having 2x cores doesn't necessarily mean a 2x increase in video processing power, _but it will help_, so do your research if this is important to you
-* If you want to try this yourself, you can download the video here<sup>[[4]](#acknowledgements)</sup> (this is a big file @ 114 MB!): [From The Air - 9798.mp4](https://pixabay.com/videos/download/video-9798_large.mp4?attachment) 
+> A 4K @ 60 FPS video encoded at 68,000 kbps will be around 510 MB per minute of video, so about 30 hours would fill up a 1 TB hard drive
 
 [Back to Top](#table-of-contents)
 
