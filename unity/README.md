@@ -58,7 +58,7 @@
    * **Depending on your internet and computer speeds, downloading and installing Unity will take a while (20+ minutes)**
    * You must sign up for a free account with Unity (<a href="https://id.unity.com" target="_blank">https://id.unity.com</a>).
    * Download and install Unity Hub from: <a href="https://store.unity.com/download-nuo" target="_blank">https://store.unity.com/download-nuo</a>
-   * Open Unity Hub and and sign into you Unity account.
+   * Open Unity Hub and sign into you Unity account.
    
    [![.img/step01b.png](.img/step01b.png)](#nolink)
    
@@ -75,7 +75,7 @@
 
    [![.img/step01e.png](.img/step01e.png)](#nolink)
 
-### After downloading and installing Unity, VSCode, and registering for a Unity account, you should be able to play your first Android application within the next 15 minutes.
+**After downloading and installing Unity, VSCode, and registering for a Unity account, you should be able to play your first Android application within the next 15 minutes.**
 
 [Back to Top](#table-of-contents)
 
@@ -205,7 +205,7 @@
 
 [![.img/step04c.png](.img/step04c.png)](#nolink)
 
-* Test you application by pressing the button and watching the number in the text box increment. Stop playmode when you are done and make sure to save your Unity project (CTRL+S).
+* Test your application by pressing the button and watching the number in the text box increment. Stop playmode when you are done and make sure to save your Unity project (CTRL+S).
 * Don't worry about design elements right now (font sizes, colors, etc.).
 
 [![.img/step04d.png](.img/step04d.png)](#nolink)
@@ -277,7 +277,7 @@
 * If you launched your application directly after installing, you'll get the Unity splash screen and then be presented with your application.
    * If you did not launch after install, find "New Unity Project" on your device.
 * Tap on the button and watch the numbers increment!
-   * The button and text box may be tiny and you may have to be careful where you click, **but it should work**.
+   * The button and text box may be tiny, and you may have to be careful where you click, **but it should work**.
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
 
@@ -331,7 +331,7 @@ GameDevTV 2D Unity Course (Paid) | <a href="https://www.gamedev.tv/p/complete-un
 * **Q: Why are we developing in Unity for an Android application, couldn't we have just used Android Studio?**
    * A: Yes, but once you develop a project in Unity, it can also be built for iOS, PS4, Xbox One, Windows, MacOS, etc. 
 * You will frequently go back and forth between manipulating objects in the Unity graphical user interface (GUI, referred to as "Unity") program and programming in Visual Studio Code (referred to as "VSCode").
-* Unity is essentailly free for you learn and to make applications for yourself, but there may be some strings attached once you start making money from it: <a href="https://unity3d.com/legal/terms-of-service/software" target="_blank">https://unity3d.com/legal/terms-of-service/software</a>
+* Unity is essentially free for you learn and to make applications for yourself, but there may be some strings attached once you start making money from it: <a href="https://unity3d.com/legal/terms-of-service/software" target="_blank">https://unity3d.com/legal/terms-of-service/software</a>
 * Motivation: A colleague of mine (veteran software engineer) once told me while they were learning Unity:
    > Unity is.. peculiar...
 
