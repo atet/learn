@@ -11,9 +11,10 @@
 
 --------------------------------------------------------------------------------------------------
 
-### Table of Contents
+## Table of Contents
 
-#### Introduction
+### Introduction
+
 * [0. Requirements](#0-requirements)
 * [1. Installation](#1-installation)
 * [2. New Unity Project](#2-new-unity-project)
@@ -24,12 +25,13 @@
 * [7. Playing Your First Android Application](#7-playing-your-first-android-application)
 * [8. Experiment](#8-experiment)
 
-#### Supplemental
+### Supplemental
+
 * [Unity Pro Tips](#unity-pro-tips)
 
 --------------------------------------------------------------------------------------------------
 
-### 0. Requirements
+## 0. Requirements
 
 * You do _NOT_ need to know how to program to complete this tutorial.
 * An Android mobile phone is required to test your application.
@@ -42,7 +44,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 1. Installation
+## 1. Installation
 
 **Two separate programs must be installed: VSCode and Unity**
 
@@ -73,13 +75,13 @@
 
    [![.img/step01e.png](.img/step01e.png)](#nolink)
 
-#### After downloading and installing Unity, VSCode, and registering for a Unity account, you should be able to play your first Android application within the next 15 minutes.
+### After downloading and installing Unity, VSCode, and registering for a Unity account, you should be able to play your first Android application within the next 15 minutes.
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 2. New Unity Project
+## 2. New Unity Project
 
 * On the left-hand menu, select "Projects" then click on the blue "NEW" button on the right, and choose "2019.2.15f1" (or whichever version was installed).
 
@@ -103,7 +105,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 3. Simple Application
+## 3. Simple Application
 
 **Our application will be a button that increments the number shown above it when pressed. We can do this in three simple steps.**
 
@@ -188,7 +190,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 4. Playmode Test
+## 4. Playmode Test
 
 * Change the following two settings before playmode testing:
    1. Go to menu Edit → Preferences... → Colors and change "Playmode tint" to a dark red.
@@ -212,7 +214,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 5. Building for Android
+## 5. Building for Android
 
 * Go to menu File → Build Settings... (CTRL+SHIFT+B)
 * Select "Android" on the bottom-left pane and click "Switch Platform" on the bottom-right.
@@ -235,7 +237,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 6. Android Mobile Phone Installation
+## 6. Android Mobile Phone Installation
 
 **You should NEVER install unverified applications on your Android phone unless you have made them yourself and are confident that they do not contain viruses, etc. In the future, consider having test devices that are not linked to your social media, email accounts, SIM card, etc.**
 
@@ -270,22 +272,32 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 7. Playing Your First Android Application
+## 7. Playing Your First Android Application
 
 * If you launched your application directly after installing, you'll get the Unity splash screen and then be presented with your application.
    * If you did not launch after install, find "New Unity Project" on your device.
 * Tap on the button and watch the numbers increment!
-   * The button and text box may be tiny and you may have to be careful where you click, but it should work.
+   * The button and text box may be tiny and you may have to be careful where you click, **but it should work**.
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
 
-**Congratulations! You made a fully-functioning, stand-alone mobile application. There are so many avenues you can pursue from here: Learning C# programming language, become a game designer, make productivity apps to help you at work, and so much more. Now that you have a feel for the workflow of using Unity, the possibilities are endless...**
+## **Congratulations!**
+
+You made a fully-functioning, stand-alone mobile application. There are so many avenues you can pursue from here:
+
+* Learn C# programming language
+* Become a game designer
+* Make productivity apps to help you at work
+
+Now that you have a feel for the workflow of using Unity, the possibilities are endless...
+
+REMINDER: Go back to settings to change back to blocking application installs from unknown sources when you are done with this tutorial.
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 8. Experiment
+## 8. Experiment
 
 * _Didn't like how small the button and text were?_ **Make them larger.**
 * _Want more buttons and text boxes?_ **Make more!**
@@ -300,7 +312,7 @@ GameDevTV 2D Unity Course (Paid) | <a href="https://www.gamedev.tv/p/complete-un
 
 --------------------------------------------------------------------------------------------------
 
-### Unity Troubleshooting
+## Unity Troubleshooting
 
 * There may be major differences between different versions of Unity. If you upgrade the Unity engine during development, you could break your application.
 * Q: I made some changes in Unity but it didn't seem to "Save" them.
@@ -310,19 +322,18 @@ GameDevTV 2D Unity Course (Paid) | <a href="https://www.gamedev.tv/p/complete-un
 
 --------------------------------------------------------------------------------------------------
 
-### Unity Pro Tips
+## Unity Pro Tips
 
 * **Clean Up**
    * If you make changes to this application, you should uninstall the current version first before installing the updated version.
    * On your Android device, go to Settings → DEVICE → Apps, find and select "New Unity Project" and click on "Uninstall".
    * You may want to erase the test.apk or start numbering these files with some sort of versioning system as you make changes, e.g. test_V2.apk or test_2019-12-08.apk
-* Q: Why are we developing in Unity for an Android application, couldn't we have just used Android Studio?
+* **Q: Why are we developing in Unity for an Android application, couldn't we have just used Android Studio?**
    * A: Yes, but once you develop a project in Unity, it can also be built for iOS, PS4, Xbox One, Windows, MacOS, etc. 
 * You will frequently go back and forth between manipulating objects in the Unity graphical user interface (GUI, referred to as "Unity") program and programming in Visual Studio Code (referred to as "VSCode").
 * Unity is essentailly free for you learn and to make applications for yourself, but there may be some strings attached once you start making money from it: <a href="https://unity3d.com/legal/terms-of-service/software" target="_blank">https://unity3d.com/legal/terms-of-service/software</a>
 * Motivation: A colleague of mine (veteran software engineer) once told me while they were learning Unity:
-> Unity is.. peculiar...
-
+   > Unity is.. peculiar...
 
 [Back to Top](#table-of-contents)
 
