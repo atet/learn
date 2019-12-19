@@ -21,6 +21,7 @@
 * [3. Your First Screenshot](#3-your-first-screenshot)
 * [4. Your First Animation](#4-your-first-animation)
 * [5. Your First Video](#5-your-first-video)
+* [5. Best Practices](#6-best-practices)
 
 ### Supplemental
 
@@ -72,7 +73,7 @@
 
 ## 2. Setup
 
-* ShareX has many advanced options that we do not need; we will change three settings for this tutorial:
+* ShareX has many advanced options that we do not need; we will change four settings for this tutorial:
 
 ### 2.1: Disable automatic file uploading to internet
 
@@ -82,16 +83,7 @@
 
 [![.img/step02a.png](.img/step02a.png)](#nolink)
 
-### 2.2: Change keyboard hotkeys for "Start/Stop screen recording (GIF)"
-
-* On the left-hand window pane, click on "Hotkey settings..."
-* By default, "Start/Stop screen recording (GIF)" is mapped to "CTRL + SHIFT + Print Screen"
-* Press the grey button to the right of "Start/Stop screen recording (GIF)" and **press on your keyboard "CTRL + SHIFT + S"**
-* Exit out of the window and you will see that this hotkey has changed in "Currently configure hotkeys"
-
-[![.img/step02b.gif](.img/step02b.gif)](#nolink)
-
-### 2.3: Find savepath of captured files
+### 2.2: Find savepath of captured files
 
 * On the left-hand window pane, click on "Application settings..."
 * In the new window, on the left-hand side, click "Paths"
@@ -101,6 +93,39 @@
 * **Don't change anything right now, just remember where files will be saved**
 
 [![.img/step02c.png](.img/step02c.png)](#nolink)
+
+### 2.3: Change pattern of saved filenames
+
+* By default, filenames are random characters
+   * Though you can sort these files by "Date Created", it would be easier if the filenames had the date
+* On the left-hand window pane, click on "Task settings..."
+* In the new window, on the left-hand side, click "File naming"
+* Change both "Name pattern for capture of clipboard upload" and "Name pattern for window capture" to the following:
+
+```
+%y%mo%d_%h%mi%s%ms
+```
+
+[![.img/step02d.png](.img/step02d.png)](#nolink)
+
+* The saved files will now follow an **ordered numeric format to sort the filenames** by:
+
+```
+<YEAR><MONTH><DAY>_<HOUR><MINUTE><SECOND><MILLISECOND>.<FILE EXTENSION>
+
+E.g. 20191219_153405023.png
+```
+
+### 2.4: Change keyboard hotkeys for "Start/Stop screen recording (GIF)"
+
+* On the left-hand window pane, click on "Hotkey settings..."
+* By default, "Start/Stop screen recording (GIF)" is mapped to "CTRL + SHIFT + Print Screen"
+* Press the grey button to the right of "Start/Stop screen recording (GIF)" and **press on your keyboard "CTRL + SHIFT + S"**
+* Exit out of the window and you will see that this hotkey has changed in "Currently configure hotkeys"
+
+[![.img/step02b.gif](.img/step02b.gif)](#nolink)
+
+
 
 [Back to Top](#table-of-contents)
 
@@ -164,6 +189,24 @@
 * You will be prompted to pick a window area to start recording (you can abort with right-click)
 * Once you left-click on an area, ShareX will start recording until you press the "Stop" button (or keyboard hotkeys) on the lower-left side
 * After you stop the recording, ShareX will take a few moments to process your video and save it out as `*.mp4` format
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+## 6. Best Practices
+
+1. **Record at the highest quality that's appropriate for your audience**:
+   * AAA game replay for review; probably the best you can do
+   * All text windows for hours long programming tutorial; find a balance between sufficient quality to read text clearly and file size
+
+2. **Clear your desktop and only show content on the screen that is relevant**
+   * You might be used to your working environment, but some people might get distracted looking at your nice wallpaper or snooping on your notifications
+   * Having a dedicated video capture computer that only has the programs you need might be useful
+
+3. **KISS: "Keep it Short & Simple"**
+   * Plan out your content and rehearse: You have the opportunity to make a piece of media that is efficient, concise, and effective
+   * Too many bloopers? Maybe you should break your content into smaller segments to reduce fatigue
 
 [Back to Top](#table-of-contents)
 
