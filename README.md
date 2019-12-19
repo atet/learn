@@ -4,7 +4,8 @@
    * [Introduction to Git](https://github.com/atet/learn/blob/master/git/README.md#atet--learn--git)
    * [Introduction to SQL](https://github.com/atet/learn/blob/master/sql/README.md#atet--learn--sql)
    * [Introduction to Tableau](https://github.com/atet/learn/blob/master/tableau/README.md#atet--learn--tableau)
-   * [Introduction to Unity](https://github.com/atet/learn/blob/master/unity/README.md#atet--learn--unity) 
+   * [Introduction to Unity](https://github.com/atet/learn/blob/master/unity/README.md#atet--learn--unity)
+   * [Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)
    * [Workshop presentations (backups)](https://github.com/atet/learn/tree/master/workshops)
 
 --------------------------------------------------------------------------------------------------
