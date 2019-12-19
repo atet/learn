@@ -35,7 +35,7 @@
 
 ## 0. Requirements
 
-* This tutorial was developed on Microsoft Windows 10, ffmpeg v4.2.1
+* This tutorial was developed on Microsoft Windows 10 and ffmpeg v4.2.1
    * **You must have administrative access on Windows**
    * `ffmpeg` is also available on Mac OS X and Linux
 
