@@ -11,9 +11,10 @@
 
 --------------------------------------------------------------------------------------------------
 
-### Table of Contents
+## Table of Contents
 
-#### Introduction
+### Introduction
+
 * [0. Requirements](#0-requirements)
 * [1. Installation](#1-installation)
 * [2. Example Data](#2-example-data)
@@ -24,13 +25,14 @@
 * [7. Customization](#7-customization)
 * [8. Experiment](#8-experiment)
 
-#### Supplemental
+### Supplemental
+
 * [Limitations of Tableau Public](#limitations-of-tableau-public)
 * [Acknowledgements](#acknowledgements)
 
 --------------------------------------------------------------------------------------------------
 
-### 0. Requirements
+## 0. Requirements
 
 * This tutorial was developed on Microsoft Windows 10.
 * Tableau is also available for MacOS 10.13+.
@@ -39,20 +41,20 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 1. Installation
+## 1. Installation
 
 * Download and install Tableau Public from: <a href="https://public.tableau.com/en-us/s/download" target="_blank">https://public.tableau.com/en-us/s/download</a>
 * I am using Tableau Public version 2019.3 for this tutorial.
 * You must sign up for a free account with Tableau Public (<a href="https://public.tableau.com" target="_blank">https://public.tableau.com</a>) to save and publish your work.
    * NOTE: A regular Tableau account will not work with Tableau Public, they are two separate accounts.
 
-#### After downloading and installing Tableau Public and registering for an account, you should be able to publish your first Tableau visualization within the next 10 minutes.
+**After downloading and installing Tableau Public and registering for an account, you should be able to publish your first Tableau visualization within the next 10 minutes.**
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 2. Example Data
+## 2. Example Data
 
 * We will use a small dataset of vehicles as an example[[1]](#acknowledgements).
 * Click here for the dataset (right-click and "Save as..." then save as _mtcars.csv_): <a href="https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv" target="_blank">https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv</a>
@@ -64,7 +66,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 3. Loading Data
+## 3. Loading Data
 
 * Open Tableau Public.
 * On left-hand side, click on "Text file".
@@ -76,7 +78,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 4. Tabs
+## 4. Tabs
 
 * Once the _mtcars.csv_ data is loaded, you will be looking at the Source Data tab.
 * Navigate to worksheet **Sheet1** at the bottom to make our first visualization.
@@ -87,7 +89,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 5. Your First Visualization
+## 5. Your First Visualization
 
 * This worksheet is where visualizations are made.
 * Tableau has automatically organized the data on the left-hand side as **Dimensions** or **Measures**.
@@ -111,7 +113,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 6. Saving and Publishing
+## 6. Saving and Publishing
 
 * Tableau Public will only allow you to save your analyses and visualization to their public cloud (everyone can see your work). This is the only option for the free Tableau Public software.
 * Go to "Save to Tableau Public As..."
@@ -128,7 +130,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 7. Customization
+## 7. Customization
 
 * Tableau will allow you to add a title, rename axes, change colors, add a trend line, etc.
 
@@ -138,7 +140,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 8. Experiment
+## 8. Experiment
 
 * Play around with the software, make new worksheets with interesting visualizations.
 * Find new data on the internet and learn new ways to use Tableau.
@@ -154,7 +156,7 @@ How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overvie
 
 --------------------------------------------------------------------------------------------------
 
-### Limitations of Tableau Public
+## Limitations of Tableau Public
 
 * Tableau Public is a free version of the subscription-based Tableau Desktop and does not have full functionality. Limitations include:
    * Data can only be uploaded as a spreadsheet (e.g. Excel files). Database connections are disabled.
@@ -167,7 +169,7 @@ How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overvie
 
 --------------------------------------------------------------------------------------------------
 
-### Acknowledgements
+## Acknowledgements
 
 1. mtcars data set from R: <a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html" target="_blank">Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.</a>
 
