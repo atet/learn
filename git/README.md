@@ -11,9 +11,10 @@
 
 --------------------------------------------------------------------------------------------------
 
-### Table of Contents
+## Table of Contents
 
-#### Introduction
+### Introduction
+
 * [0. Requirements](#0-requirements)
 * [1. Installation](#1-installation)
 * [2. New Repository](#2-new-repository)
@@ -24,14 +25,16 @@
 * [7. Pushing Changes](#7-pushing-changes)
 * [8. Typical Workflow](#8-typical-workflow)
 
-#### Supplemental
+### Supplemental
+
 * [Epilogue](#Epilogue)
 * [Additional Tutorials](#additional-tutorials)
 * [GitHub vs. Other Git Platforms](#gitHub-vs-other-git-platforms)
 
 --------------------------------------------------------------------------------------------------
 
-### 0. Requirements
+## 0. Requirements
+
 * This tutorial was developed on Microsoft Windows 10.
 * You are using two platforms hand-in-hand:
    * **Git GUI** downloaded on your computer (also available for MacOS and Linux).
@@ -42,9 +45,9 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 1. Installation
+## 1. Installation
 
-#### Git GUI
+### Git GUI
 
 * We will use Git GUI to interface with GitHub's Website.
 * Download the "64-bit Git for Windows Portable" version: [https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/PortableGit-2.23.0-64-bit.7z.exe](https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/PortableGit-2.23.0-64-bit.7z.exe)
@@ -61,7 +64,7 @@
 
 [![.img/step01c.png](.img/step01c.png)](#nolink)
 
-#### GitHub Website
+### GitHub Website
 
 * You must sign up for a free account with GitHub at [www.github.com](www.github.com) and sign in.
 
@@ -74,9 +77,9 @@
 --------------------------------------------------------------------------------------------------
 
 
-### 2. New Repository
+## 2. New Repository
 
-#### Create a New Repository on GitHub
+### Create a New Repository on GitHub
 
 * We will create a new **repository** and **initialize** it to begin using the _repos_ (short for repository).
 * After you log in, click on the green "New" button:
@@ -95,7 +98,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 3. Clone Repository
+## 3. Clone Repository
 
 * We just created the repository on GitHub's website, let's **clone** that repository so it also exists on your local computer.
 * Go back to the Git GUI program and select "Clone Existing Repository"
@@ -121,25 +124,28 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 4. Setup Connection
+## 4. Setup Connection
 
 * After cloning your repository, you must set up your Git GUI and GitHub website account to securely communicate with each other.
 
-#### Setup GitHub Account Credentials in Git GUI
+### Setup GitHub Account Credentials in Git GUI
+
 * Go to Edit → Options...
 * On the left-hand side, enter your GitHub website Username and Email Address associated with your account.
 * Click "Save".
 
 [![.img/step04a.png](.img/step04a.png)](#nolink)
 
-#### Generate Git GUI SSH Key
+### Generate Git GUI SSH Key
+
 * Go to Help → Show SSH Key.
 * Click on "Generate Key" then "Copy To Clipboard".
    * NOTE: Your key will be a difference sequence of characters than below
 
 [![.img/step04b.png](.img/step04b.png)](#nolink)
 
-#### Register Git GUI SSH Key with GitHub Account:
+### Register Git GUI SSH Key with GitHub Account:
+
 * Click on the top-right profile picture and select Settings.
 * Click on "SSH and GPG keys" on left-hand side.
 * Click on green "New SSH key" button on top-right.
@@ -154,7 +160,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 5. `Add`ing changes
+## 5. `Add`ing changes
 
 * Here, we will just make a simple change to the `README.md` file:
    * Navigate to where you cloned the `TEST` repos
@@ -176,7 +182,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 6. `Commit`ting Changes
+## 6. `Commit`ting Changes
 
 * By **commit**ting changes, you are telling the Git system that these new, deleted, and/or modified files are ready to be incorporated in the main repository.
    * Add a message relating to the changes you just made, e.g. `"Added "HELLO WORLD!" to README.md."`
@@ -189,7 +195,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 7. `Push`ing Changes
+## 7. `Push`ing Changes
 
 * By **push**ing all your commits, everything gets incorporated to the master repository on GitHub:
    * Click on "Push"
@@ -210,7 +216,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 8. Typical Workflow
+## 8. Typical Workflow
 
 * You can think of each repos as all the content that comprises a single project. You can add, change, and/or delete files in this project and these changes will be tracked.
 * Identify breakpoints in a project and organize your efforts (and commits) around them:
@@ -223,11 +229,11 @@
 
 --------------------------------------------------------------------------------------------------
 
-### Epilogue
+## Epilogue
 
 * Anyone can incorporate Git into their development workflow and immediately gain benefits:
    * **Redundancy and Backup**: Copies of your files will exist in multiple locations (on the GitHub platform, your computer, collaborators, etc.)
-   * **Versioning**: Revert back to any previous version of your repos
+   * **Versioning**: Revert to any previous version of your repos
 * This was a quick introduction, but Git can be more powerful (and complex):
    * **Branching**: Collaborators can work on their own branch without affecting anyone else's and submit changes for review
    * **Command Line Access**: Quickly `add` → `commit` → `push` through a terminal instead of website drag-dropping or GUI button-pushing
@@ -236,19 +242,19 @@
 
 --------------------------------------------------------------------------------------------------
 
-### Additional Tutorials
+## Additional Tutorials
 
 Title | Link
 --- | ---
 Git Concepts | [https://git-scm.com/book/en/v1/Getting-Started-Git-Basics](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics)
 GitHub's Web-GUI Introduction | [https://guides.github.com/activities/hello-world/](https://guides.github.com/activities/hello-world/)
-Git Commands Cheatsheet | [https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+Git Commands Cheat Sheet | [https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### GitHub vs. Other Git Platforms
+## GitHub vs. Other Git Platforms
 
 * Git and GitHub are two different systems that work together:
    * Think of GitHub as a service like Dropbox or OneDrive, both providing cloud storage that can be accessed from the Windows operating system
