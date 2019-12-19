@@ -100,7 +100,7 @@
    * Filenames will be in the format of `<RANDOM FILENAME>.<FILE FORMAT>`
 * **Don't change anything right now, just remember where files will be saved**
 
-[![.img/step02b.png](.img/step02b.png)](#nolink)
+[![.img/step02c.png](.img/step02c.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -142,7 +142,7 @@
 
 [![.img/step04c.png](.img/step04c.png)](#nolink)
 
-* After you stop the recording, ShareX will take a few moments to compile your animation and save it out as `*.gif` format
+* After you stop the recording, ShareX will take a few moments to process your animation and save it out as `*.gif` format
 * Watch my screen recording of deleting the first screenshot we took (right-click on thumbnail):
 
 [![.img/step04d.gif](.img/step04d.gif)](#nolink)
@@ -153,7 +153,17 @@
 
 ## 5. Your First Video
 
-* Coming soon! Check back later...
+**This is exactly the same process as making an animated GIF**
+
+* **You must have ffmpeg.exe downloaded from the previous step**
+* On the left-hand window pane, click on "Capture"
+* Click on "Screen recording" NOT "Screen recording (GIF)"
+
+[![.img/step05a.png](.img/step05a.png)](#nolink)
+
+* You will be prompted to pick a window area to start recording (you can abort with right-click)
+* Once you left-click on an area, ShareX will start recording until you press the "Stop" button (or keyboard hotkeys) on the lower-left side
+* After you stop the recording, ShareX will take a few moments to process your video and save it out as `*.mp4` format
 
 [Back to Top](#table-of-contents)
 
@@ -181,6 +191,7 @@ GIMP ([wikipedia](https://en.wikipedia.org/wiki/GIMP)) | Graphical User Interfac
 Issue | Solution
 --- | ---
 [![.img/ta.png](.img/ta.png)](#nolink) | Run `ShareX.exe`<br>as administrator
+Cursor in screenshots | Disable "Show cursor"
 
 [Back to Top](#table-of-contents)
 
