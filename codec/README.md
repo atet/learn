@@ -205,7 +205,7 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
 ```
 * Looking at `output2.mp4`:
    * The **file size is 2.84 MB (59% decrease!)** @ ~2,000 kbps bit rate
-   * The **video quality is almost indistiguishable** from the original `output.mp4`
+   * The **video quality is almost indistinguishable** from the original `output.mp4`
    * We got the **best of both worlds** here: Sufficient video quality for our needs and a huge reduction in file size
 * **Explore this topic more with your own videos...**
    * What we performed above is a **two-pass transcoding to get the average bit rate (ABR)** for video (audio stream was not changed)
@@ -221,7 +221,7 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
 ### **1: Bit Rate**
 
 * Think of video as just a slide show of individual pictures
-   * Each picture has a resolution and some level of compression which yields it's total file size
+   * Each picture has a resolution and some level of compression which yields its total file size
    * We did not dive into audio much, but know that you can also reduce an audio stream's bit rate which may reduce file size without reducing _perceived_ quality
 * As discussed above in **6.2: "There exists..."**, you may have to play around with finding a sweet spot between video quality and file size
 * You can find the bit rate information for a video with the following:
@@ -309,9 +309,9 @@ Bit Rate | An amount of data (video, audio, etc.) per unit time, e.g. kilobits p
 Codec | A program that compresses data to enable faster transmission and decompresses received data
 Container | A file that may hold multiple data streams (e.g. one video stream and two audio streams of different languages)
 Data Stream | In the context of this tutorial, distinct data that is video or audio
-Encoding | The _original_ compression of data (incorrectly used interchangably with transcoding)
+Encoding | The _original_ compression of data (used interchangeably with transcoding)
 File Format | Containers will have a file format, e.g. `*.mp4`, `*.webm`
-Transcoding | The process of decoding → reformatting → re-encoding a file
+Transcoding | The process of decoding → reformatting → re-encoding a file (used interchangeably with encoding)
 
 [Back to Top](#table-of-contents)
 
