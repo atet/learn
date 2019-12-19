@@ -69,13 +69,13 @@
 
 * In the bottom window pane "System variables", click on the variable **Path** and click on Edit
 * Select "New" and new text entry will be added at the bottom of the list
-* Input the path to `ffmpeg.exe` that we extracted earlier: `C:\Program Files\ffmpeg-4.2.1-win64-static\bin`
+* Input the path to `ffmpeg.exe` that we extracted earlier: "`C:\Program Files\ffmpeg-4.2.1-win64-static\bin`"
 * Click on OK to exit all of the windows
 
 [![.img/step01e.png](.img/step01e.png)](#nolink)
 
 * Let's check that Windows can now access `ffmpeg.exe` in Command Prompt
-   * **If you already have Command Prompt already open, you must close it and start a new session**
+   * **If you already have Command Prompt open, you must close it and start a new session**
    * Press the Windows key or click on the Windows button and search for "command prompt"
    * Right-click on Command Prompt and "Run as administrator"
    * In the Command Prompt, type `ffmpeg -version` and press Enter
@@ -103,10 +103,10 @@
 
 ## 3. Navigation
 
-* Open Command Prompt as Administrator
+* Run Command Prompt as Administrator
 * Navigate to your Example folder
    * If the folder is in a different drive, you must execute "`<DRIVE LETTER>:`" to switch to that drive first (don't forget that colon)
-   * If there are spaces in the filepath, you need to surround the path in quotation marks to change to that directory with the `cd` command
+   * If there are spaces in the filepath, you need to surround the path in quotation marks to change to that folder with the `cd` command
 
 [![.img/step03a.png](.img/step03a.png)](#nolink)
 
@@ -117,8 +117,8 @@
 ## 4. Your First Transcoding
 
 * If you open the video `Ferris Wheel - 18386.mp4`, you'll notice that there's no audio
-* **We are going to combine the video and audio into one file**
-* In the Command Prompt, navigate to the directory with the two files and execute the following command:
+* **We are going to combine the video and audio files you downloaded into a single file**
+* In the Command Prompt, navigate to the Example folder with the two files and execute the following command:
 
 ```
 ffmpeg -i "Ferris Wheel - 18386.mp4" -i "Chuzausen_-_06_-_Raro_Bueno.mp3" -c copy -shortest -map 0:v:0 -map 1:a:0 output.mp4
@@ -137,7 +137,7 @@ ffmpeg -i "Ferris Wheel - 18386.mp4" -i "Chuzausen_-_06_-_Raro_Bueno.mp3" -c cop
 
 ## 5. Background
 
-* Now that you've seen how easy it is to use `ffmpeg` in a command line interface (CLI), we will go over some additional information
+* Now that you've experienced how easy it is to use `ffmpeg` in a command line interface (CLI), we will go over some additional information
 * **Q: Why are we using `ffmpeg` in CLI when there is...**
    * A: Depending on your use case, it may be vastly more efficient to transcode multiple videos this way versus a graphical user interface (GUI) program
 * **Q: What did I just type above?**
@@ -151,8 +151,8 @@ Command | Description
 `-i "<FILENAME>"` | Signifies that the following filename(s) in quotation are input(s), note that we are using a video and an audio file as two separate inputs, e.g. `-i "Ferris Wheel - 18386.mp4" -i "Chuzausen_-_06_-_Raro_Bueno.mp3"`
 `-c copy` | Copy over the video and audio without re-encoding it to another format
 `-shortest` | Have the output file be only as long as the shortest file, note that `Ferris Wheel - 18386.mp4` is the shortest file at 10 seconds
-`-map 0:v:0` | From the first file (zero-based, so the first file is file #0), look at the video streams (`:v:`) and use the first video stream
-`-map 1:a:0` | From the second file (file #1), look at the audio streams (`:a:`) and use the first audio stream
+`-map 0:v:0` | From the first file (zero-based, so the first file is file #0), look at the video streams (`:v:`) and use the first video stream #0
+`-map 1:a:0` | From the second file (file #1), look at the audio streams (`:a:`) and use the first audio stream #0
 `output.mp4` | Name given to the new file that will be created in the current directory
 
 * **Q: Wait a minute, we just copied over the video and audio stream, that wasn't "transcoding"!**
@@ -169,12 +169,12 @@ This section will cover two major best practices in video transcoding
 ### **6.1: "Always transcode to a lower quality"**
 
 * Raw video from most cameras and cell phones will already be in a **compressed** format and that video will be **the best quality it will ever be**
-   * If you recorded video at 720p, it will not look any better if you transcode it up to 1080p in most circumstances
+   * If you recorded video at 720p, it will not look any better if you transcode it up (a.k.a. upscale) to 1080p in most circumstances
 * [Most popular video compression techniques are **"lossy"**](https://en.wikipedia.org/wiki/Lossy_compression), this is exemplified with a picture of Mona Lisa<sup>[[3]](#acknowledgements)</sup> below losing significant detail when resized back to 200x200 pixels:
 
 [![.img/step06a.png](.img/step06a.png)](#nolink)
 
-* Let's transcode the `output.mp4` video from 1920x1080 resolution down to 160x90:
+* Let's transcode the `output.mp4` video from its original 1920x1080 resolution down to 160x90:
 ```
 ffmpeg -i "output.mp4" -s 160x90 "output160x90.mp4"
 ```
@@ -208,7 +208,7 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
    * The **video quality is almost indistiguishable** from the original `output.mp4`
    * We got the **best of both worlds** here: Sufficient video quality for our needs and a huge reduction in file size
 * **Explore this topic more with your own videos...**
-   * What we performed above is a **two-pass transcoding to get the average bit rate (ABR)** for video (audio stream was not changed), more information here: [http://trac.ffmpeg.org/wiki/Encode/H.264#twopass](http://trac.ffmpeg.org/wiki/Encode/H.264#twopass)
+   * What we performed above is a **two-pass transcoding to get the average bit rate (ABR)** for video (audio stream was not changed)
 
 [Back to Top](#table-of-contents)
 
@@ -223,14 +223,18 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
 * Think of video as just a slide show of individual pictures
    * Each picture has a resolution and some level of compression which yields it's total file size
    * We did not dive into audio much, but know that you can also reduce an audio stream's bit rate which may reduce file size without reducing _perceived_ quality
-* As was discussed in [6.2: "There exists an optimal balance of quality and file size"](#6.2:-"there-exists-an-optimal-balance-of-quality-and-file-size") you may have to play around with finding a sweet spot between video quality and file size
+* As discussed above in **6.2: "There exists..."**, you may have to play around with finding a sweet spot between video quality and file size
 * You can find the bit rate information for a video with the following:
-   * `ffmpeg`: Execute the following and look for `bitrate: <BIT RATE> kb/s` in the output:
+   * `ffmpeg`: Execute the following and look for `bitrate: <BIT RATE> kb/s` in the output (ignore the warning):
       ```
       ffmpeg -i "<FILENAME>"
       ```
+
+[![.img/tda.png](.img/tda.png)](#nolink)
+
    * Windows: Right-click on the video file, select "Properties", select "Details" tab (these numbers may be slightly different than from `ffmpeg`)
-   [![.img/tda.png](.img/tda.png)](#nolink)
+
+[![.img/tdb.png](.img/tdb.png)](#nolink)
 
 ### **2: Containers**
 
@@ -240,22 +244,20 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
 
-* The streams within can be encoded using different codecs, each with their own advantages
+* The streams within could be encoded using different codecs, each with their own advantages
 
 ### **3: Transcoding Performance**
 
 * The process of transcoding can be CPU intensive, especially if you are processing many large files (e.g. 100+ 4K videos from your vacation)
 * **`ffmpeg` should automatically be using the optimal amount of threads for your computer's CPU**
 * We will simulate a single-core CPU vs. a quad-core CPU to exemplify this point by transcoding a 4K video to 1080p:
-   * One thread: **Processing @ 6 FPS, 184 sec. elapsed**
-   ```
-   ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 1 "test.mp4"
-   ```
-   * Four threads: **Processing @ 8.1 FPS, 137 sec. elapsed (25% less time)**
-   ```
-   ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 4 "test.mp4"
-   ```
-* Having 2x cores doesn't necessarily mean a 2x increase in video processing power, _but it will help_, do your research if this is important to you
+
+Threads | Processing FPS | Time Elapsed (sec.) | Command
+--- | --- | --- | ---
+1 | 6 | 184 | `ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 1 "test.mp4"`
+4 | 8.1 | **137 (25% less time)** | `ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 4 "test.mp4"`
+
+* Having 2x cores doesn't necessarily mean a 2x increase in video processing power, _but it will help_, so do your research if this is important to you
 * If you want to try this yourself, you can download the video here<sup>[[4]](#acknowledgements)</sup> (this is a big file @ 114 MB!): [From The Air - 9798.mp4](https://pixabay.com/videos/download/video-9798_large.mp4?attachment) 
 
 [Back to Top](#table-of-contents)
@@ -291,7 +293,9 @@ Description | Link
 Official `ffmpeg` manual | <a href="https://ffmpeg.org/ffmpeg.html" target="_blank">https://ffmpeg.org/ffmpeg.html</a>
 Google Developers From Raw Video to Web Ready | <a href="https://developers.google.com/web/fundamentals/media/manipulating/files" target="_blank">https://developers.google.com/web/fundamentals/media/manipulating/files</a>
 Google Developers Media Manipulation Cheat Sheet | <a href="https://developers.google.com/web/fundamentals/media/manipulating/cheatsheet" target="_blank">https://developers.google.com/web/fundamentals/media/manipulating/cheatsheet</a>
+`ffmpeg` Two-Pass Transcoding | <a href="http://trac.ffmpeg.org/wiki/Encode/H.264#twopass" target="_blank">http://trac.ffmpeg.org/wiki/Encode/H.264#twopass</a>
 YouTube's Recommended Video Encoding Settings | <a href="https://support.google.com/youtube/answer/1722171?hl=en" target="_blank">https://support.google.com/youtube/answer/1722171?hl=en</a>
+YouTube's Recommended Settings for Live Streaming | <a href="https://support.google.com/youtube/answer/2853702?hl=en" target="_blank">https://support.google.com/youtube/answer/2853702?hl=en</a>
 
 [Back to Top](#table-of-contents)
 
@@ -304,9 +308,9 @@ Term | Definition
 Bit Rate | An amount of data (video, audio, etc.) per unit time, e.g. kilobits per second (kbps or kb/s)
 Codec | A program that compresses data to enable faster transmission and decompresses received data
 Container | A file that may hold multiple data streams (e.g. one video stream and two audio streams of different languages)
-Data Stream | In the context of this tutorial, distinct data that is video+audio or each separately
+Data Stream | In the context of this tutorial, distinct data that is video or audio
 Encoding | The _original_ compression of data (incorrectly used interchangably with transcoding)
-File Format | Containers will have a file format
+File Format | Containers will have a file format, e.g. `*.mp4`, `*.webm`
 Transcoding | The process of decoding → reformatting → re-encoding a file
 
 [Back to Top](#table-of-contents)
