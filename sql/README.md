@@ -11,9 +11,10 @@
 
 --------------------------------------------------------------------------------------------------
 
-### Table of Contents
+## Table of Contents
 
-#### Introduction
+### Introduction
+
 * [0. Requirements](#0-requirements)
 * [1. Installation](#1-installation)
 * [2. Example Data](#2-example-data)
@@ -24,7 +25,8 @@
 * [7. Data Manipulation Queries](#7-data-manipulation-queries)
 * [8. Experiment](#8-experiment)
 
-#### Supplemental
+### Supplemental
+
 * [Epilogue](#Epilogue)
 * [Troubleshooting](#troubleshooting)
 * [SQLite vs. other SQL implementations](#sqlite-vs-other-sql-implementations)
@@ -32,7 +34,8 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 0. Requirements
+## 0. Requirements
+
 * This tutorial was developed on Microsoft Windows 10.
 * SQLite and SQLiteStudio is also available for MacOS and Linux.
 
@@ -40,7 +43,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 1. Installation
+## 1. Installation
 
 * We will use SQLiteStudio, which is a Graphical User Interface (GUI) created for SQLite: [https://sqlitestudio.pl/index.rvt?act=download](https://sqlitestudio.pl/index.rvt?act=download)
 * Download the "Windows (portable), 32-bit" version: [https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/SQLiteStudio-3.2.1.zip](https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/SQLiteStudio-3.2.1.zip)
@@ -57,7 +60,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 2. Example Data
+## 2. Example Data
 
 * We will use a small dataset of vehicles as an example[[1]](#acknowledgements).
 * Click here for the dataset (right-click and "Save as..." then save as _mtcars.csv_): <a href="https://raw.githubusercontent.com/atet/learn/master/sql/data/mtcars.csv" target="_blank">https://raw.githubusercontent.com/atet/learn/master/sql/data/mtcars.csv</a>
@@ -69,7 +72,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 3. Loading Data
+## 3. Loading Data
 
 * First, create a new _database_:
    * Click on "Add a database" or CTRL+O
@@ -91,7 +94,7 @@
 
 [![.img/step03b.png](.img/step03b.png)](#nolink)
 
-* You will get a console message that "_Imported data to the table 'mtcars' successfully._" and _mtcars_ is now seen in the heirarchy of the database you created.
+* You will get a console message that "_Imported data to the table 'mtcars' successfully._" and _mtcars_ is now seen in the hierarchy of the database you created.
 
 [![.img/step03c.png](.img/step03c.png)](#nolink)
 
@@ -99,7 +102,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 4. Navigation
+## 4. Navigation
 
 * You can view the imported _mtcars_ data in tabular format by selecting the table on the left-hand side, Data tab, and Grid view tab.
 * You will execute SQL queries when you select "Create a view".
@@ -110,7 +113,7 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 5. Your First Query
+## 5. Your First Query
 
 * Once you select "Create a view", a new bottom tab will appear for the new view.
 * We are going to make a view that basically selects all the data from the _mtcars_ table.
@@ -121,7 +124,7 @@
 
 [![.img/step05a.png](.img/step05a.png)](#nolink)
 
-* You will get a console message that "_Committed changes for view 'all' (named before '') successfully._" and the _all_ view is now seen in the heirarchy of the database you created.
+* You will get a console message that "_Committed changes for view 'all' (named before '') successfully._" and the _all_ view is now seen in the hierarchy of the database you created.
 * You can navigate this view as you would a regular table.
 
 [![.img/step05b.png](.img/step05b.png)](#nolink)
@@ -130,11 +133,11 @@
 
 --------------------------------------------------------------------------------------------------
 
-### 6. Data Manipulation Concept
+## 6. Data Manipulation Concept
 
-* The general concept is that you have data in your database **tables** and you are generating a customized **view** that was manipulated by your queries.
+* The general concept is that you have data in your database **tables**, and you are generating a customized **view** that was manipulated by your queries.
 
-#### What did "`SELECT * FROM mtcars;`" mean?
+**What did "`SELECT * FROM mtcars;`" mean?**
 
 * This query means that you want to `SELECT` all rows (and columns), this is represented by the wildcard `*` (asterisk), `FROM` table `mtcars`.
 
@@ -146,17 +149,17 @@ SELECT * FROM mtcars;
 
 [![.img/step06.png](.img/step06.png)](#nolink)
 
-_**Figure 6.** Concept of `SELECT`ing everything. Basically viewing the entire table._
+_**Figure 6.** Concept of `SELECT`ing everything. Basically, viewing the entire table._
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-### 7. Data Manipulation Queries
+## 7. Data Manipulation Queries
 
 * We will go through four common data manipulation queries here.
 
-#### 7.a. Subsetting rows
+### 7.a. Subsetting rows
 
 * You can subset rows (a.k.a. observations) by their values.
 
@@ -170,7 +173,7 @@ SELECT * FROM mtcars WHERE cyl >= "6";
 
 _**Figure 7.a.** Only returning rows that meet some criteria._
 
-#### 7.b. Subsetting columns
+### 7.b. Subsetting columns
 
 * You can subset only the columns (a.k.a. variables) that you need.
 
@@ -184,7 +187,7 @@ SELECT id, mpg FROM mtcars;
 
 _**Figure 7.b.** Only returning required columns._
 
-#### 7.c. Make new columns
+### 7.c. Make new columns
 
 * You can make new columns (a.k.a. variables) based on calculations.
 
@@ -198,7 +201,7 @@ SELECT id, disp, (disp * 0.0164) AS disp2 FROM mtcars;
 
 _**Figure 7.c.** Add new columns with values calculated from other variables._
 
-#### 7.d. Summarize data
+### 7.d. Summarize data
 
 * You can summarize many observations into fewer values while making new columns based on calculations.
 
@@ -218,7 +221,7 @@ _**Figure 7.d.** Summarizing groups into fewer values and variables._
 
 --------------------------------------------------------------------------------------------------
 
-### 8. Experiment
+## 8. Experiment
 
 * Play around with the software, make new views.
 * Find new data on the internet and learn new ways to use SQL for your workflow.
@@ -236,7 +239,7 @@ More Concepts | [https://javajee.com/basic-sql-concepts](https://javajee.com/bas
 
 --------------------------------------------------------------------------------------------------
 
-### Epilogue
+## Epilogue
 
 * Don't be discouraged: Professionals that work with data often spend more time munging/wrangling data than they do performing statistical analyses.
    * You can read about organizing, cleaning, and manipulating data (a.k.a. "munging" or "wrangling") here: [https://en.wikipedia.org/wiki/Data_wrangling](https://en.wikipedia.org/wiki/Data_wrangling)
@@ -247,7 +250,7 @@ More Concepts | [https://javajee.com/basic-sql-concepts](https://javajee.com/bas
 
 --------------------------------------------------------------------------------------------------
 
-### Troubleshooting
+## Troubleshooting
 
 * By downloading the "portable" version of SQLite in this tutorial, nothing gets installed on your system.
 
@@ -259,7 +262,7 @@ Installation SQLite Tools for Command Line | [https://www.sqlitetutorial.net/dow
 
 --------------------------------------------------------------------------------------------------
 
-### SQLite vs. other SQL implementations
+## SQLite vs. other SQL implementations
 
 * The SQL language has multiple implementations (e.g. SQLite, MySQL, MariaDB, etc.)
 * There can be many differences between these implementations ranging from capabilities to performance.
@@ -269,7 +272,7 @@ Installation SQLite Tools for Command Line | [https://www.sqlitetutorial.net/dow
 
 --------------------------------------------------------------------------------------------------
 
-### Acknowledgements
+## Acknowledgements
 
 1. mtcars data set from R: <a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html" target="_blank">Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.</a>
 
