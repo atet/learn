@@ -61,8 +61,8 @@
 
 [![.img/step01d.png](.img/step01d.png)](#nolink)
 
-* **Starting ShareX for the first time, you may get a warning window** that the pre-set ShareX keyboard shortcuts clash with ones already set on your system
-* Since ShareX relies on keyboard shortcuts to take a screenshot, start recording, etc., **you may want to remap those keys, or you can ignore this warning**
+* **Starting ShareX for the first time, you may get a warning window** that the pre-set ShareX keyboard hotkeys clash with ones already set on your system
+* Since ShareX relies on keyboard hotkeys to take a screenshot, start recording, etc., **you may want to remap those keys, or you can ignore this warning**
 
 [![.img/step01e.png](.img/step01e.png)](#nolink)
 
@@ -72,7 +72,7 @@
 
 ## 2. Setup
 
-* ShareX has many advanced options that we do not need; we will change two settings for this tutorial:
+* ShareX has many advanced options that we do not need; we will change three settings for this tutorial:
 
 ### 2.1: Disable automatic file uploading to internet
 
@@ -82,7 +82,16 @@
 
 [![.img/step02a.png](.img/step02a.png)](#nolink)
 
-### 2.2: Find savepath of captured files
+### 2.2: Change keyboard hotkeys for "Start/Stop screen recording (GIF)"
+
+* On the left-hand window pane, click on "Hotkey settings..."
+* By default, "Start/Stop screen recording (GIF)" is mapped to "CTRL + SHIFT + Print Screen"
+* Press the grey button to the right of "Start/Stop screen recording (GIF)" and **press on your keyboard "CTRL + SHIFT + S"**
+* Exit out of the window and you will see that this hotkey has changed in "Currently configure hotkeys"
+
+[![.img/step02b.gif](.img/step02b.gif)](#nolink)
+
+### 2.3: Find savepath of captured files
 
 * On the left-hand window pane, click on "Application settings..."
 * In the new window, on the left-hand side, click "Paths"
@@ -129,7 +138,7 @@
 [![.img/step04b.png](.img/step04b.png)](#nolink)
 
 * Immediately after you click "OK", ShareX will prompt you to pick a window area to start recording (you can abort with right-click)
-* Once you left-click on an area, ShareX will start recording until you press the "Stop" button (or keyboard shortcut) on the lower-left side
+* Once you left-click on an area, ShareX will start recording until you press the "Stop" button (or keyboard hotkeys) on the lower-left side
 
 [![.img/step04c.png](.img/step04c.png)](#nolink)
 
@@ -157,11 +166,11 @@
 
 **I highly recommend learning how to use `ffmpeg` in the command line, you can find my tutorial here: [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
 
-Program | Description | Format | Image Manipulation | GIF Animation Manipulation/Transcoding | Video Transcoding
---- | --- | --- | --- | --- | ---
-`ffmpeg` | [https://en.wikipedia.org/wiki/FFmpeg](https://en.wikipedia.org/wiki/FFmpeg) | Command Line Interface | **Yes** | **Yes** | **Yes**
-Avidemux | [https://en.wikipedia.org/wiki/Avidemux](https://en.wikipedia.org/wiki/Avidemux) | Graphical User Interface | No | No | **Yes**
-GIMP | [https://en.wikipedia.org/wiki/GIMP](https://en.wikipedia.org/wiki/GIMP) | Graphical User Interface | **Yes** | **Yes** | No
+Program | Format | Image Manipulation | GIF Animation Manipulation & Transcoding | Video Transcoding
+--- | --- | --- | --- | ---
+`ffmpeg` ([Wikipedia](https://en.wikipedia.org/wiki/FFmpeg)) | Command Line Interface | **Yes** | **Yes** | **Yes**
+Avidemux ([Wikipedia](https://en.wikipedia.org/wiki/Avidemux)) | Graphical User Interface | No | No | **Yes**
+GIMP ([wikipedia](https://en.wikipedia.org/wiki/GIMP)) | Graphical User Interface | **Yes** | **Yes** | No
 
 [Back to Top](#table-of-contents)
 
