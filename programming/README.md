@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**programming**](https://github.com/atet/learn/tree/master/programming)
+# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**_programming_**](https://github.com/atet/learn/tree/master/programming)
 
 [![.img/logo_r.png](.img/logo_r.png)](#nolink)
 

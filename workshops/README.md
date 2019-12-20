@@ -1,4 +1,4 @@
-﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [workshops](https://github.com/atet/learn/workshops)
+﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**_workshops_**](https://github.com/atet/learn/workshops)
 
 --------------------------------------------------------------------------------------------------
 

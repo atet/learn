@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**codec**](https://github.com/atet/learn/tree/master/codec)
+# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**_codec_**](https://github.com/atet/learn/tree/master/codec)
 
 [![.img/logo_ffmpeg.png](.img/logo_ffmpeg.png)](#nolink)
 
