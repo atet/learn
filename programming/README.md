@@ -26,7 +26,7 @@
 
 #### Supplemental
 * [Epilogue](#epilogue)
-* [Acknowledgements](#acknowledgements)
+* [Acknowledgments](#acknowledgments)
 
 --------------------------------------------------------------------------------------------------
 
@@ -119,7 +119,7 @@ How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overvie
 
 --------------------------------------------------------------------------------------------------
 
-### Acknowledgements
+### Acknowledgments
 
 1. Web-based R console by DataCamp: <a href="https://github.com/datacamp/datacamp-light" target="_blank">https://github.com/datacamp/datacamp-light</a>
 

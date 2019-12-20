@@ -31,7 +31,7 @@
 * [Troubleshooting](#troubleshooting)
 * [Other Resources](#other-resources)
 * [Glossary](#glossary)
-* [Acknowledgements](#acknowledgements)
+* [Acknowledgments](#acknowledgments)
 
 --------------------------------------------------------------------------------------------------
 
@@ -93,8 +93,8 @@
 
 * We will use a short video file and an audio file in this tutorial
 * Make a new folder on your desktop called "Example" and download the following two files there:
-   * Video<sup>[[1]](#acknowledgements)</sup>: [Ferris Wheel - 18386.mp4](https://pixabay.com/videos/download/video-18386_large.mp4?attachment)
-   * Audio<sup>[[2]](#acknowledgements)</sup>: [Chuzausen_-\_06\_-_Raro_Bueno.mp3](https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Enough_Records/Chuzausen/Awesome_Is_Grey/Chuzausen_-_06_-_Raro_Bueno.mp3)
+   * Video<sup>[[1]](#acknowledgments)</sup>: [Ferris Wheel - 18386.mp4](https://pixabay.com/videos/download/video-18386_large.mp4?attachment)
+   * Audio<sup>[[2]](#acknowledgments)</sup>: [Chuzausen_-\_06\_-_Raro_Bueno.mp3](https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Enough_Records/Chuzausen/Awesome_Is_Grey/Chuzausen_-_06_-_Raro_Bueno.mp3)
 * **Remember the path to this folder, e.g. `C:\Users\<USERNAME>\Desktop\Example`**
 
 [![.img/step02a.png](.img/step02a.png)](#nolink)
@@ -172,7 +172,7 @@ This section will cover two major best practices in video transcoding
 
 * Raw video from most cameras and cell phones will already be in a **compressed** format and that video will be **the best quality it will ever be**
    * If you recorded video at 720p, it will not look any better if you transcode it up (a.k.a. upscale) to 1080p in most circumstances
-* [Most popular video compression techniques are **"lossy"**](https://en.wikipedia.org/wiki/Lossy_compression), this is exemplified with a picture of Mona Lisa<sup>[[3]](#acknowledgements)</sup> below losing significant detail when resized back to 200x200 pixels:
+* [Most popular video compression techniques are **"lossy"**](https://en.wikipedia.org/wiki/Lossy_compression), this is exemplified with a picture of Mona Lisa<sup>[[3]](#acknowledgments)</sup> below losing significant detail when resized back to 200x200 pixels:
 
 [![.img/step06a.png](.img/step06a.png)](#nolink)
 
@@ -246,7 +246,7 @@ Threads | Processing FPS | Time Elapsed (sec.) | Command
 4 | 8.1 | **137 (25% less time)** | `ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 4 "test.mp4"`
 
 * Having 2x cores doesn't necessarily mean a 2x increase in video processing power, _but it will help_, so do your research if this is important to you
-* If you want to try this yourself, you can download the video here<sup>[[4]](#acknowledgements)</sup> (this is a big file @ 114 MB!): [From The Air - 9798.mp4](https://pixabay.com/videos/download/video-9798_large.mp4?attachment) 
+* If you want to try this yourself, you can download the video here<sup>[[4]](#acknowledgments)</sup> (this is a big file @ 114 MB!): [From The Air - 9798.mp4](https://pixabay.com/videos/download/video-9798_large.mp4?attachment) 
 
 ### **3: Bit Rate**
 
@@ -344,7 +344,7 @@ Transcoding | The process of decoding → reformatting → re-encoding a file (u
 
 --------------------------------------------------------------------------------------------------
 
-## Acknowledgements
+## Acknowledgments
 
 1. Video: [Ferris Wheel - 18386.mp4](https://pixabay.com/videos/download/video-18386_large.mp4?attachment)
    * Attribution: [Nature-Stock-Footage (Pixabay)](https://pixabay.com/users/nature-stock-footage-10096666/)

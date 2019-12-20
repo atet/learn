@@ -28,7 +28,7 @@
 ### Supplemental
 
 * [Limitations of Tableau Public](#limitations-of-tableau-public)
-* [Acknowledgements](#acknowledgements)
+* [Acknowledgments](#acknowledgments)
 
 --------------------------------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@
 
 ## 2. Example Data
 
-* We will use a small dataset of vehicles as an example[[1]](#acknowledgements).
+* We will use a small dataset of vehicles as an example<sup>[[1]](#acknowledgments)</sup>.
 * Click here for the dataset (right-click and "Save as..." then save as _mtcars.csv_): <a href="https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv" target="_blank">https://raw.githubusercontent.com/atet/learn/master/tableau/data/mtcars.csv</a>
 * This Comma Separated Values (CSV) file contains 32 records of vehicles and 12 attributes describing them (e.g. "id" = name, "mpg" = miles per gallon, etc.):
 
@@ -169,7 +169,7 @@ How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overvie
 
 --------------------------------------------------------------------------------------------------
 
-## Acknowledgements
+## Acknowledgments
 
 1. mtcars data set from R: <a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html" target="_blank">Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.</a>
 
