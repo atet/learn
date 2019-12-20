@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [unity](https://github.com/atet/learn/tree/master/unity)
+# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**unity**](https://github.com/atet/learn/tree/master/unity)
 
 [![.img/logo_unity.png](.img/logo_unity.png)](#nolink)
 
