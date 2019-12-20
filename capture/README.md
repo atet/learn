@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [capture](https://github.com/atet/learn/tree/master/capture)
+# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**capture**](https://github.com/atet/learn/tree/master/capture)
 
 [![.img/logo_sharex.png](.img/logo_sharex.png)](#nolink)
 
@@ -21,11 +21,11 @@
 * [3. Your First Screenshot](#3-your-first-screenshot)
 * [4. Your First Animation](#4-your-first-animation)
 * [5. Your First Video](#5-your-first-video)
-* [5. Best Practices](#6-best-practices)
+* [6. Best Practices](#6-best-practices)
+* [7. Next Steps](#7-next-steps)
 
 ### Supplemental
 
-* [Editing](#editing)
 * [Troubleshooting](#troubleshooting)
 
 --------------------------------------------------------------------------------------------------
@@ -35,6 +35,8 @@
 * This tutorial was developed on Microsoft Windows 10 and ShareX v13.0.1 Portable
    * **You must have administrative access on Windows**
    * ShareX is only available for Windows 7, 8.1, and 10
+
+**This is part of a two-tutorial series on capturing and transcoding videos, see [7. Next Steps](#7-next-steps) to finish this series**
 
 [Back to Top](#table-of-contents)
 
@@ -73,13 +75,13 @@
 
 ## 2. Setup
 
-* ShareX has many advanced options that we do not need; we will change four settings for this tutorial:
+* ShareX has many advanced options that we do not need; **we must change four settings for this tutorial**:
 
 ### 2.1: Disable automatic file uploading to internet
 
 * By default, files will automatically attempt to be uploaded to the internet right after they are captured (Imgur, Dropbox, Twitter, etc.)
 * On the left-hand window pane, click on "After capture tasks" and de-select "Upload image to host"
-   * Note: It may be difficult to see what is enabled (bolded) vs. what is disabled (not bolded) in these menus
+   * Note: **It may be difficult to see what is enabled (bolded)** vs. what is disabled (not bolded) in these menus
 
 [![.img/step02a.png](.img/step02a.png)](#nolink)
 
@@ -142,7 +144,7 @@ E.g. 20191219_153405023.png
 
 * Five seconds after selecting a window, ShareX will take a screenshot of that window and save it to where you specified
    * New files will also show up in the ShareX program
-   * Think about using the time delay to open menus or perform actions before a screenshot is taken (seen below, a highlighted tooltip and a right-clicked menu was captured in the screenshot)
+   * **Think about using the time delay** to open menus or perform actions before a screenshot is taken (seen below, a highlighted tooltip and a right-clicked menu was captured in the screenshot)
 
 [![.img/step03b.png](.img/step03b.png)](#nolink)
 
@@ -163,12 +165,12 @@ E.g. 20191219_153405023.png
 [![.img/step04b.png](.img/step04b.png)](#nolink)
 
 * Immediately after you click "OK", ShareX will prompt you to pick a window area to start recording (you can abort with right-click)
-* Once you left-click on an area, ShareX will start recording until you press the "Stop" button (or keyboard hotkeys) on the lower-left side
+* Once you left-click on a chosen window, ShareX will start recording until you press the "Stop" button on the lower-left side (or use keyboard hotkey)
 
 [![.img/step04c.png](.img/step04c.png)](#nolink)
 
 * After you stop the recording, ShareX will take a few moments to process your animation and save it out as `*.gif` format
-* Watch my screen recording of deleting the first screenshot we took (right-click on thumbnail):
+* Watch my animated GIF recording of deleting the first screenshot we took (right-click on thumbnail):
 
 [![.img/step04d.gif](.img/step04d.gif)](#nolink)
 
@@ -187,7 +189,7 @@ E.g. 20191219_153405023.png
 [![.img/step05a.png](.img/step05a.png)](#nolink)
 
 * You will be prompted to pick a window area to start recording (you can abort with right-click)
-* Once you left-click on an area, ShareX will start recording until you press the "Stop" button (or keyboard hotkeys) on the lower-left side
+* Once you left-click on a chosen window, ShareX will start recording until you press the "Stop" button on the lower-left side (or use keyboard hotkey)
 * After you stop the recording, ShareX will take a few moments to process your video and save it out as `*.mp4` format
 
 [Back to Top](#table-of-contents)
@@ -212,12 +214,12 @@ E.g. 20191219_153405023.png
 
 --------------------------------------------------------------------------------------------------
 
-## Editing
+## 7. Next Steps
 
 * ShareX has some basic editing tools, but you may need more powerful programs to manipulate images, animated GIFs, and/or video
 * The following are free, open-source programs:
 
-**I highly recommend learning how to use `ffmpeg` in the command line, you can find my tutorial here: [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
+**I highly recommend learning how to use `ffmpeg` in the command line next, you can find my tutorial here: [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
 
 Program | Format | Image Manipulation | GIF Animation Manipulation & Transcoding | Video Transcoding
 --- | --- | --- | --- | ---
