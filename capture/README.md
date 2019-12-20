@@ -4,6 +4,8 @@
 
 # Introduction to Screen Capture
 
+**This is part of a two-tutorial series on capturing and transcoding videos: When you're done here, please see [7. Next Steps](#7-next-steps) to finish this series**
+
 * Estimated time to completion: 15 minutes.
 * This quick introduction to screen capturing is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
 * You are here because **you want to capture images and/or video from your computer screen** (e.g. for recording video gameplay, making tutorials, etc.).
@@ -35,8 +37,6 @@
 * This tutorial was developed on Microsoft Windows 10 and ShareX v13.0.1 Portable
    * **You must have administrative access on Windows**
    * ShareX is only available for Windows 7, 8.1, and 10
-
-**This is part of a two-tutorial series on capturing and transcoding videos, see [7. Next Steps](#7-next-steps) to finish this series**
 
 [Back to Top](#table-of-contents)
 
@@ -198,15 +198,18 @@ E.g. 20191219_153405023.png
 
 ## 6. Best Practices
 
-1. **Record at the highest quality that's appropriate for your audience**:
+### **6.1: Record at the highest quality that's appropriate for your audience**
+
    * AAA game replay for review; probably the best you can do
    * All text windows for hours long programming tutorial; find a balance between sufficient quality to read text clearly and file size
 
-2. **Clear your desktop and only show content on the screen that is relevant**
+### **6.2: Clear your desktop and only show content on the screen that is relevant**
+
    * You might be used to your working environment, but some people might get distracted looking at your nice wallpaper or snooping on your notifications
    * Having a dedicated video capture computer that only has the programs you need might be useful
 
-3. **KISS: "Keep it Short & Simple"**
+### **6.3: KISS ("Keep it Short & Simple")**
+
    * Plan out your content and rehearse: You have the opportunity to make a piece of media that is efficient, concise, and effective
    * Too many bloopers? Maybe you should break your content into smaller segments to reduce fatigue
 
@@ -219,7 +222,7 @@ E.g. 20191219_153405023.png
 * ShareX has some basic editing tools, but you may need more powerful programs to manipulate images, animated GIFs, and/or video
 * The following are free, open-source programs:
 
-**I highly recommend learning how to use `ffmpeg` in the command line next, you can find my tutorial here: [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
+**I highly recommend learning how to use the powerful `ffmpeg` program next: [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
 
 Program | Format | Image Manipulation | GIF Animation Manipulation & Transcoding | Video Transcoding
 --- | --- | --- | --- | ---

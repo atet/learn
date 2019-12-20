@@ -4,7 +4,7 @@
 
 # Introduction to Video Transcoding
 
-**This is part of a two-tutorial series on capturing and transcoding videos: I recommend to first finish [Atet's 15 minute Tutorial on Screen Capture](https://github.com/atet/learn/blob/master/capture/README.md#atet--learn--capture) to put the content here in better context**
+**This is part of a two-tutorial series on capturing and transcoding videos: I recommend to first finish [Atet's 15 Minute Tutorial on Screen Capture](https://github.com/atet/learn/blob/master/capture/README.md#atet--learn--capture) to put this content in better context**
 
 * Estimated time to completion: 15 minutes.
 * This quick introduction to video transcoding is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
