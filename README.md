@@ -1,4 +1,4 @@
-﻿# [atet](https://github.com/atet) / [**learn**](https://github.com/atet/learn)
+﻿# [atet](https://github.com/atet) / [**_learn_**](https://github.com/atet/learn)
 
 * Educational material I've authored for https://learn.athitkao.com:
    * [Introduction to Git](https://github.com/atet/learn/blob/master/git/README.md#atet--learn--git)
