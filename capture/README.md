@@ -171,7 +171,9 @@ E.g. 20191219_153405023.png
 [![.img/step04c.png](.img/step04c.png)](#nolink)
 
 * After you stop the recording, ShareX will take a few moments to process your animation and save it out as `*.gif` format
-* Watch my animated GIF recording of deleting the first screenshot we took (right-click on thumbnail):
+   * NOTE: Only use GIFs for low resolution and short \<10 sec. clips, otherwise make an MP4 video in the next section for longer and more detailed clips
+
+* Watch my animated GIF recording of deleting the screenshot we took earlier:
 
 [![.img/step04d.gif](.img/step04d.gif)](#nolink)
 
