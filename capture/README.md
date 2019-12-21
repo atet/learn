@@ -48,16 +48,16 @@
 * Download the Windows Portable version from GitHub: https://github.com/ShareX/ShareX/releases/download/v13.0.1/ShareX-portable.zip
    * Note: This link may break as new versions are released
 
-![.img/step01a.png](.img/step01a.png)(#nolink)
+[![.img/step01a.png](.img/step01a.png)](#nolink)
 
 * Make a new folder in `C:/Program Files` named `ShareX` (this requires administrative permission)
 
-![.img/step01b.png](.img/step01b.png)(#nolink)
+[![.img/step01b.png](.img/step01b.png)](#nolink)
 
 * Right-click on the downloaded `ShareX-portable.zip` file and "Extract All..." to the newly created "`C:\Program Files\ShareX`" (this requires administrative permission)
    * Select "Do this for all current items" if it's not selected
 
-![.img/step01c.png](.img/step01c.png)(#nolink)
+[![.img/step01c.png](.img/step01c.png)](#nolink)
 
 * Navigate to `ShareX.exe`, **right-click and "Run as administrator" (this is critical!)**
    * Some new directories must be made during the initial run (this requires administrative permission)
@@ -65,7 +65,7 @@
 [![.img/step01d.png](.img/step01d.png)](#nolink)
 
 * **Starting ShareX for the first time, you may get a warning window** that the pre-set ShareX keyboard hotkeys clash with ones already set on your system
-* Since ShareX relies on keyboard hotkeys to take a screenshot, start recording, etc., **you may want to remap those keys, or you can ignore this warning**
+* **Ignore this warning for now**, we will remap some keys in the next section
 
 [![.img/step01e.png](.img/step01e.png)](#nolink)
 
@@ -89,7 +89,7 @@
 
 * On the left-hand window pane, click on "Application settings..."
 * In the new window, on the left-hand side, click "Paths"
-* By default:
+* By default (your default may be different):
    * Files will save to: `C:\Users\<USERNAME>\Documents/ShareX\Screenshots\<YEAR>-<MONTH>\`
    * Filenames will be in the format of `<RANDOM FILENAME>.<FILE FORMAT>`
 * **Don't change anything right now, just remember where files will be saved**
@@ -122,7 +122,8 @@ E.g. 20191219_153405023.png
 
 * On the left-hand window pane, click on "Hotkey settings..."
 * By default, "Start/Stop screen recording (GIF)" is mapped to "CTRL + SHIFT + Print Screen"
-* Press the grey button to the right of "Start/Stop screen recording (GIF)" and **press on your keyboard "CTRL + SHIFT + S"**
+   * Press the grey button to the right of "Start/Stop screen recording (GIF)" and **press on your keyboard "CTRL + SHIFT + S"**
+* Remap any other hotkeys if necessary
 * Exit out of the window and you will see that this hotkey has changed in "Currently configure hotkeys"
 
 [![.img/step02b.gif](.img/step02b.gif)](#nolink)
@@ -200,13 +201,13 @@ E.g. 20191219_153405023.png
 
 ### **6.1: Record at the highest quality that's appropriate for your audience**
 
-   * AAA game replay for review; probably the best you can do
+   * AAA game replay for review; probably should record at the maximum quality you can do
    * All text windows for hours long programming tutorial; find a balance between sufficient quality to read text clearly and file size
 
 ### **6.2: Clear your desktop and only show content on the screen that is relevant**
 
    * You might be used to your working environment, but some people might get distracted looking at your nice wallpaper or snooping on your notifications
-   * Having a dedicated video capture computer that only has the programs you need might be useful
+   * Having a dedicated video capture computer that only has the programs you need
 
 ### **6.3: KISS ("Keep it Short & Simple")**
 
@@ -220,7 +221,7 @@ E.g. 20191219_153405023.png
 ## 7. Next Steps
 
 * ShareX has some basic editing tools, but you may need more powerful programs to manipulate images, animated GIFs, and/or video
-* The following are free, open-source programs:
+* The following are free, open-source programs that have advanced editing tools:
 
 **I highly recommend learning how to use the powerful `ffmpeg` program next: [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
 
