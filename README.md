@@ -2,6 +2,7 @@
 
 * Educational material I've authored for https://learn.athitkao.com:
    * [Introduction to Git](https://github.com/atet/learn/blob/master/git/README.md#atet--learn--git)
+   * [Introduction to Raspberry Pi](https://github.com/atet/learn/blob/master/raspberrypi/README.md#atet--learn--raspberrypi)
    * [Introduction to Regular Expressions](https://github.com/atet/learn/blob/master/regex/README.md#atet--learn--regex)
    * [Introduction to SQL](https://github.com/atet/learn/blob/master/sql/README.md#atet--learn--sql)
    * [Introduction to Screen Capture](https://github.com/atet/learn/blob/master/capture/README.md#atet--learn--capture)
