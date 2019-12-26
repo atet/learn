@@ -69,11 +69,36 @@
 
 ## 2. Preface
 
+### Stream Editor
+
+> "`sed` is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline)."
+>
+> [gnu.org](https://www.gnu.org/software/sed/manual/sed.html#Introduction)
+
+* Basically, `sed` can replace words with other words
+* When used in combination with `grep`, you can make a powerful [pipelines (commands "piped" together using "`|`")](https://www.gnu.org/software/bash/manual/html_node/Pipelines.html) that can quickly manipulate huge amounts of data
+
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
 ## 3. Basic Use
+
+### Prepare Environment
+
+* Let's make a new directory named `stream` to work in then download an example text file:
+
+```
+$ cd ~
+$ mkdir stream
+$ cd stream
+$ wget https://raw.githubusercontent.com/atet/learn/master/sed/data/hello.txt
+
+<A BUNCH OF WGET STATUS TEXT>
+
+$ ls
+hello.txt
+```
 
 [Back to Top](#table-of-contents)
 
@@ -136,7 +161,7 @@ Bash Reference Manual | https://www.gnu.org/software/bash/manual/bash.pdf
 
 Issue | Solution
 --- | ---
- | 
+I need more delimiters | https://stackoverflow.com/questions/33914360/what-delimiters-can-you-use-in-sed
 
 [Back to Top](#table-of-contents)
 
@@ -145,6 +170,7 @@ Issue | Solution
 ## Acknowledgments
 
 1. chuck.html is adapted from: <a href="https://en.wikipedia.org/wiki/Chuck_Norris_filmography" target="_blank">https://en.wikipedia.org/wiki/Chuck_Norris_filmography</a>
+2. chuck.txt is adapted from: <a href="https://chucknorrisfacts.net/top-100" target="_blank">https://chucknorrisfacts.net/top-100</a>
 
 [Back to Top](#table-of-contents)
 
