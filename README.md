@@ -6,6 +6,7 @@
    * [Introduction to Regular Expressions](https://github.com/atet/learn/blob/master/regex/README.md#atet--learn--regex)
    * [Introduction to SQL](https://github.com/atet/learn/blob/master/sql/README.md#atet--learn--sql)
    * [Introduction to Screen Capture](https://github.com/atet/learn/blob/master/capture/README.md#atet--learn--capture)
+   * [Introduction to Stream Editor](https://github.com/atet/learn/blob/master/sed/README.md#atet--learn--sed)
    * [Introduction to Tableau](https://github.com/atet/learn/blob/master/tableau/README.md#atet--learn--tableau)
    * [Introduction to Unity](https://github.com/atet/learn/blob/master/unity/README.md#atet--learn--unity)
    * [Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)
