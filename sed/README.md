@@ -25,7 +25,7 @@
 * [5. More `sed`](#5-more-sed)
 * [6. Tabular Data](#6-tabular-data)
 * [7. Bigger Data](#7-bigger-data)
-* [8. Experiment](#8-experiment)
+* [8. The Art of Troubleshooting](#8-the-art-of-troubleshooting)
 * [9. Next Steps](#9-next-steps)
 
 ### Supplemental
@@ -458,15 +458,54 @@ Title,Year,Actor,Executive Producer,Writer,Role
 The Wrecking Crew,1968,Y,N,N,Man in the House of 7 Joys (uncredited)
 ```
 
+### 6.9. Nice. You're done!
+
+* With the last step redirecting output to `chuck.csv`, you can open this file in a spreadsheet program like Microsoft Excel:
+
 [![.img/step06b.png](.img/step06b.png)](#nolink)
 
-**Congratulations! You've just performed your very first "webscraping", a very useful skill to have in your toolbelt**
+**Congratulations! You've just performed your very first ["webscraping"](https://en.wikipedia.org/wiki/Web_scraping), a very useful skill to have in your toolbelt in this era of big data**
+
+### 6.10. Piping
+
+* The above could be done in one step by creating a [pipeline](https://www.gnu.org/software/bash/manual/html_node/Pipelines.html); piping the output from one command into another
+   * The `wget` flag `-qO` will suppress the output of status information an makes the downloaded data ready to be piped into another command (does not save to file)
+   * Output file `chuck2.csv` below will be exactly the same as `chuck.csv`
+
+```
+$ wget -qO- https://raw.githubusercontent.com/atet/learn/master/sed/data/chuck.html | \
+  grep -i -e "</*table\|</*tr\|</*th\|</*td" | \
+  sed "s/^[\ \t]*//g" | \
+  tr -d '\n\r' | \
+  sed "s/<\/tr[^>]*>/\n/Ig" | \
+  sed "s/<\/*\(table\|tr\)>//Ig" | \
+  sed "s/^<t[dh]>\|<\/t[dh]>$//Ig" | \
+  sed "s/<\/t[dh]><t[dh]>/,/Ig" > \
+  chuck2.csv
+$ head -n 5 chuck2.csv
+Title,Year,Actor,Executive Producer,Writer,Role
+The Wrecking Crew,1968,Y,N,N,Man in the House of 7 Joys (uncredited)
+Way of the Dragon,1972,Y,N,N,Colt
+The Student Teachers,1973,Y,N,N,Karate Advisor (cameo)
+Yellow Faced Tiger,1974,Y,N,N,Chuck Slaughter
+```
+
+### 6.11. Cleanup
+
+* You can erase all `chuck` files by using a Bash wildcard "`*`"
+* Make sure none of the files are open in other programs, otherwise the files are "locked" and cannot be deleted
+
+```
+$ rm chuck*
+```
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
 ## 7. Bigger Data
+
+### 7.1. Downloading example data
 
 * Let's take a look at a bigger data set `movies.json`<sup>[[3]](##acknowledgments)</sup>, a file listing American movies in JavaScript object notation (JSON) format
 
@@ -475,21 +514,274 @@ $ wget https://raw.githubusercontent.com/atet/learn/master/sed/data/movies.json
 
 <A BUNCH OF WGET STATUS TEXT>
 
+$ head -c 100 movies.json
+[{"title":"After Dark in Central Park","year":1900,"cast":[],"genres":[]},{"title":"Boarding School
 ```
 
-* Similar to HTML, there is a specific structure a JSON file must adhere to
+### 7.2. JSON format
+
+* Similar to HTML, there is a specific structure a JSON file must adhere to for it to represent nested data:
+
+```
+[
+   {
+      "title":"After Dark in Central Park",
+      "year":1900,
+      "cast":[],
+      "genres":[]
+   },
+.
+.
+.
+   {
+      "title":"Destroyer",
+      "year":2018,
+      "cast":["Nicole Kidman","Tatiana Maslany","Sebastian Stan","Toby Kebbell","Scoot McNairy"],
+      "genres":["Crime","Thriller"]
+   }
+]
+```
+
+### 7.3. Goal
+
+* Fortunately, `movies.json` does not have complex structure and can easily be represented as a comma seprated value (CSV) format:
+
+```
+title,year,cast,genres
+After Dark in Central Park, 1900,,
+.
+.
+.
+Destroyer,2018,Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy,Crime;Thriller
+```
+
+**Just like parsing the Chuck Norris HTML table previously, this will require a few steps to massage the data around**
+
+### 7.4. Line breaks between rows
+
+* We can combine some steps here: Add a line break when we see "`},`" and also remove those characters
+
+```
+$ sed "s/},/\n/Ig" movies.json > movies2.json
+$ head -n 2 movies2.json
+[{"title":"After Dark in Central Park","year":1900,"cast":[],"genres":[]
+{"title":"Boarding School Girls' Pajama Parade","year":1900,"cast":[],"genres":[]
+```
+
+### 7.5. Remove extraneous JSON syntax
+
+* We will remove any extra "`[{`", "`}]`", "`{`", and "`"`" (quotation marks) that are not relevant in CSV format
+
+```
+$ sed "s/^\[{\|}\]$\|^{\|\"//Ig" movies2.json > movies3.json
+$ head -n 2 movies3.json
+title:After Dark in Central Park,year:1900,cast:[],genres:[]
+title:Boarding School Girls' Pajama Parade,year:1900,cast:[],genres:[]
+```
+
+### 7.6. Remove JSON headers
+
+* Unlike the HTML table we parsed earlier, we need to know a bit about the JSON structure
+* Take note of the header names in the file for a later step: "`title:`", "`year:`", "`cast:`", and "`genres:`"
+* We are going to delete the header names from each row along with the colon
+
+```
+$ sed "s/title\:\|year\:\|cast\:\|genres\://Ig" movies3.json > movies4.json
+$ head -n 2 movies4.json
+After Dark in Central Park,1900,[],[]
+Boarding School Girls' Pajama Parade,1900,[],[]
+```
+
+### 7.7. Check comma delimiters
+
+* Let's take a look at some later entries that have information in `cast` and/or `genre`
+
+```
+$ tail -n 1 movies4.json
+Destroyer,2018,[Nicole Kidman,Tatiana Maslany,Sebastian Stan,Toby Kebbell,Scoot McNairy],[Crime,Thriller]
+```
+
+* Looks like we'll have a problem with those "extra" commas that are separating multiple entries within `cast` or `genre`
+* Let's go ahead and find that pattern of info within the brackets and replace them with semicolons:
+
+```
+$ sed "s/\[.\+,.\+\]/;/Ig" movies4.json > movies5.json
+$ tail -n 1 movies5.json
+Destroyer,2018,;
+```
+
+* Oops, that just replaced the first content `sed` saw between brackets with a semicolon, basically seeing the entire `[Nicole...],[...Thriller]` as the pattern
+
+**Well, let's try to be clever and see if we can introduce the semicolons correctly**
+
+#### 7.7.1. Introduce line breaks
+
+* Introduce line breaks for every `[...]` entry
+
+```
+$ sed "s/\[/\n\[/Ig" movies4.json > movies5.json
+$ tail -n 3 movies5.json
+Destroyer,2018,
+[Nicole Kidman,Tatiana Maslany,Sebastian Stan,Toby Kebbell,Scoot McNairy],
+[Crime,Thriller]
+```
+
+#### 7.7.2. Substitute commas with semicolons in `cast` and `genre`
+
+* For every line that contains `]`, substitute all commas with semicolons
+
+```
+$ sed "/\[/ s/,/;/Ig" movies5.json > movies6.json
+$ tail -n 3 movies6.json
+Destroyer,2018,
+[Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy];
+[Crime;Thriller]
+```
+
+#### 7.7.3. Replace semicolon with comma
+
+* There's one comma that was substituted to a semicolon, do you see it after "`...McNairy];`"?
+* We must change that back to a comma because it delineates the information from `cast` and `genre` columns
+
+```
+$ sed "/\[/ s/];/],/Ig" movies6.json > movies7.json
+$ tail -n 3 movies7.json
+Destroyer,2018,
+[Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy],
+[Crime;Thriller]
+```
+
+#### 7.7.4. Remove line breaks
+
+* For every line that contains a terminal comma, remove newline to make the row a single line again
+* Remember like the previous section with `chuck.html`, when we remove newlines ("`\n`"), we need to use the program `tr` (translate)
+
+```
+$ tr -d '\n\r' < movies7.json > movies8.json
+$ tail -c 110 movies8.json
+rama]Destroyer,2018,[Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy],[Crime;Thriller]
+```
+
+#### 7.7.5. Reintroduce line breaks
+
+* Now that everything is in one line again, we need to break this file back into individual rows
+* Recall that the last column of information `genres` does **not** have a comma after the ending bracket "`]`", we can use this unique pattern to line break on:
+   1. We will have to use the "`-E`" flag for extended regex expressions
+   2. The context of "`^`" used between the brackets mean "match everything except comma", therefore "`\][^,]`" means right bracket with any character after it that is **not** a comma
+   3. The parenthesis combined with `\1` is ["back referencing", a very powerful feature](https://www.gnu.org/software/sed/manual/html_node/Back_002dreferences-and-Subexpressions.html) in which the characters within are required to match, but instead of replacing them, they can be used as part of the substitution
+
+```
+$ sed -E "s/\]([^,])/\]\n\\1/Ig" movies8.json > movies9.json
+$ tail -n 3 movies9.json
+Holmes and Watson,2018,[Will Ferrell;John C. Reilly;Rebecca Hall;Ralph Fiennes;Rob Brydon;Kelly Macdonald;Lauren Lapkus;Hugh Laurie],[Action;Mystery;Comedy]
+On the Basis of Sex,2018,[Felicity Jones;Armie Hammer;Justin Theroux;Jack Reynor;Cailee Spaeny;Sam Waterston;Kathy Bates],[Biography;Drama]
+Destroyer,2018,[Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy],[Crime;Thriller]
+```
+
+#### 7.7.6. Remove extraneous JSON syntax
+
+* Now that we're done using the brackets as markers for specific patterns, we can get rid of them (remove the `-E` flag for this)
+
+```
+$ sed "s/\[\|\]//Ig" movies9.json > movies10.json
+$ tail -n 1 movies10.json
+Destroyer,2018,Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy,Crime;Thriller
+```
+
+#### 7.7.7. Add back header
+
+* Remember the column headers from earlier: "`title`", "`year`", "`cast`", and "`genres`
+* We will use `sed` to put the headers back as the first line of the file: 
+
+```
+$ sed "1 i title,year,cast,genres" movies10.json > movies.csv
+$ head -n 10 movies.csv
+title,year,cast,genres
+After Dark in Central Park,1900,,
+```
+
+* Nice, now you can open this in a spreadsheet program:
+
+[![.img/step07a.png](.img/step07a.png)](#nolink)
+
+* Oh no! Some rows have more than four columns!
+* Let's check the source data to see what's going on:
+
+[![.img/step07b.png](.img/step07b.png)](#nolink)
+
+* Looks like some movie titles had commas in them (just like `cast` and `genre`) that we didn't account for
+
+**Looks like we have a bit more work to do...**
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-## 8. Experiment
+## 8. The Art of Troubleshooting
+
+**Before we get back to finishing the JSON conversion, a few words:**
+
+* In this tutorial, we want to go from raw HTML or JSON to a CSV file that can be easily viewed on spreadsheet software
+   * Data [munging (a.k.a. wrangling)](https://en.wikipedia.org/wiki/Data_wrangling) is the process of transforming raw data to something more useful for you
+* **This transformation process is never perfect**; you may have to perform a couple deep dives and a bunch of fine tuning before you get to your end product
+* Fortunately, the more experience you accumulate the easier and faster this process gets because you'll already know what common pitfalls to look out
+
+**Back to the show**
+
+* The issue we had with the JSON file is that `title` entries also had commas
+* There's a million ways we can tackle this, let's brainstorm a couple:
+   1. Go back to step [7.7. Check comma delimiters](#77-check-comma-delimiters) and add a step to look for commas in the `title` column?
+   2. Use a different delineation symbol than the comma?
+* Option #1 might work, but what about the commas already delineating the columns?
+* **Option #2 actually might work really well, let's try using tabs instead of commas**
+
+### 8.1. Tab delineation and piping
+
+* Let's change the column delineation to tabs ("`\t`") intead of commas and put all the different steps into a pipeline:
+
+```
+$ wget -qO- https://raw.githubusercontent.com/atet/learn/master/sed/data/movies.json | \
+  sed "s/},/\n/Ig" | \
+  sed "s/^\[{\|}\]$\|^{\|\"//Ig" | \
+  
+  ### Replace ",year:" , ",cast:" , and ",genre:" with a tab "\t"
+  sed "s/,year\:\|,cast\:\|,genres\:/\t/Ig" | \
+  
+  ### Remove "title:"
+  sed "s/title\://Ig" | \
+  
+  ### Now we can skip most of "7.7. Check comma delimiters"
+  sed "s/\[\|\]//Ig" | \
+  sed "1 i title\tyear\tcast\tgenres" > \
+  movies.tsv
+$ head -n 2 movies.tsv
+title   year    cast    genres
+After Dark in Central Park      1900
+```
+
+* Now let's check this tab separated value (TSV) file in a spreadsheet program:
+   * Microsoft Office: You have to open as "All Files" and use the Text Import Wizard:
+
+[![.img/step08a.png](.img/step08a.png)](#nolink)
+
+[![.img/step08b.png](.img/step08b.png)](#nolink)
+
+* Excellent! Looks like we successfully transformed the JSON file into a file we can view in a spreadsheet program
+
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
 ## 9. Next Steps
+
+* Data [munging (a.k.a. wrangling)](https://en.wikipedia.org/wiki/Data_wrangling) is an extensive topic that requires patience (as you've seen here) to work through troubleshooting
+* I would recommend going back to try [Atet's 15 Minute Introduction to Regular Expressions](https://github.com/atet/learn/blob/master/regex/README.md#atet--learn--regex) and this tutorial over again at least one more time
+* After getting a good handle on the flow of how commands and pipelines are assembled, check out other free, public data sets to flex your new skills:
+
+Data Set | Link
+--- | ---
+Curated Example Data Sets by Justin Dorfman | https://github.com/jdorfman/awesome-json-datasets
 
 [Back to Top](#table-of-contents)
 
@@ -501,6 +793,9 @@ Description | Link
 --- | ---
 `sed` Manual | https://www.gnu.org/software/sed/manual/sed.html
 Bash Reference Manual | https://www.gnu.org/software/bash/manual/bash.pdf
+`tr` Manual | https://www.gnu.org/software/coreutils/manual/html_node/tr-invocation.html#tr-invocation
+Pipelines in Bash | https://www.gnu.org/software/bash/manual/html_node/Pipelines.html
+Back Referencing in `sed` | https://www.gnu.org/software/sed/manual/html_node/Back_002dreferences-and-Subexpressions.html
 
 [Back to Top](#table-of-contents)
 
@@ -510,7 +805,7 @@ Bash Reference Manual | https://www.gnu.org/software/bash/manual/bash.pdf
 
 Issue | Solution
 --- | ---
-I need more delimiters | https://stackoverflow.com/questions/33914360/what-delimiters-can-you-use-in-sed
+I need more delimiters for `sed` | https://stackoverflow.com/questions/33914360/what-delimiters-can-you-use-in-sed
 
 [Back to Top](#table-of-contents)
 
