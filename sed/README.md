@@ -258,6 +258,9 @@ $ $ sed -e "s/ 1 / one /g" -e "s/ 2 / two /g" chuck.txt
 ## 6. Tabular Data
 
 * We can combine some regex syntax used in `grep` so that `sed` will recognize specific patterns to replace
+
+### 6.1. Downloading example data
+
 * Let's download the raw HTML code for a webpage that contains a table of information<sup>[[2]](#acknowledgments)</sup>:
 
 ```
@@ -279,12 +282,13 @@ $ head -n 10 chuck.html
 ```
 
 * If you haven't seen raw HTML code, it's basically a language of organized and nested elements that describe a webpage
-* Though the code above could be all in one line, it's industry standard to make it look a bit nice with line breaks and tab spacing
-* The HTML is ultimately instructions for your web browser to render a web page:
+* Though the HTML code above could all be in one line and still work, it's best practice to make it readable with line breaks and tab spacing for editing
+* This HTML code is ultimately instructions for your web browser to render it into a nice looking web page:
+   * Try opening `chuck.html` in your favorite web browser
 
 [![.img/step06a.png](.img/step06a.png)](#nolink)
 
-### HTML format
+### 6.2. HTML format
 
 * Looking back at the raw HTML, let's look at the meat of the HTML table:
    * The commands below first takes the first 35 lines of the file `chuck.html` with `head` then pipes it into `tail` to only output the last eight lines
@@ -302,7 +306,7 @@ $ head -n 35 chuck.html | tail -n 8
 ```
 
 * The table will have an entry for each movie with six columns of information
-* Let's look at another part of the table to see and example of a movie entry:
+* Let's look at another part of the table to see an example of a movie entry:
    * Instead of using `head` piped into `tail`, we will use `sed` to display a range of lines in the file
    * The commands below uses `sed` print control to output only lines 276 through 283
 
@@ -318,9 +322,9 @@ $ sed -n '276,283p' chuck.html
          </tr>
 ```
 
-### Goal
+### 6.3. Goal
 
-* Let's try converting the nested HTML table into comma separated value (CSV) format:
+* Let's try converting the nested HTML table from `chuck.html` into a comma separated value (CSV) format like this:
 
 ```
 Title,Year,Actor,Executive Producer,Writer,Role
@@ -330,22 +334,37 @@ Title,Year,Actor,Executive Producer,Writer,Role
 The Expendables 2,2012,Y,N,N,Booker "The Lone Wolf"
 ```
 
-* This will require a couple steps:
-   * Getting rid of a lot of standard HTML tags (e.g. "`<tr>`")
-   * Converting a multi-line, nested entry into a single line separated by commas
+* This will require a few steps:
+   * Extract only the table information
+   * Converting a multi-line, nested entry into a single line
+   * Introduce line breaks between table rows
+   * Remove standard HTML tags (e.g. "`<tr>`")
+   * Introduce commas between each cell of information in a row
 
-### Linearize
+### 6.4. Extract HTML table
 
-* You've seen that there is a specific structure that HTML tables must adhere to
+* If you've noticed, there is a specific structure that HTML tables must adhere to
 * We are going to use `grep` to only extract the lines that have relevant HTML table information:
    * HTML tags that define a table are `table`, `tr`, `th`, and `td`
    * Tags come in pairs, so a beginning and end of a table would be `<table>...</table>`
 
 ```
 $ grep -i -e "</*table\|</*tr\|</*th\|</*td" chuck.html > chuck2.html
+$ head -n 10 chuck2.html
+      <table>
+         <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Actor</th>
+            <th>Executive Producer</th>
+            <th>Writer</th>
+            <th>Role</th>
+         </tr>
+         <tr>
 ```
 
-* Let's breakdown the "`</*table\|...`" processing that is replaced by nothing (i.e. deletes this pattern)
+* Nice, we got rid of all the elements at the head of the file
+* Let's breakdown the `grep` syntax ("`</*table\|...`") that is matched and redirected into `chuck2.html`
 
 `grep` Syntax | Definition
 --- | ---
@@ -354,14 +373,25 @@ $ grep -i -e "</*table\|</*tr\|</*th\|</*td" chuck.html > chuck2.html
 `table` | Literal string "`table`", with "`grep -i`" makes it case insensitive
 `\\|` | Regex "or" (must be escaped with backslash)
 
-* Let's not modify the original source file; the HTML table-only code has been redirected to the new file `chuck2.html`
 * Let's get rid of all the nested spacing; nesting is always a leading set of spaces or tabs before each line
 
 ```
 $ sed "s/^[\ \t]*//g" chuck2.html > chuck3.html
+$ head -n 10 chuck3.html
+<table>
+<tr>
+<th>Title</th>
+<th>Year</th>
+<th>Actor</th>
+<th>Executive Producer</th>
+<th>Writer</th>
+<th>Role</th>
+</tr>
+<tr>
 ```
 
-* Let's breakdown the "`^[\ \t]*`" processing that is replaced by nothing (i.e. deletes this pattern)
+* Nice, we got rid of all the leading spaces/tabs
+* Let's breakdown the `sed` processing ("`^[\ \t]*`") that is replaced by nothing (i.e. deletes this pattern)
 
 `sed` Syntax | Definition
 --- | ---
@@ -371,37 +401,64 @@ $ sed "s/^[\ \t]*//g" chuck2.html > chuck3.html
 "`\t`" | Tab
 `*` | Quantifier zero or more
 
-* Let's remove all the newline-carriage returns (`\n\r`) and make all the text in a single line
-* We have to use another program called `tr` (translate) to read in `chuck3.html` make the deletion and redirect the output into `chuck4.html`
+### 6.5. Compress HTML to one line
+
+* Let's remove all the newline-carriage returns (`\n\r`) so we can convert the multi-line text to a single line
+* We must use another program called `tr` (translate) to read in `chuck3.html` make the deletion and redirect the output into `chuck4.html`
    * Remember, that all these different programs were made by different people; so the way files are read in may be different
 
 ```
 $ tr -d '\n\r' < chuck3.html > chuck4.html
+$ head -c 50 chuck4.html
+<table><tr><th>Title</th><th>Year</th><th>Actor</t
 ```
 
-* Replace `</tr>` with newline-carriage return:
+* Using `head` with the `-c` flag specifies the number of characters you want to see
+
+### 6.6. Line breaks between rows
+
+* Replace `</tr>` with newline:
 
 ```
-$ sed "s/<\/tr[^>]*>/\n\r/Ig" chuck4.html > chuck5.html
+$ sed "s/<\/tr[^>]*>/\n/Ig" chuck4.html > chuck5.html
+$ head -n 2 chuck5.html
+<table><tr><th>Title</th><th>Year</th><th>Actor</th><th>Executive Producer</th><th>Writer</th><th>Role</th>
+<tr><td>The Wrecking Crew</td><td>1968</td><td>Y</td><td>N</td><td>N</td><td>Man in the House of 7 Joys (uncredited)</td>
 ```
+
+### 6.7. Remove HTML tags
 
 * Remove `<table>` and `<tr>` tags:
 
 ```
-$ sed "s/<\/*\(table\|tr\)[^>]*>//Ig" chuck5.html > chuck6.html
+$ sed "s/<\/*\(table\|tr\)>//Ig" chuck5.html > chuck6.html
+$ head -n 2 chuck6.html
+<th>Title</th><th>Year</th><th>Actor</th><th>Executive Producer</th><th>Writer</th><th>Role</th>
+<td>The Wrecking Crew</td><td>1968</td><td>Y</td><td>N</td><td>N</td><td>Man in the House of 7 Joys (uncredited)</td>
 ```
 
-* Remove ^`<td>`, ^`<th>`, `</td>`$, `</th>`$:
+* Remove beginning of line "^`<td>`", "^`<th>`" (anchor `^`)
+* Remove end of line "`</td>`$", "`</th>`$" (anchor `$`):
 
 ```
-$ sed "s/^<t[dh][^>]*>\|<\/*t[dh][^>]*>$//Ig" chuck6.html > chuck7.html
+$ sed "s/^<t[dh]>\|<\/t[dh]>$//Ig" chuck6.html > chuck7.html
+$ head -n 2 chuck7.html
+Title</th><th>Year</th><th>Actor</th><th>Executive Producer</th><th>Writer</th><th>Role
+The Wrecking Crew</td><td>1968</td><td>Y</td><td>N</td><td>N</td><td>Man in the House of 7 Joys (uncredited)
 ```
 
-* Substitute `</td><td>` with comma:
+### 6.8. Add commas between columns
+
+* Substitute "`</th><th>`" and "`</td><td>`" with comma:
 
 ```
-$ sed "s/<\/t[dh][^>]*><t[dh][^>]*>/,/Ig" chuck7.html > chuck8.html
+$ sed "s/<\/t[dh]><t[dh]>/,/Ig" chuck7.html > chuck.csv
+$ head -n 2 chuck.csv
+Title,Year,Actor,Executive Producer,Writer,Role
+The Wrecking Crew,1968,Y,N,N,Man in the House of 7 Joys (uncredited)
 ```
+
+[![.img/step06b.png](.img/step06b.png)](#nolink)
 
 **Congratulations! You've just performed your very first "webscraping", a very useful skill to have in your toolbelt**
 
@@ -410,6 +467,17 @@ $ sed "s/<\/t[dh][^>]*><t[dh][^>]*>/,/Ig" chuck7.html > chuck8.html
 --------------------------------------------------------------------------------------------------
 
 ## 7. Bigger Data
+
+* Let's take a look at a bigger data set `movies.json`<sup>[[3]](##acknowledgments)</sup>, a file listing American movies in JavaScript object notation (JSON) format
+
+```
+$ wget https://raw.githubusercontent.com/atet/learn/master/sed/data/movies.json
+
+<A BUNCH OF WGET STATUS TEXT>
+
+```
+
+* Similar to HTML, there is a specific structure a JSON file must adhere to
 
 [Back to Top](#table-of-contents)
 
@@ -450,8 +518,9 @@ I need more delimiters | https://stackoverflow.com/questions/33914360/what-delim
 
 ## Acknowledgments
 
-1. chuck.txt is adapted from: <a href="https://chucknorrisfacts.net/top-100" target="_blank">https://chucknorrisfacts.net/top-100</a>
-2. chuck.html is adapted from: <a href="https://en.wikipedia.org/wiki/Chuck_Norris_filmography" target="_blank">https://en.wikipedia.org/wiki/Chuck_Norris_filmography</a>
+1. `chuck.txt` is adapted from: <a href="https://chucknorrisfacts.net/top-100" target="_blank">https://chucknorrisfacts.net/top-100</a>
+2. `chuck.html` is adapted from: <a href="https://en.wikipedia.org/wiki/Chuck_Norris_filmography" target="_blank">https://en.wikipedia.org/wiki/Chuck_Norris_filmography</a>
+3. `movies.json` is a list of American movies scraped from Wikipedia by [Peter Rust](https://github.com/prust): <a href="https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json" target="_blank">https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json</a> 
 
 [Back to Top](#table-of-contents)
 
