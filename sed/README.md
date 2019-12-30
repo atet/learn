@@ -216,7 +216,7 @@ $ sed -e "/1./ s/Chuck/Charles/" -ne "s/2/two/p" chuck.txt
 two. Death once had a near-Chuck-Norris experience.
 ```
 
-* Oops, didn't mean to change "`2.`" to `two` on the second line, need to be more specific with that second chained command:
+* Oops, we didn't mean to change "`2.`" to `two` on the second line, need to be more specific with that second chained command:
 
 ```
 $ sed -e "/1./ s/Chuck/Charles/" -ne "/1./ s/2/two/p" chuck.txt
@@ -231,7 +231,7 @@ one. Chuck Norris can kill two stones with one bird.
 two. Death once had a near-Chuck-Norris experience.
 ```
 
-* Oops, didn't want to change the line numbers such as "`1.`" into text
+* Oops, we didn't want to change the line numbers such as "`1.`" into text
 * Let's add spaces before and after what we want to match to help make our pattern a bit more specific:
    * E.g. "`1.`" doesn't have a space before or after, so it shouldn't match
 
@@ -240,7 +240,7 @@ $ sed -e "s/ 1 /one/g" -ne "s/ 2 /two/gp" chuck.txt
 1. Chuck Norris can killtwostones withonebird.
 ```
 
-* Almost, just forgot to add spaces before and after the substitution:
+* We almost got it, just forgot to add spaces before and after the substitution:
 
 ```
 $ $ sed -e "s/ 1 / one /g" -e "s/ 2 / two /g" chuck.txt
@@ -347,6 +347,7 @@ The Expendables 2,2012,Y,N,N,Booker "The Lone Wolf"
 * We are going to use `grep` to only extract the lines that have relevant HTML table information:
    * HTML tags that define a table are `table`, `tr`, `th`, and `td`
    * Tags come in pairs, so a beginning and end of a table would be `<table>...</table>`
+   * Some tags that are not relevant to the end goal are not `grep`'ed over (e.g. `<head>`, `<style>`, etc. seen earlier in [6.1. Downloading example data](#61-downloading-example-data))
 
 ```
 $ grep -i -e "</*table\|</*tr\|</*th\|</*td" chuck.html > chuck2.html
@@ -376,7 +377,7 @@ $ head -n 10 chuck2.html
 * Let's get rid of all the nested spacing; nesting is always a leading set of spaces or tabs before each line
 
 ```
-$ sed "s/^[\ \t]*//g" chuck2.html > chuck3.html
+$ sed "s/^[ \t]*//g" chuck2.html > chuck3.html
 $ head -n 10 chuck3.html
 <table>
 <tr>
@@ -391,21 +392,20 @@ $ head -n 10 chuck3.html
 ```
 
 * Nice, we got rid of all the leading spaces/tabs
-* Let's breakdown the `sed` processing ("`^[\ \t]*`") that is replaced by nothing (i.e. deletes this pattern)
+* Let's breakdown the `sed` processing ("`^[ \t]*`") that is replaced by nothing (i.e. deletes this pattern)
 
 `sed` Syntax | Definition
 --- | ---
 `^` | Anchor at the beginning of the line
 `[` `]` | Anything between this can be matched
-"`\ `" | Space
+"` `" | Literal space
 "`\t`" | Tab
 `*` | Quantifier zero or more
 
 ### 6.5. Compress HTML to one line
 
-* Let's remove all the newline-carriage returns (`\n\r`) so we can convert the multi-line text to a single line
-* We must use another program called `tr` (translate) to read in `chuck3.html` make the deletion and redirect the output into `chuck4.html`
-   * Remember, that all these different programs were made by different people; so the way files are read in may be different
+* Let's remove all the line breaks in the file (a.k.a. newline-carriage returns a.k.a. "`\n\r`") so we can convert the multi-line text to a single line
+* We must use another program called `tr` (translate) to read in `chuck3.html`, make the deletion of newlines, and redirect the output into `chuck4.html`
 
 ```
 $ tr -d '\n\r' < chuck3.html > chuck4.html
@@ -414,13 +414,17 @@ $ head -c 50 chuck4.html
 ```
 
 * Using `head` with the `-c` flag specifies the number of characters you want to see
+* Remember, all these different programs were made by different people; so the way files are read in may be different: 
+   * `sed COMMAND INPUT_FILE > OUTPUT_FILE`
+   * `tr COMMANDS < INPUT_FILE > OUTPUT_FILE`
+   * Notice the use of "`<`" to input a file in `tr` but not used in `sed`
 
 ### 6.6. Line breaks between rows
 
 * Replace `</tr>` with newline:
 
 ```
-$ sed "s/<\/tr[^>]*>/\n/Ig" chuck4.html > chuck5.html
+$ sed "s/<\/tr[^>]*>/\n/g" chuck4.html > chuck5.html
 $ head -n 2 chuck5.html
 <table><tr><th>Title</th><th>Year</th><th>Actor</th><th>Executive Producer</th><th>Writer</th><th>Role</th>
 <tr><td>The Wrecking Crew</td><td>1968</td><td>Y</td><td>N</td><td>N</td><td>Man in the House of 7 Joys (uncredited)</td>
@@ -431,7 +435,7 @@ $ head -n 2 chuck5.html
 * Remove `<table>` and `<tr>` tags:
 
 ```
-$ sed "s/<\/*\(table\|tr\)>//Ig" chuck5.html > chuck6.html
+$ sed "s/<\/*\(table\|tr\)>//g" chuck5.html > chuck6.html
 $ head -n 2 chuck6.html
 <th>Title</th><th>Year</th><th>Actor</th><th>Executive Producer</th><th>Writer</th><th>Role</th>
 <td>The Wrecking Crew</td><td>1968</td><td>Y</td><td>N</td><td>N</td><td>Man in the House of 7 Joys (uncredited)</td>
@@ -441,7 +445,7 @@ $ head -n 2 chuck6.html
 * Remove end of line "`</td>`$", "`</th>`$" (anchor `$`):
 
 ```
-$ sed "s/^<t[dh]>\|<\/t[dh]>$//Ig" chuck6.html > chuck7.html
+$ sed "s/^<t[dh]>\|<\/t[dh]>$//g" chuck6.html > chuck7.html
 $ head -n 2 chuck7.html
 Title</th><th>Year</th><th>Actor</th><th>Executive Producer</th><th>Writer</th><th>Role
 The Wrecking Crew</td><td>1968</td><td>Y</td><td>N</td><td>N</td><td>Man in the House of 7 Joys (uncredited)
@@ -452,7 +456,7 @@ The Wrecking Crew</td><td>1968</td><td>Y</td><td>N</td><td>N</td><td>Man in the 
 * Substitute "`</th><th>`" and "`</td><td>`" with comma:
 
 ```
-$ sed "s/<\/t[dh]><t[dh]>/,/Ig" chuck7.html > chuck.csv
+$ sed "s/<\/t[dh]><t[dh]>/,/g" chuck7.html > chuck.csv
 $ head -n 2 chuck.csv
 Title,Year,Actor,Executive Producer,Writer,Role
 The Wrecking Crew,1968,Y,N,N,Man in the House of 7 Joys (uncredited)
@@ -477,10 +481,10 @@ $ wget -qO- https://raw.githubusercontent.com/atet/learn/master/sed/data/chuck.h
   grep -i -e "</*table\|</*tr\|</*th\|</*td" | \
   sed "s/^[\ \t]*//g" | \
   tr -d '\n\r' | \
-  sed "s/<\/tr[^>]*>/\n/Ig" | \
-  sed "s/<\/*\(table\|tr\)>//Ig" | \
-  sed "s/^<t[dh]>\|<\/t[dh]>$//Ig" | \
-  sed "s/<\/t[dh]><t[dh]>/,/Ig" > \
+  sed "s/<\/tr[^>]*>/\n/g" | \
+  sed "s/<\/*\(table\|tr\)>//g" | \
+  sed "s/^<t[dh]>\|<\/t[dh]>$//g" | \
+  sed "s/<\/t[dh]><t[dh]>/,/g" > \
   chuck2.csv
 $ head -n 5 chuck2.csv
 Title,Year,Actor,Executive Producer,Writer,Role
@@ -507,7 +511,7 @@ $ rm chuck*
 
 ### 7.1. Downloading example data
 
-* Let's take a look at a bigger data set `movies.json`<sup>[[3]](##acknowledgments)</sup>, a file listing American movies in JavaScript object notation (JSON) format
+* Let's take a look at a bigger data set `movies.json`<sup>[[3]](##acknowledgments)</sup>, a file listing 28,794 American movies in JavaScript object notation (JSON) format
 
 ```
 $ wget https://raw.githubusercontent.com/atet/learn/master/sed/data/movies.json
@@ -562,7 +566,7 @@ Destroyer,2018,Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot M
 * We can combine some steps here: Add a line break when we see "`},`" and also remove those characters
 
 ```
-$ sed "s/},/\n/Ig" movies.json > movies2.json
+$ sed "s/},/\n/g" movies.json > movies2.json
 $ head -n 2 movies2.json
 [{"title":"After Dark in Central Park","year":1900,"cast":[],"genres":[]
 {"title":"Boarding School Girls' Pajama Parade","year":1900,"cast":[],"genres":[]
@@ -573,7 +577,7 @@ $ head -n 2 movies2.json
 * We will remove any extra "`[{`", "`}]`", "`{`", and "`"`" (quotation marks) that are not relevant in CSV format
 
 ```
-$ sed "s/^\[{\|}\]$\|^{\|\"//Ig" movies2.json > movies3.json
+$ sed "s/^\[{\|}\]$\|^{\|\"//g" movies2.json > movies3.json
 $ head -n 2 movies3.json
 title:After Dark in Central Park,year:1900,cast:[],genres:[]
 title:Boarding School Girls' Pajama Parade,year:1900,cast:[],genres:[]
@@ -586,7 +590,7 @@ title:Boarding School Girls' Pajama Parade,year:1900,cast:[],genres:[]
 * We are going to delete the header names from each row along with the colon
 
 ```
-$ sed "s/title\:\|year\:\|cast\:\|genres\://Ig" movies3.json > movies4.json
+$ sed "s/title\:\|year\:\|cast\:\|genres\://g" movies3.json > movies4.json
 $ head -n 2 movies4.json
 After Dark in Central Park,1900,[],[]
 Boarding School Girls' Pajama Parade,1900,[],[]
@@ -605,7 +609,7 @@ Destroyer,2018,[Nicole Kidman,Tatiana Maslany,Sebastian Stan,Toby Kebbell,Scoot 
 * Let's go ahead and find that pattern of info within the brackets and replace them with semicolons:
 
 ```
-$ sed "s/\[.\+,.\+\]/;/Ig" movies4.json > movies5.json
+$ sed "s/\[.\+,.\+\]/;/g" movies4.json > movies5.json
 $ tail -n 1 movies5.json
 Destroyer,2018,;
 ```
@@ -619,7 +623,7 @@ Destroyer,2018,;
 * Introduce line breaks for every `[...]` entry
 
 ```
-$ sed "s/\[/\n\[/Ig" movies4.json > movies5.json
+$ sed "s/\[/\n\[/g" movies4.json > movies5.json
 $ tail -n 3 movies5.json
 Destroyer,2018,
 [Nicole Kidman,Tatiana Maslany,Sebastian Stan,Toby Kebbell,Scoot McNairy],
@@ -631,7 +635,7 @@ Destroyer,2018,
 * For every line that contains `]`, substitute all commas with semicolons
 
 ```
-$ sed "/\[/ s/,/;/Ig" movies5.json > movies6.json
+$ sed "/\[/ s/,/;/g" movies5.json > movies6.json
 $ tail -n 3 movies6.json
 Destroyer,2018,
 [Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy];
@@ -644,7 +648,7 @@ Destroyer,2018,
 * We must change that back to a comma because it delineates the information from `cast` and `genre` columns
 
 ```
-$ sed "/\[/ s/];/],/Ig" movies6.json > movies7.json
+$ sed "/\[/ s/];/],/g" movies6.json > movies7.json
 $ tail -n 3 movies7.json
 Destroyer,2018,
 [Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy],
@@ -671,7 +675,7 @@ rama]Destroyer,2018,[Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;S
    3. The parenthesis combined with `\1` is ["back referencing", a very powerful feature](https://www.gnu.org/software/sed/manual/html_node/Back_002dreferences-and-Subexpressions.html) in which the characters within are required to match, but instead of replacing them, they can be used as part of the substitution
 
 ```
-$ sed -E "s/\]([^,])/\]\n\\1/Ig" movies8.json > movies9.json
+$ sed -E "s/\]([^,])/\]\n\\1/g" movies8.json > movies9.json
 $ tail -n 3 movies9.json
 Holmes and Watson,2018,[Will Ferrell;John C. Reilly;Rebecca Hall;Ralph Fiennes;Rob Brydon;Kelly Macdonald;Lauren Lapkus;Hugh Laurie],[Action;Mystery;Comedy]
 On the Basis of Sex,2018,[Felicity Jones;Armie Hammer;Justin Theroux;Jack Reynor;Cailee Spaeny;Sam Waterston;Kathy Bates],[Biography;Drama]
@@ -683,7 +687,7 @@ Destroyer,2018,[Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot 
 * Now that we're done using the brackets as markers for specific patterns, we can get rid of them (remove the `-E` flag for this)
 
 ```
-$ sed "s/\[\|\]//Ig" movies9.json > movies10.json
+$ sed "s/\[\|\]//g" movies9.json > movies10.json
 $ tail -n 1 movies10.json
 Destroyer,2018,Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy,Crime;Thriller
 ```
@@ -704,7 +708,7 @@ After Dark in Central Park,1900,,
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
 
-* Oh no! Some rows have more than four columns!
+* **Oh no!** Some rows have more than four columns!
 * Let's check the source data to see what's going on:
 
 [![.img/step07b.png](.img/step07b.png)](#nolink)
@@ -719,15 +723,6 @@ After Dark in Central Park,1900,,
 
 ## 8. The Art of Troubleshooting
 
-**Before we get back to finishing the JSON conversion, a few words:**
-
-* In this tutorial, we want to go from raw HTML or JSON to a CSV file that can be easily viewed on spreadsheet software
-   * Data [munging (a.k.a. wrangling)](https://en.wikipedia.org/wiki/Data_wrangling) is the process of transforming raw data to something more useful for you
-* **This transformation process is never perfect**; you may have to perform a couple deep dives and a bunch of fine tuning before you get to your end product
-* Fortunately, the more experience you accumulate the easier and faster this process gets because you'll already know what common pitfalls to look out
-
-**Back to the show**
-
 * The issue we had with the JSON file is that `title` entries also had commas
 * There's a million ways we can tackle this, let's brainstorm a couple:
    1. Go back to step [7.7. Check comma delimiters](#77-check-comma-delimiters) and add a step to look for commas in the `title` column?
@@ -741,17 +736,17 @@ After Dark in Central Park,1900,,
 
 ```
 $ wget -qO- https://raw.githubusercontent.com/atet/learn/master/sed/data/movies.json | \
-  sed "s/},/\n/Ig" | \
-  sed "s/^\[{\|}\]$\|^{\|\"//Ig" | \
+  sed "s/},/\n/g" | \
+  sed "s/^\[{\|}\]$\|^{\|\"//g" | \
   
   ### Replace ",year:" , ",cast:" , and ",genre:" with a tab "\t"
-  sed "s/,year\:\|,cast\:\|,genres\:/\t/Ig" | \
+  sed "s/,year\:\|,cast\:\|,genres\:/\t/g" | \
   
   ### Remove "title:"
-  sed "s/title\://Ig" | \
+  sed "s/title\://g" | \
   
   ### Now we can skip most of "7.7. Check comma delimiters"
-  sed "s/\[\|\]//Ig" | \
+  sed "s/\[\|\]//g" | \
   sed "1 i title\tyear\tcast\tgenres" > \
   movies.tsv
 $ head -n 2 movies.tsv
@@ -759,24 +754,36 @@ title   year    cast    genres
 After Dark in Central Park      1900
 ```
 
-* Now let's check this tab separated value (TSV) file in a spreadsheet program:
-   * Microsoft Office: You have to open as "All Files" and use the Text Import Wizard:
+### 8.2. Viewing TSV files
+
+* Now let's check this tab separated value (TSV) file in a spreadsheet program
+* Microsoft Office may not have TSV as a recognized file type; you may have to open as "All Files" and use the Text Import Wizard to specify tabs as the separator:
 
 [![.img/step08a.png](.img/step08a.png)](#nolink)
 
 [![.img/step08b.png](.img/step08b.png)](#nolink)
 
-* Excellent! Looks like we successfully transformed the JSON file into a file we can view in a spreadsheet program
-
+**Excellent! Looks like we successfully transformed the JSON file into a file we can view in a spreadsheet program**
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-## 9. Next Steps
+## 9. Epilogue
+
+* In this tutorial, we want to go from raw HTML or JSON to a CSV file that can be easily viewed on spreadsheet software
+   * Data [munging (a.k.a. wrangling)](https://en.wikipedia.org/wiki/Data_wrangling) is the process of transforming raw data to something more useful for you
+* **This transformation process is never perfect**; you may have to perform a couple deep dives and a bunch of fine tuning before you get to your end product
+* Fortunately, the more experience you accumulate the easier and faster this process gets because you'll already know what common pitfalls to look out
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+## 10. Next Steps
 
 * Data [munging (a.k.a. wrangling)](https://en.wikipedia.org/wiki/Data_wrangling) is an extensive topic that requires patience (as you've seen here) to work through troubleshooting
-* I would recommend going back to try [Atet's 15 Minute Introduction to Regular Expressions](https://github.com/atet/learn/blob/master/regex/README.md#atet--learn--regex) and this tutorial over again at least one more time
+* I would recommend going back to try [Atet's 15 Minute Introduction to Regular Expressions](https://github.com/atet/learn/blob/master/regex/README.md#atet--learn--regex) and this tutorial over again at least one more time to cement these concepts
 * After getting a good handle on the flow of how commands and pipelines are assembled, check out other free, public data sets to flex your new skills:
 
 Data Set | Link
