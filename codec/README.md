@@ -93,8 +93,8 @@
 
 * We will use a short video file and an audio file in this tutorial
 * Make a new folder on your desktop called "Example" and download the following two files there:
-   * Video<sup>[[1]](#acknowledgments)</sup>: [Ferris Wheel - 18386.mp4](https://pixabay.com/videos/download/video-18386_large.mp4?attachment)
-   * Audio<sup>[[2]](#acknowledgments)</sup>: [Chuzausen_-\_06\_-_Raro_Bueno.mp3](https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Enough_Records/Chuzausen/Awesome_Is_Grey/Chuzausen_-_06_-_Raro_Bueno.mp3)
+   * Video<sup>[[1]](#acknowledgments)</sup>: [Ferris Wheel - 18386.mp4](https://github.com/atet/learn/blob/master/codec/.video/Ferris%20Wheel%20-%2018386.mp4)
+   * Audio<sup>[[2]](#acknowledgments)</sup>: [Chuzausen_-\_06\_-_Raro_Bueno.mp3](https://github.com/atet/learn/blob/master/codec/.video/Chuzausen_-_06_-_Raro_Bueno.mp3)
 * **Remember the path to this folder, e.g. `C:\Users\<USERNAME>\Desktop\Example`**
 
 [![.img/step02a.png](.img/step02a.png)](#nolink)
