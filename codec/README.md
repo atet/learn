@@ -246,7 +246,7 @@ Threads | Processing FPS | Time Elapsed (sec.) | Command
 4 | 8.1 | **137 (25% less time)** | `ffmpeg -i "From The Air - 9798.mp4" -s 1920x1080 -threads 4 "test.mp4"`
 
 * Having 2x cores doesn't necessarily mean a 2x increase in video processing power, _but it will help_, so do your research if this is important to you
-* If you want to try this yourself, you can download the video here<sup>[[4]](#acknowledgments)</sup> (this is a big file @ 114 MB!): [From The Air - 9798.mp4](https://pixabay.com/videos/download/video-9798_large.mp4?attachment) 
+* If you want to try this yourself, you can download the video here<sup>[[4]](#acknowledgments)</sup> (this is a big file @ 99 MB!): [From The Air - 9798.mp4](https://github.com/atet/learn/blob/master/codec/.video/From%20The%20Air%20-%209798.mp4?raw=true) 
 
 ### **3: Bit Rate**
 
@@ -359,7 +359,7 @@ Transcoding | The process of decoding → reformatting → re-encoding a file (u
 4. Video: [From The Air - 9798.mp4](https://pixabay.com/videos/download/video-9798_large.mp4?attachment)
    * Attribution: [lukasbieri (Pixabay)](https://pixabay.com/users/lukasbieri-4664461/)
    * License: [Pixabay License](https://pixabay.com/service/license/): Free for commercial use, no attribution required
-   * File Size: 114 MB
+   * File Size: 114 MB (Original), edited in this repos to 99 MB (GitHub file size limit)
    * Dimensions: 4096x2160
 
 <a href="" target="_blank"></a>
