@@ -227,7 +227,7 @@ ffmpeg -y -i "output.mp4" -b:v 2000k -pass 1 -an -f mp4 NUL && ffmpeg -i "output
 ### **1: Containers**
 
 * Video files are just containers of streams (video, audio, subtitles, etc.)
-* You many need to package multiple audio or text streams for different language translations of spoken content
+* You may need to package multiple audio or text streams for different language translations of spoken content
 * Below to the left is a representation of a generic file while the right describes the `output.mp4` container we made earlier: 
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
