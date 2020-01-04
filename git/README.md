@@ -6,7 +6,7 @@
 
 **_Git and run_ in 15 minutes**
 
-* This introduction to Git only covers what's absolute necessary to get you up and running
+* This introduction to Git only covers what's absolutely necessary to get you up and running
 * You are here because you want to use a [version control system (VCS)](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) to help manage your solo and/or team-based projects
 * We will use Git graphical user interface (GUI) and GitHub to perform basic operations; advanced material is not covered here
 
