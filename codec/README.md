@@ -6,10 +6,11 @@
 
 **This is part of a two-tutorial series on capturing and transcoding videos: I recommend to first finish [Atet's 15 Minute Tutorial on Screen Capture](https://github.com/atet/learn/blob/master/capture/README.md#atet--learn--capture) to put this content in better context**
 
-* Estimated time to completion: 15 minutes.
-* This quick introduction to video transcoding is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
-* You are here because **you want to efficiently reformat your videos to another specification** (e.g. for optimal YouTube uploading).
-* We will be using <a href="https://en.wikipedia.org/wiki/FFmpeg" target="_blank">ffmpeg</a> to perform basic operations; advanced material is not covered here.
+**Estimated time to completion: 15 minutes**
+
+* This introduction to video transcoding covers what's absolutely necessary to get you up and running
+* You are here because **you want to save time and hard drive space** by efficiently reformatting your videos
+* We will be using the free and open-source `ffmpeg` program to perform basic operations; advanced material is not covered here.
 
 --------------------------------------------------------------------------------------------------
 
@@ -47,17 +48,16 @@
 
 ## 1. Installation
 
-* We will use ffmpeg, a free, open-source command line interface (CLI) program for video transcoding: http://ffmpeg.org/download.html
-* Download the Windows 64-bit version (built for Windows by Zeranoe): https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-4.2.1-win64-static.zip
-   * Note: This link may break as new versions are released
+* We will use ffmpeg, a free, open-source command line interface (CLI) program for video transcoding
+* Download the latest Windows 64-bit version of `ffmpeg` (built for Windows by Zeranoe): https://ffmpeg.zeranoe.com/builds/
 
 ![.img/step01a.png](.img/step01a.png)(#nolink)
 
-* Extract the downloaded `ffmpeg-4.2.1-win64-static.zip` file to "`C:\Program Files`" (this requires administrative permission)
+* Extract the downloaded `ZIP` file to "`C:\Program Files`" (this requires administrative permission)
 
 ![.img/step01b.png](.img/step01b.png)(#nolink)
 
-* The critical file `ffmpeg.exe` should now be extracted to the path "`C:\Program Files\ffmpeg-4.2.1-win64-static\bin`"
+* The critical file `ffmpeg.exe` should now be extracted to the path "`C:\Program Files\ffmpeg-<VERSION>-win64-static\bin`"
    * **This program can only be used in Command Prompt**, a.k.a. the command line interface (CLI) for Windows
 
 [![.img/step01c.png](.img/step01c.png)](#nolink)
@@ -71,7 +71,7 @@
 
 * In the bottom window pane "System variables", click on the variable **Path** and click on Edit
 * Select "New" and new text entry will be added at the bottom of the list
-* Input the path to `ffmpeg.exe` that we extracted earlier: "`C:\Program Files\ffmpeg-4.2.1-win64-static\bin`"
+* Input the path to `ffmpeg.exe` that we extracted earlier: "`C:\Program Files\ffmpeg-<VERSION>-win64-static\bin`"
 * Click on OK to exit all of the windows
 
 [![.img/step01e.png](.img/step01e.png)](#nolink)
