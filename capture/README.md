@@ -4,12 +4,11 @@
 
 # Introduction to Screen Capture
 
-**This is part of a two-tutorial series on capturing and transcoding videos: When you're done here, please see [7. Next Steps](#7-next-steps) to finish this series**
+**Estimated time to completion: 15 minutes**
 
-* Estimated time to completion: 15 minutes.
-* This quick introduction to screen capturing is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
-* You are here because **you want to capture images and/or video from your computer screen** (e.g. for recording video gameplay, making tutorials, etc.).
-* We will be using <a href="https://en.wikipedia.org/wiki/ShareX" target="_blank">ShareX</a> to perform basic operations; advanced material is not covered here.
+* This introduction to screen capturing covers what's absolutely necessary to get you up and running
+* You are here because **you want to capture video** for screencasts, recording gameplay, making tutorials, etc.
+* We will be using the free and open-source ShareX program to perform basic operations; advanced material is not covered here
 
 --------------------------------------------------------------------------------------------------
 
@@ -44,9 +43,8 @@
 
 ## 1. Installation
 
-* We will use ShareX, a free, open-source graphical user interface (GUI) program for screen capturing: https://getsharex.com/downloads/
-* Download the Windows Portable version from GitHub: https://github.com/ShareX/ShareX/releases/download/v13.0.1/ShareX-portable.zip
-   * Note: This link may break as new versions are released
+* We will use ShareX, a free, open-source graphical user interface (GUI) program for screen capturing
+* Download the latest Windows Portable version of ShareX from GitHub: https://github.com/ShareX/ShareX/releases
 
 [![.img/step01a.png](.img/step01a.png)](#nolink)
 
@@ -222,10 +220,12 @@ E.g. 20191219_153405023.png
 
 ## 7. Next Steps
 
+**This is part of a two-tutorial series on capturing and transcoding videos: When you're done here, please see [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
+
 * ShareX has some basic editing tools, but you may need more powerful programs to manipulate images, animated GIFs, and/or video
 * The following are free, open-source programs that have advanced editing tools:
 
-**I highly recommend learning how to use the powerful `ffmpeg` program next: [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
+**I highly recommend learning how to use the powerful `ffmpeg` program next in [Atet's 15 Minute Introduction to Video Transcoding](https://github.com/atet/learn/blob/master/codec/README.md#atet--learn--codec)**
 
 Program | Format | Image Manipulation | GIF Animation Manipulation & Transcoding | Video Transcoding
 --- | --- | --- | --- | ---
