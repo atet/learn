@@ -4,10 +4,11 @@
 
 # Introduction to SQL
 
-* Estimated time to completion: 15 minutes.
-* This quick introduction to [Structured Query Language (SQL)](https://en.wikipedia.org/wiki/SQL) is meant to cover only the absolute necessary material to get you up and running in a minimal amount of time.
-* You are here because you want to use SQL to manage (view, extract, and/or manipulate) data in a [Relational Database Management System (RDMS)](https://en.wikipedia.org/wiki/Relational_database#RDBMS).
-* We will be using [SQLite](https://www.sqlite.org/index.html) to perform basic operations; advanced material is not covered here.
+**Estimated time to completion: 15 minutes**
+
+* This introduction to structured query language (SQL) covers what's absolutely necessary to get you up and running
+* You are here because you want to **manage data in a relational database management system (RDMS)**
+* We will be using [SQLite](https://www.sqlite.org/index.html) to perform basic operations; advanced material is not covered here
 
 --------------------------------------------------------------------------------------------------
 
@@ -36,8 +37,8 @@
 
 ## 0. Requirements
 
-* This tutorial was developed on Microsoft Windows 10.
-* SQLite and SQLiteStudio is also available for MacOS and Linux.
+* This tutorial was developed on Microsoft Windows 10 and SQLite Studio v3.2.1
+* SQLite and SQLiteStudio is also available for MacOS and Linux
 
 [Back to Top](#table-of-contents)
 
@@ -45,14 +46,13 @@
 
 ## 1. Installation
 
-* We will use SQLiteStudio, which is a Graphical User Interface (GUI) created for SQLite: [https://sqlitestudio.pl/index.rvt?act=download](https://sqlitestudio.pl/index.rvt?act=download)
-* Download the "Windows (portable), 32-bit" version: [https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/SQLiteStudio-3.2.1.zip](https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/SQLiteStudio-3.2.1.zip)
-   * Note: This link may break as new versions are released.
+* We will use SQLiteStudio, which is a Graphical User Interface (GUI) created for SQLite
+* Download the latest "Windows (portable), 32-bit" version: https://github.com/pawelsalawa/sqlitestudio/releases
 
 [![.img/step01a.png](.img/step01a.png)](#nolink)
 
-* Unzip the file find and run "SQLiteStudio.exe".
-* After choosing your language setting and you will be presented with your working environment.
+* Unzip the file find and run "SQLiteStudio.exe"
+* After choosing your language setting and you will be presented with your working environment
 
 [![.img/step01b.png](.img/step01b.png)](#nolink)
 
@@ -62,7 +62,7 @@
 
 ## 2. Example Data
 
-* We will use a small dataset of vehicles as an example<sup>[[1]](#acknowledgments)</sup>.
+* We will use a small dataset of vehicles as an example<sup>[[1]](#acknowledgments)</sup>
 * Click here for the dataset (right-click and "Save as..." then save as _mtcars.csv_): <a href="https://raw.githubusercontent.com/atet/learn/master/sql/data/mtcars.csv" target="_blank">https://raw.githubusercontent.com/atet/learn/master/sql/data/mtcars.csv</a>
 * This Comma Separated Values (CSV) file contains 32 records of vehicles and 12 attributes describing them (e.g. "id" = name, "mpg" = miles per gallon, etc.):
 
@@ -75,26 +75,26 @@
 ## 3. Loading Data
 
 * First, create a new _database_:
-   * Click on "Add a database" or CTRL+O
-   * Leave Database type as default SQLite 3
-   * Give your File a name, e.g. "testdb" (this will also be the database name)
-   * Click on OK
+   * Click on `Add a database`
+   * Leave `Database type` as default `SQLite 3`
+   * Give your `File` a name, e.g. "`testdb`" (this will also be the database name)
+   * Click on `OK`
    * **IMPORTANT: You must connect to this newly created _database_ to work on it**
 
 [![.img/step03a.png](.img/step03a.png)](#nolink)
 
-* Second, load the _mtcars.csv_ file as a new _table_ in the database:
+* Second, load the `mtcars.csv` file as a new _table_ in the database:
    * Note: A database can have multiple tables in it, analogous to an Excel workbook having multiple worksheets
-   * Select "Import"
-   * Give the incoming data a table name, (e.g. "mtcars")
-   * **IMPORTANT: Make sure you select "First line represents CSV column names"**
-   * Click Next
-   * Navigate to where you downloaded the _mtcars.csv_
-   * Click Finish
+   * Select `Import`
+   * Give the incoming data a table name, (e.g. "`mtcars`")
+   * **IMPORTANT: Make sure you select `First line represents CSV column names`**
+   * Click `Next`
+   * Navigate to where you downloaded the `mtcars.csv`
+   * Click `Finish`
 
 [![.img/step03b.png](.img/step03b.png)](#nolink)
 
-* You will get a console message that "_Imported data to the table 'mtcars' successfully._" and _mtcars_ is now seen in the hierarchy of the database you created.
+* You will get a console message that "`Imported data to the table 'mtcars' successfully.`" and `mtcars` is now seen in the hierarchy of the database you created
 
 [![.img/step03c.png](.img/step03c.png)](#nolink)
 
@@ -104,8 +104,8 @@
 
 ## 4. Navigation
 
-* You can view the imported _mtcars_ data in tabular format by selecting the table on the left-hand side, Data tab, and Grid view tab.
-* You will execute SQL queries when you select "Create a view".
+* You can view the imported `mtcars` data in tabular format by selecting the table on the left-hand side, `Data` tab, and `Grid view` tab
+* You will execute SQL queries when you select `Create a view`
 
 [![.img/step04a.png](.img/step04a.png)](#nolink)
 
@@ -115,17 +115,17 @@
 
 ## 5. Your First Query
 
-* Once you select "Create a view", a new bottom tab will appear for the new view.
-* We are going to make a view that basically selects all the data from the _mtcars_ table.
-   * Name the view "all"
+* Once you select `Create a view`, a new bottom tab will appear for the new view
+* We are going to make a view that basically selects all the data from the `mtcars` table
+   * Name the view "`all`"
    * In the text box, type out `SELECT * FROM mtcars;` (make sure you have the semicolon at the end)
-   * Press the green "Commit the view changes" button
-   * A confirmation window "Queries to be executed" will pop up, select OK
+   * Press the green `Commit the view changes` button
+   * A confirmation window "`Queries to be executed`" will pop up, select `OK`
 
 [![.img/step05a.png](.img/step05a.png)](#nolink)
 
-* You will get a console message that "_Committed changes for view 'all' (named before '') successfully._" and the _all_ view is now seen in the hierarchy of the database you created.
-* You can navigate this view as you would a regular table.
+* You will get a console message that "`_Committed changes for view 'all' (named before '') successfully._`" and the `all` view is now seen in the hierarchy of the database you created
+* You can navigate this view as you would a regular table
 
 [![.img/step05b.png](.img/step05b.png)](#nolink)
 
@@ -135,21 +135,21 @@
 
 ## 6. Data Manipulation Concept
 
-* The general concept is that you have data in your database **tables**, and you are generating a customized **view** that was manipulated by your queries.
+* The general concept is that you have data in your database **tables**, and you are generating a customized **view** that was manipulated by your queries
 
 **What did "`SELECT * FROM mtcars;`" mean?**
 
-* This query means that you want to `SELECT` all rows (and columns), this is represented by the wildcard `*` (asterisk), `FROM` table `mtcars`.
+* This query means that you want to `SELECT` all rows (and columns), this is represented by the wildcard `*` (asterisk), `FROM` table `mtcars`
 
 ```{sql}
 SELECT * FROM mtcars;
 ```
 
-* We are basically viewing everything from the _mtcars_ **table** in the _all_ **view**.
+* We are basically viewing everything from the `mtcars` **table** in the `all` **view**
 
-[![.img/step06.png](.img/step06.png)](#nolink)
-
-_**Figure 6.** Concept of `SELECT`ing everything. Basically, viewing the entire table._
+> [![.img/step06.png](.img/step06.png)](#nolink)
+> 
+> **Figure 6.** Concept of `SELECT`ing everything. Basically, viewing the entire table
 
 [Back to Top](#table-of-contents)
 
@@ -157,65 +157,66 @@ _**Figure 6.** Concept of `SELECT`ing everything. Basically, viewing the entire 
 
 ## 7. Data Manipulation Queries
 
-* We will go through four common data manipulation queries here.
+* We will go through four common data manipulation queries here
 
-### 7.a. Subsetting rows
+### 7.1. Subsetting rows
 
-* You can subset rows (a.k.a. observations) by their values.
+* You can subset rows (a.k.a. observations) by their values
 
 ```{sql}
 SELECT * FROM mtcars WHERE cyl >= "6";
 ```
 
-* E.g. Select vehicles that have six or more engine cylinders (column "cyl").
+* E.g. Select vehicles that have six or more engine cylinders (column "`cyl`")
 
-[![.img/step07a.png](.img/step07a.png)](#nolink)
+> [![.img/step07a.png](.img/step07a.png)](#nolink)
+> 
+> **Figure 7.1.** Only returning rows that meet some criteria
 
-_**Figure 7.a.** Only returning rows that meet some criteria._
+### 7.2. Subsetting columns
 
-### 7.b. Subsetting columns
-
-* You can subset only the columns (a.k.a. variables) that you need.
+* You can subset only the columns (a.k.a. variables) that you need
 
 ```{sql}
 SELECT id, mpg FROM mtcars;
 ```
 
-* E.g. Select only vehicle name (column "id") and fuel efficiency (column "mpg"), we don't need the rest of the columns.
+* E.g. Select only vehicle name (column "`id`") and fuel efficiency (column "`mpg`"), we don't need the rest of the columns
 
-[![.img/step07b.png](.img/step07b.png)](#nolink)
+> [![.img/step07b.png](.img/step07b.png)](#nolink)
+> 
+> **Figure 7.2.** Only returning required columns
 
-_**Figure 7.b.** Only returning required columns._
+### 7.3. Make new columns
 
-### 7.c. Make new columns
-
-* You can make new columns (a.k.a. variables) based on calculations.
+* You can make new columns (a.k.a. variables) based on calculations
 
 ```{sql}
 SELECT id, disp, (disp * 0.0164) AS disp2 FROM mtcars;
 ```
 
-* E.g. Add a new column _disp2_ that multiplies the _disp_ column (cubic inches) by 0.0164 to give displacement in liters. Show only columns _id_, _disp_, and new displacement in liters `AS` column _disp2_.
+* E.g. Add a new column `disp2` that multiplies the `disp` column (cubic inches) by 0.0164 to give displacement in liters
+* Show only columns `id`, `disp`, and new displacement in liters `AS` column `disp2`
 
-[![.img/step07c.png](.img/step07c.png)](#nolink)
+> [![.img/step07c.png](.img/step07c.png)](#nolink)
+> 
+> **Figure 7.3.** Add new columns with values calculated from other variables
 
-_**Figure 7.c.** Add new columns with values calculated from other variables._
+### 7.4. Summarize data
 
-### 7.d. Summarize data
-
-* You can summarize many observations into fewer values while making new columns based on calculations.
+* You can summarize many observations into fewer values while making new columns based on calculations
 
 ```{sql}
 SELECT cyl, AVG(disp) AS meandisp FROM mtcars GROUP BY cyl;
 ```
 
-* E.g. Mean (average) displacement for vehicles grouped by cylinder count.
-   * Fewer observations: Individual vehicles will be summarized by grouping them by cylinder count.
-   * New columns: Mean displacement.
+* E.g. Mean (average) displacement for vehicles grouped by cylinder count
+   * Fewer observations: Individual vehicles will be summarized by grouping them by cylinder count
+   * New columns: Mean displacement (`AS meandisp`)
 
-[![.img/step07d.png](.img/step07d.png)](#nolink)
-
-_**Figure 7.d.** Summarizing groups into fewer values and variables._
+> [![.img/step07d.png](.img/step07d.png)](#nolink)
+> 
+> **Figure 7.4.** Summarizing groups into fewer values and variables
 
 [Back to Top](#table-of-contents)
 
@@ -223,9 +224,9 @@ _**Figure 7.d.** Summarizing groups into fewer values and variables._
 
 ## 8. Experiment
 
-* Play around with the software, make new views.
-* Find new data on the internet and learn new ways to use SQL for your workflow.
-* If you are an Excel and/or R user, think about how your analysis workflow would be different using SQL.
+* Play around with the software, make new views
+* Find new data on the internet and learn new ways to use SQL for your workflow
+* If you are an Excel and/or R user, think about how your analysis workflow would be different using SQL
 * Resources:
 
 Description | Link
@@ -241,9 +242,9 @@ More Concepts | [https://javajee.com/basic-sql-concepts](https://javajee.com/bas
 
 ## Epilogue
 
-* Don't be discouraged: Professionals that work with data often spend more time munging/wrangling data than they do performing statistical analyses.
+* Don't be discouraged: Professionals that work with data often spend more time munging/wrangling data than they do performing statistical analyses
    * You can read about organizing, cleaning, and manipulating data (a.k.a. "munging" or "wrangling") here: [https://en.wikipedia.org/wiki/Data_wrangling](https://en.wikipedia.org/wiki/Data_wrangling)
-* _Really, don't be discouraged_: If you are just using SQL as a means to an end, know that there are highly-paid professionals that their primary responsibility is optimizing SQL queries.
+* _Really, don't be discouraged_: If you are just using SQL as a means to an end, know that there are highly-paid professionals that their primary responsibility is optimizing SQL queries
    * Check out: [https://www.google.com/search?q=SQL+Query+Optimization+Engineer+Jobs](https://www.google.com/search?q=SQL+Query+Optimization+Engineer+Jobs)
 
 [Back to Top](#table-of-contents)
@@ -252,7 +253,7 @@ More Concepts | [https://javajee.com/basic-sql-concepts](https://javajee.com/bas
 
 ## Troubleshooting
 
-* By downloading the "portable" version of SQLite in this tutorial, nothing gets installed on your system.
+* By downloading the "portable" version of SQLite in this tutorial, nothing gets installed on your system
 
 Task | Link
 --- | ---
@@ -265,7 +266,7 @@ Installation SQLite Tools for Command Line | [https://www.sqlitetutorial.net/dow
 ## SQLite vs. other SQL implementations
 
 * The SQL language has multiple implementations (e.g. SQLite, MySQL, MariaDB, etc.)
-* There can be many differences between these implementations ranging from capabilities to performance.
+* There can be many differences between these implementations ranging from capabilities to performance
 * You can read more about the details here: [https://stackoverflow.com/q/1326318](https://stackoverflow.com/q/1326318)
 
 [Back to Top](#table-of-contents)
