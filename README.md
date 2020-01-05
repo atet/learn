@@ -5,6 +5,7 @@
 * **IT and System Administration**
    1. [Introduction to Raspberry Pi](https://github.com/atet/learn/blob/master/raspberrypi/README.md#atet--learn--raspberrypi)
    2. [Introduction to Network Attached Storage](https://github.com/atet/learn/blob/master/nas/README.md#atet--learn--nas)
+   3. [Introduction to Virtualization](https://github.com/atet/learn/blob/master/virtual/README.md#atet--learn--virtual)
 * **Computer Science**
    1. [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
    2. [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
