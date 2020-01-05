@@ -1,4 +1,4 @@
-﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**_sql_**](https://github.com/atet/learn/tree/master/sql)
+﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn/blob/master/README.md#atet--learn) / [**_sql_**](https://github.com/atet/learn/blob/master/sql/README.md#atet--learn--sql)
 
 [![.img/logo_sqlite.png](.img/logo_sqlite.png)](#nolink)
 

@@ -1,4 +1,4 @@
-﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**_git_**](https://github.com/atet/learn/tree/master/git)
+﻿# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn/blob/master/README.md#atet--learn) / [**_git_**](https://github.com/atet/learn/blob/master/git/README.md#atet--learn--git)
 
 [![.img/logo_git.png](.img/logo_git.png)](#nolink)
 

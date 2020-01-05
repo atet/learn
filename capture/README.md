@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**_capture_**](https://github.com/atet/learn/tree/master/capture)
+# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn/blob/master/README.md#atet--learn) / [**_capture_**](https://github.com/atet/learn/blob/master/capture/README.md#atet--learn--capture)
 
 [![.img/logo_sharex.png](.img/logo_sharex.png)](#nolink)
 

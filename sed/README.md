@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**_sed_**](https://github.com/atet/learn/tree/master/sed)
+# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn/blob/master/README.md#atet--learn) / [**_sed_**](https://github.com/atet/learn/blob/master/sed/README.md#atet--learn--sed)
 
 [![.img/logo_sed.png](.img/logo_sed.png)](#nolink)
 

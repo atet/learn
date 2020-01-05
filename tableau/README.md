@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn) / [**_tableau_**](https://github.com/atet/learn/tree/master/tableau)
+# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn/blob/master/README.md#atet--learn) / [**_tableau_**](https://github.com/atet/learn/blob/master/tableau/README.md#atet--learn--tableau)
 
 [![.img/logo_tableau.png](.img/logo_tableau.png)](#nolink)
 
