@@ -102,7 +102,7 @@
 > [![.img/step03a.png](.img/step03a.png)](#nolink)
 
 
-* Unlike algebra homework, there are helpful differences in computer programming:
+* Unlike the algebra homework in the previous example, there are helpful differences in computer programming:
    * The computer will handle remembering what values each variable is assigned and performing any calculations
    * It is common practice to give variables descriptive names to distinguish them and help _you_ remember what they represent
 
@@ -139,7 +139,7 @@ print(var)
 
 * We touched a bit on operators in the previous section by using the assignment and multiplication operator
    * **Assignment operator**: Assigns a value to a variable
-      * You can use either "`=`" or "`<-`" in R
+      * Note: You can use either "`=`" or "`<-`" in R for assignment
    * **Mathematical operators**:
       Operator | Definition
       --- | ---
@@ -162,7 +162,7 @@ print(num1 - num2)
 
 ### **Relational Operators**
 
-* This class of operators encompass all the greater-than, less-than types
+* This class of operators encompass all the greater-than, less-than, and equals-to comparisons
 * Unlike mathematical operators, these will result in a **boolean** data type (can be either "`TRUE`" or "`FALSE`")
 
 Operator | Definition
@@ -174,6 +174,17 @@ Operator | Definition
 `==` | Equal to
 `!=` | Not equal to
 
+```r
+10 <= 1
+num1 = 10
+num2 = 1
+num1 > num2
+num1 == num2
+num1 != num2
+```
+
+[![.img/step04b.gif](.img/step04b.gif)](#nolink)
+
 ### **Logical Operators**
 
 * Piggybacking off the boolean results from relational operators, we can also compare `TRUE`/`FALSE` in logical operations
@@ -184,16 +195,31 @@ Operator | Definition
 `||` | "Or" at least one `TRUE`
 
 ```r
-!TRUE
 TRUE && TRUE
 TRUE && FALSE
-
+TRUE || TRUE
+TRUE || FALSE
 ```
+
+[![.img/step04c.gif](.img/step04c.gif)](#nolink)
+
+* We saw in the `!=` ("not equal to") relationship operator that the "`!`" means "not" a.k.a. "give me the opposite"
+* Remember that the relationship operators will give boolean results and those can be used with these logical operators
 
 Operator | Definition
 --- | ---
 `!` | "Not" gives the opposite
+`!TRUE` | `FALSE`
+`!FALSE` | `TRUE`
 
+```r
+num1 = 1
+num2 = 1
+num1 != num2
+!(num1 != num2)
+```
+
+[![.img/step04d.gif](.img/step04d.gif)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -237,9 +263,9 @@ print(tweet1[1])
 
 ### **List**
 
-* We see that this tweet is a named vector, but how do we store a collection of these complex variables types?
+* What if we need to store a collection of complex variables types?
 * Unfortunately, vectors cannot store other vectors
-* Fortunately, we can use **lists** and reference individual indices the same way we did with vectors:
+* Fortunately, we can use **lists** to store vectors (named and unnamed), and reference individual indices similarly:
    * Note: You must use double square brackets with **lists** instead of the single bracket with vectors
 
 ```r
@@ -277,6 +303,13 @@ print(c(1:10))
 
 **Now that we have mastered operators and data structures, let's combine what we've learned to make a powerful program**
 
+* Essentially loops will help you plow through a lot of data quickly
+* There are three essential parts to a loop:
+   * 
+   * 
+   * 
+
+* We'll imagine our intern spent all night collecting tweets into a list and we need to 
 
 
 [Back to Top](#table-of-contents)
@@ -286,7 +319,7 @@ print(c(1:10))
 ## 7. Epilogue
 
 * We have reviewed some of the critical building blocks needed for a strong foundation of computer science theory
-* These themes will echo in every programming languages and are components to even the most complex programs like
+* These themes will echo in every programming languages and are components to even the most complex programs like your favorite video game or 
 
 [Back to Top](#table-of-contents)
 
@@ -294,7 +327,8 @@ print(c(1:10))
 
 ## 8. Next Steps
 
-* I recommend going over this material one more time 
+* I recommend going over this material one more time to solidify these concepts
+* You can continue to use the same web-based programming environment as you continue into advanced concepts; **no need to distract yourself on installing things** right now
 
 [Back to Top](#table-of-contents)
 
