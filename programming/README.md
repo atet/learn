@@ -2,12 +2,12 @@
 
 [![.img/logo_r.png](.img/logo_r.png)](#nolink)
 
-# Introduction to Programming (INCOMPLETE)
+# Introduction to Programming
 
 **Estimated time to completion: 15 minutes**
 
-* This introduction to programming only covers what's absolutely necessary to get you up and running
-* You are here because you're tired of repetitive tasks that you know can be automated
+* This introduction to programming only covers what's absolutely necessary to get you up and running (no prior experience necessary)
+* You are here because **you're tired of repetitive tasks that you know can be automated**
 * We will be using **R Programming Language** to perform basic operations; advanced material is not covered here
 
 --------------------------------------------------------------------------------------------------
@@ -21,8 +21,8 @@
 * [2. Environment](#2-environment)
 * [3. Variables](#3-variables)
 * [4. Operators](#4-operators)
-* [5. Structures](#5-structures)
-* [6. Loops](#6-loops)
+* [5. Data Structures](#5-data-structures)
+* [6. Control Structures](#6-control-structures)
 * [7. Epilogue](#7-epilogue)
 * [8. Next Steps](#8-next-steps)
 
@@ -37,7 +37,7 @@
 
 **No prior programming experience necessary for this tutorial**
 
-* **You don't need to download or install anything**; we will be using a web-based programming environment in this tutorial<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
+* **You don't need to download or install anything**; we will be using a web-based programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
 * I recommend having these windows side-by-side during this tutorial:
 
 [![.img/step00.png](.img/step00.png)](#nolink)
@@ -48,15 +48,13 @@
 
 ## 1. Preface
 
-* Q: Is programming difficult?
-   * A: 
 * Q: Which language should I start my journey with?
-   * A: 
-   * Programming languages are more similar than they are different; they share the same foundation of **_computer science theory_**
+   * A: Start with the language that offers you immediate progress without being bogged down with installing and configuring stuff
+   * Programming languages are more similar than they are different; all share the same foundation of **_computer science theory_**
 * Q: So R language is the same as Python?
    * A: The underlying theory of how things work is the same, just different syntax
-   * e.g. The following line of code prints out "`Hello World!`" to the console in both R and Python languages:
-   ```
+   * Sometimes things are identical: The following code prints out "`Hello World!`" in both R and Python:
+   ```r
    print("Hello World!")
    ```
 
@@ -75,7 +73,7 @@
 
 ### **Console**
 
-> _Individual commands are run line-by-line after pressing **ENTER** on your keyboard (**Ignore the "context menu"** that appears while you type for now)_
+> _Individual commands are run line-by-line after pressing **ENTER** on your keyboard<br>**NOTE: Ignore the "context menu"** that appears while you type for now)_
 >
 > [![.img/step02a.gif](.img/step02a.gif)](#nolink)
 
@@ -117,7 +115,7 @@
 
 ### **Simple Variable Types**
 
-* The R language allows you to store different types of data such as **numbers** and **strings** (of characters)
+* The R language allows you to store different types of data such as **numbers** and **strings** (a.k.a. string of characters)
 * Run the following code in the R **script** area to see the variable `var` store a number then be overwritten with a string:
 
 ```r
@@ -163,7 +161,7 @@ print(num1 - num2)
 ### **Relational Operators**
 
 * This class of operators encompass all the greater-than, less-than, and equals-to comparisons
-* Unlike mathematical operators, these will result in a **boolean** data type (can be either "`TRUE`" or "`FALSE`")
+* Unlike mathematical operators, these will result in a **Boolean** data type (can be either "`TRUE`" or "`FALSE`")
 
 Operator | Definition
 --- | ---
@@ -187,7 +185,7 @@ num1 != num2
 
 ### **Logical Operators**
 
-* Piggybacking off the boolean results from relational operators, we can also compare `TRUE`/`FALSE` in logical operations
+* Piggybacking off the Boolean results from relational operators, we can also compare `TRUE`/`FALSE` in logical operations
 
 Operator | Definition
 --- | ---
@@ -204,7 +202,7 @@ TRUE || FALSE
 [![.img/step04c.gif](.img/step04c.gif)](#nolink)
 
 * We saw in the `!=` ("not equal to") relationship operator that the "`!`" means "not" a.k.a. "give me the opposite"
-* Remember that the relationship operators will give boolean results and those can be used with these logical operators
+* Remember that the relationship operators will give Boolean results and those can be used with these logical operators
 
 Operator | Definition
 --- | ---
@@ -225,9 +223,9 @@ num1 != num2
 
 --------------------------------------------------------------------------------------------------
 
-## 5. Structures
+## 5. Data Structures
 
-**Earlier, we've seen simple data types being stored in variables; now let's look at more complex data structures**
+**Earlier, we've seen simple number and string data types being stored in variables; now let's look at more complex data structures**
 
 ### **Vector**
 
@@ -242,12 +240,28 @@ print(vec[1])
 print(vec[3])
 ```
 
-[![.img/step06a.gif](.img/step06a.gif)](#nolink)
+[![.img/step05a.gif](.img/step05a.gif)](#nolink)
+
+### **Building a Vector**
+
+* We can easily add new data into a vector by including the previous vector in the new vector
+* Let's add some numbers in front of and at the end of an existing vector:
+
+```r
+vec = c(2, 3)
+print(vec)
+vec = c(1, vec)
+print(vec)
+vec = c(vec, 4)
+print(vec)
+```
+
+[![.img/step05b.gif](.img/step05b.gif)](#nolink)
 
 ### **Named Vector**
 
-* A vector of numbers doesn't sound too exciting, but let's imagine you have an intern transcribing your favorite Twitter tweets into R
-* We can extend vectors to giving each index a name (though you can still reference them by index number):
+* A vector of numbers doesn't sound too exciting, how about Twitter tweets?
+* Since there's a bit more complicated data with tweets, we can extend vectors to giving each index a name (can still reference by number):
    * Note: Try running the first half on the script side and the remainder on the console side
 
 ```r
@@ -259,14 +273,15 @@ print(tweet1["user"])
 print(tweet1[1])
 ```
 
-[![.img/step06b.gif](.img/step06b.gif)](#nolink)
+[![.img/step05c.gif](.img/step05c.gif)](#nolink)
 
 ### **List**
 
 * What if we need to store a collection of complex variables types?
-* Unfortunately, vectors cannot store other vectors
-* Fortunately, we can use **lists** to store vectors (named and unnamed), and reference individual indices similarly:
-   * Note: You must use double square brackets with **lists** instead of the single bracket with vectors
+* Unfortunately, vectors cannot store other vectors as seen in the Building a Vector section
+* **Lists** can store vectors by placing vectors between the parentheses of "`list()`"
+* Below, we will build a list of two named vectors and reference indices by name and number:
+   * Note: You must use double square brackets with **lists** and single brackets with vectors
 
 ```r
 tweet1 = c("user" = "atet",
@@ -279,9 +294,10 @@ tweets = list(tweet1, tweet2)
 print(tweets[[1]])
 print(tweets[[2]])
 print(tweets[[1]]["text"])
+print(tweets[[2]][3])
 ```
 
-[![.img/step06c.gif](.img/step06c.gif)](#nolink)
+[![.img/step05d.gif](.img/step05d.gif)](#nolink)
 
 ### **Data Range**
 
@@ -293,24 +309,118 @@ print(c(1,2,3,4,5,6,7,8,9,10))
 print(c(1:10))
 ```
 
-[![.img/step06d.gif](.img/step06d.gif)](#nolink)
+[![.img/step05e.gif](.img/step05e.gif)](#nolink)
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
-## 6. Loops
+## 6. Control Structures
 
-**Now that we have mastered operators and data structures, let's combine what we've learned to make a powerful program**
+**Earlier, we've used Booleans for comparisons; now let's use them to control what code will run**
 
-* Essentially loops will help you plow through a lot of data quickly
+### **Conditional Statements**
+
+* Booleans can also control what code will run in conditional statements
+* The example below shows an "`if`" conditional statement that executes only when the result within the `if()`'s parenthesis is `TRUE`:
+   * Note: You must use curly brackets ("`{}`") to surround the code that will run with a `TRUE` `if` statement
+
+```r
+tweet_count = 5
+
+if(tweet_count > 10){
+   print("That's a lot of tweets!")
+}
+
+tweet_count = tweet_count + 100
+
+if(tweet_count > 50){
+   print("Too many tweets!")
+}
+```
+
+* If we run the above code, we will see that only the second `if` statement executes ("`Too many tweets!`") since its condition was satisfied (`tweet_count` of 150 is greater than 50)
+* We can use "`else`" statements in conjunction, which execute only when the `if` condition is **not** satisfied
+
+```r
+tweet_count = 7
+
+if(tweet_count > 10){
+   print("That's a lot of tweets!")
+}else{
+   print("Get more tweets!")
+}
+```
+
+* These examples seem to be pretty benign, but maybe you'll have to use these control structures for something important one day:
+
+```r
+ants = 1000
+if(ants > 900){
+   print("Start exterminator program...")
+}
+```
+
+[![.img/step06a.gif](.img/step06a.gif)](#nolink)
+
+### **Loops**
+
+**Our final topic will combine data structures with conditional statements to produce a powerful programming tool**
+
+* Essentially loops will help you plow through a lot of data quickly by literally "looping" through code
+* It may help to think of loops conceptually rather than the actual code you see
 * There are three essential parts to a loop:
-   * 
-   * 
-   * 
+1. Initialization - Code that sets the starting parameters of a loop
+2. Condition - A condition that must be satisfied to continue the loop
+3. Body - Code that will execute if the condition remains TRUE
 
-* We'll imagine our intern spent all night collecting tweets into a list and we need to 
+[![.img/step06b.png](.img/step06b.png)](#nolink)
 
+* If we run the loop below, we see that the variable `this_index` continues to increment every loop iteration until it is no longer less than `last_index` and "`break`s" out of the loop
+* As the loop iterates, `this_index` increments and is used to print out different indices from the vector `words`
+ 
+```r
+words = c("Hello", "World", "!")
+this_index = 1
+last_index = 3
+repeat{
+   if(this_index > last_index){
+      break
+   }
+   print(words[this_index])
+   this_index = this_index + 1
+}
+print("Loop Done!")
+```
+
+[![.img/step06c.gif](.img/step06c.gif)](#nolink)
+
+[![.img/step06d.gif](.img/step06d.gif)](#nolink)
+
+* Computers work blazingly fast to our benefit; running the above loop finishes instantaneously
+* Let's see if we can push the limits by figuring out if 216,091 is a prime number (divisible only by 1 and itself)
+* We can do this by looping through integers 2 through 108,046 (about half of 216,091) and seeing if any of them divide cleanly without any remainder
+   * Note: We will use the modulus mathematical operator "`%%`" that will calculate any remainder from a division, e.g. `4 %% 2 = 0` while `5 %% 2 = 1`
+
+```r
+dividend = 216091
+divisor = 2
+repeat{
+   if(divisor > (dividend/2)){
+      print("I am a prime!!!")
+      break
+   }
+   if((dividend %% divisor) == 0){
+      print("I am not a prime.")
+      break
+   }
+   divisor = divisor + 1
+}
+```
+
+[![.img/step06e.gif](.img/step06e.gif)](#nolink)
+
+**Holy cow that was quick!** I don't know about you, but I wouldn't have wanted to perform 100,000 divisions even _with_ a calculator
 
 [Back to Top](#table-of-contents)
 
@@ -318,8 +428,11 @@ print(c(1:10))
 
 ## 7. Epilogue
 
-* We have reviewed some of the critical building blocks needed for a strong foundation of computer science theory
-* These themes will echo in every programming languages and are components to even the most complex programs like your favorite video game or 
+* We have reviewed the critical building blocks needed for a strong foundation of computer science theory
+* These themes will echo in every programming language and are components to even the most complex programs
+* Always remember: If you ever reach a roadblock, your answer is just a well-crafted Google search away:
+
+[![.img/ea.png](.img/ea.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -328,14 +441,19 @@ print(c(1:10))
 ## 8. Next Steps
 
 * I recommend going over this material one more time to solidify these concepts
-* You can continue to use the same web-based programming environment as you continue into advanced concepts; **no need to distract yourself on installing things** right now
+* You can continue to use the same web-based programming environment as you continue into advanced concepts; **no need to distract yourself with installing things** right now
+* 
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
 ## Other Languages
- 
+
+* Regardless of the difference in syntax between languages, they will all share a common theory of how things work
+* All languages will have variables, operators, data types, data structures, and control structures
+* Here's an example of the similarities and differences in three popular programming languages
+
 ### **R Syntax**
 
 > The words "`Hello World!`" are stored in the variable `greeting` and then "printed" out
@@ -348,7 +466,7 @@ print(c(1:10))
 
 ### **Python Syntax**
 
-> The exact same thing as above was performed, but Python has different syntax
+> The exact same thing as above was performed, but Python doesn't use `<-` as an assignment operator
 >
 > ```
 > >>> greeting = "Hello World!"
@@ -356,18 +474,15 @@ print(c(1:10))
 > Hello World!
 > ```
 
+### **JavaScript Syntax**
 
-
-
-* Play around with the software, make new worksheets with interesting visualizations.
-* Find new data on the internet and learn new ways to use Tableau.
-* If you are an Excel and/or R user, think about how your analysis workflow would be different using Tableau.
-* Resources:
-
-Description | Link
---- | ---
-Sample Data | <a href="https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources" target="_blank">https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources</a>
-How-To Videos | <a href="https://public.tableau.com/en-us/s/resources?qt-overview_resources=0#qt-overview_resources" target="_blank">https://public.tableau.com/en-us/s/resources?qt-overview_resources=0#qt-overview_resources</a>
+> The exact same thing as above was performed, but JavaScript has different syntax for printing to console
+>
+> ```
+> > greeting = "Hello World!"
+> > console.log(greeting)
+> Hello World!
+> ``
 
 [Back to Top](#table-of-contents)
 
