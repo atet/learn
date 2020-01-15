@@ -38,9 +38,6 @@
 **No prior programming experience necessary for this tutorial**
 
 * **You don't need to download or install anything**; we will be using a web-based programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
-* I recommend having these windows side-by-side during this tutorial:
-
-[![.img/step00.png](.img/step00.png)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -67,6 +64,10 @@
 **Let's get comfortable with your working environment for this tutorial**
 
 * Use your web browser to access the programming environment on my website<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
+* I recommend having these windows side-by-side during this tutorial:
+
+[![.img/step00.png](.img/step00.png)](#nolink)
+
 * The left side is the "**script**" and the right side is the "**console**"
 * You can use either side to program, but results will only be printed out on the **console** side
 * Now let's watch the following animations to see each side in action:
