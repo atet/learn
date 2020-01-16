@@ -7,8 +7,7 @@
 **Estimated time to completion: 15 minutes**
 
 * This introduction to programming only covers what's absolutely necessary to get you up and running (no prior experience necessary)
-* You are here because **you're tired of repetitive tasks that you know can be automated**
-* We will be using **R Programming Language** to perform basic operations; advanced material is not covered here
+* We will be using **R Programming Language** to learn the critical building blocks of computer science
 
 --------------------------------------------------------------------------------------------------
 
@@ -70,7 +69,8 @@
 
 * In this programming environment, the left side is the "**script**" and the right side is the "**console**"
 * You can use either side to program, but results will only be printed out on the **console** side
-* Now let's watch the following animations to see each side in action:
+* Now let's **watch the following animations** to see each side in action:
+   * Note: Every section has animated figures to help you with abstract concepts and guide you with coding
 
 ### **Console**
 
