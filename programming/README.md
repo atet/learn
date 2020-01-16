@@ -68,7 +68,7 @@
 
 [![.img/step00.png](.img/step00.png)](#nolink)
 
-* The left side is the "**script**" and the right side is the "**console**"
+* In this programming environment, the left side is the "**script**" and the right side is the "**console**"
 * You can use either side to program, but results will only be printed out on the **console** side
 * Now let's watch the following animations to see each side in action:
 
@@ -109,7 +109,7 @@
 >
 > [![.img/step03b.png](.img/step03b.png)](#nolink)
 
-* If you were to re-write the above computation line-by-line in the R **console** area, you will see that R will compute `height` multiplied by `width` for you when you print `area`:
+* If you were to re-write the above computation line-by-line in the R **console** area, you will see that R will automatically compute `height` multiplied by `width` for you when you print `area`:
    * Note: The multiplication symbol in programming is the asterisk "`*`" (SHIFT+8)
 
 [![.img/step03c.gif](.img/step03c.gif)](#nolink)
@@ -117,7 +117,7 @@
 ### **Simple Variable Types**
 
 * The R language allows you to store different types of data such as **numbers** and **strings** (a.k.a. string of characters)
-* Run the following code in the R **script** area to see the variable `var` store a number then be overwritten with a string:
+* Run the following code in the R **script** area to see the variable `var` store a number and then be overwritten with a string:
 
 ```r
 var = 5 * 10
@@ -149,6 +149,7 @@ print(var)
       `^` | Exponent
 
 * Remember that variables storing numbers can also use mathematical operators:
+  * Note: We are using both options for assigment operator ("`=`" and "`<-`")
 
 ```r
 print(100 - 50)
@@ -186,7 +187,7 @@ num1 != num2
 
 ### **Logical Operators**
 
-* Piggybacking off the Boolean results from relational operators, we can also compare `TRUE`/`FALSE` in logical operations
+* Piggybacking off the Boolean results (`TRUE`/`FALSE`) from relational operators, we can also compare Booleans  in logical operations
 
 Operator | Definition
 --- | ---
@@ -240,8 +241,9 @@ print(vec)
 print(vec[1])
 print(vec[3])
 ```
-
 [![.img/step05a.gif](.img/step05a.gif)](#nolink)
+
+[![.img/step05b.gif](.img/step05b.gif)](#nolink)
 
 ### **Building a Vector**
 
@@ -257,7 +259,7 @@ vec = c(vec, 4)
 print(vec)
 ```
 
-[![.img/step05b.gif](.img/step05b.gif)](#nolink)
+[![.img/step05c.gif](.img/step05c.gif)](#nolink)
 
 ### **Named Vector**
 
@@ -274,7 +276,7 @@ print(tweet1["user"])
 print(tweet1[1])
 ```
 
-[![.img/step05c.gif](.img/step05c.gif)](#nolink)
+[![.img/step05d.gif](.img/step05d.gif)](#nolink)
 
 ### **List**
 
@@ -298,7 +300,9 @@ print(tweets[[1]]["text"])
 print(tweets[[2]][3])
 ```
 
-[![.img/step05d.gif](.img/step05d.gif)](#nolink)
+[![.img/step05e.gif](.img/step05e.gif)](#nolink)
+
+[![.img/step05f.gif](.img/step05f.gif)](#nolink)
 
 ### **Data Range**
 
@@ -310,7 +314,7 @@ print(c(1,2,3,4,5,6,7,8,9,10))
 print(c(1:10))
 ```
 
-[![.img/step05e.gif](.img/step05e.gif)](#nolink)
+[![.img/step05g.gif](.img/step05g.gif)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -421,7 +425,7 @@ repeat{
 
 [![.img/step06e.gif](.img/step06e.gif)](#nolink)
 
-**Holy cow that was quick!** I don't know about you, but I wouldn't have wanted to perform 100,000 divisions even _with_ a calculator
+**Holy cow that was quick!** I don't know about you, but I wouldn't have wanted to perform 100,000+ divisions even _with_ a calculator
 
 [Back to Top](#table-of-contents)
 
@@ -443,7 +447,7 @@ repeat{
 
 * I recommend going over this material one more time to solidify these concepts
 * You can continue to use the same web-based programming environment as you continue into advanced concepts; **no need to distract yourself with installing things** right now
-* 
+* There is so much free educational materials out on the internet, find the best content that fits your learning style
 
 [Back to Top](#table-of-contents)
 
@@ -483,7 +487,7 @@ repeat{
 > > greeting = "Hello World!"
 > > console.log(greeting)
 > Hello World!
-> ``
+> ```
 
 [Back to Top](#table-of-contents)
 
