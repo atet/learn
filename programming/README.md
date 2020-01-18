@@ -72,17 +72,19 @@
 * Now let's **watch the following animations** to see each side in action:
    * Note: Every section has animated figures to help you with abstract concepts and guide you with coding
 
-### **Console**
+### **Script** (Left Side)
 
-> _Individual commands are run line-by-line after pressing **ENTER** on your keyboard<br>**NOTE: Ignore the "context menu"** that appears while you type for now)_
+> _Multiple-lines of commands can be executed at once by clicking on the bottom-left **RUN** button<br>**NOTE: Ignore the "context menu"** that appears while you type for now)_
+>
+> [![.img/step02b.gif](.img/step02b.gif)](#nolink)
+
+### **Console** (Right Side)
+
+> _Unlike the script side, individual commands are run line-by-line after pressing **ENTER** on your keyboard<br>**NOTE: Ignore the "context menu"** that appears while you type for now)_
 >
 > [![.img/step02a.gif](.img/step02a.gif)](#nolink)
 
-### **Script**
 
-> _Animation of the **script** side: Multiple commands can be executed at once by clicking on the **RUN** button_
->
-> [![.img/step02b.gif](.img/step02b.gif)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -118,6 +120,7 @@
 
 * The R language allows you to store different types of data such as **numbers** and **strings** (a.k.a. string of characters)
 * Run the following code in the R **script** area to see the variable `var` store a number and then be overwritten with a string:
+   * Note: Strings must be enclosed in quotation marks
 
 ```r
 var = 5 * 10
