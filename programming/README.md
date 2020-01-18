@@ -153,8 +153,8 @@ print(var)
 
 ```r
 print(100 - 50)
-num1 = 10
-num2 <- 5
+num1 = 100
+num2 <- 50
 print(num1 - num2)
 ```
 
@@ -192,7 +192,7 @@ num1 != num2
 Operator | Definition
 --- | ---
 `&&` | "And" both must be `TRUE`
-`||` | "Or" at least one `TRUE`
+`\|\|` | "Or" at least one `TRUE`
 
 ```r
 TRUE && TRUE
