@@ -2,6 +2,8 @@
 
 # Loop Animation Frame-by-Frame
 
+* Note: [Click here to go back to tutorial](https://github.com/atet/learn/blob/master/programming/README.md#loops)
+
 [![step06c.gif](step06c.gif)](#nolink)
 
 --------------------------------------------------------------------------------------------------
