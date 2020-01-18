@@ -2,11 +2,15 @@
 
 # Loop Animation Frame-by-Frame
 
-* Note: [Click here to go back to tutorial](https://github.com/atet/learn/blob/master/programming/README.md#loop-concept)
+* [Click here to go back to tutorial](https://github.com/atet/learn/blob/master/programming/README.md#loop-concept)
+
+## Loop Concept Animation
 
 [![step06c.gif](step06c.gif)](#nolink)
 
 --------------------------------------------------------------------------------------------------
+
+## Loop Concept Frame-by-Frame
 
 [![Frame_00001.png](Frame_00001.png)](#nolink)
 

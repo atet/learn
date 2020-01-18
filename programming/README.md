@@ -400,11 +400,15 @@ print("Loop Done!")
 
 [![.img/step06d.gif](.img/step06d.gif)](#nolink)
 
-#### Loop Concept
+#### Loop concept
 
-> [![.img/step06c.gif](.img/step06c.gif)](#nolink)
->
-> [Click here to see loop animation frame-by-frame](https://github.com/atet/learn/blob/master/programming/.img/step06c/README.md#atet--learn--programming)
+* Sometimes it helps to visualize what a loop is doing step-by-step
+* The animation below shows what we just ran with the code above
+   * Note: [Click here to see the loop animation frame-by-frame](https://github.com/atet/learn/blob/master/programming/.img/step06c/README.md#atet--learn--programming)
+
+[![.img/step06c.gif](.img/step06c.gif)](#nolink)
+
+#### Loops with repetitive tasks
 
 * Computers work blazingly fast to our benefit; running the above loop finishes instantaneously
 * Let's see if we can push the limits by figuring out if 216,091 is a prime number (divisible only by 1 and itself)
