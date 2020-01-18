@@ -383,7 +383,6 @@ if(ants > 900){
 
 * If we run the loop below, we see that the variable `this_index` continues to increment every loop iteration until it is no longer less than `last_index` and "`break`s" out of the loop
 * As the loop iterates, `this_index` increments and is used to print out different indices from the vector `words`
-   * Note: [Click here to see loop animation frame-by-frame](https://github.com/atet/learn/blob/master/programming/.img/step06c/README.md#atet--learn--programming)
 
 ```r
 words = c("Hello", "World", "!")
@@ -399,9 +398,13 @@ repeat{
 print("Loop Done!")
 ```
 
-[![.img/step06c.gif](.img/step06c.gif)](#nolink)
-
 [![.img/step06d.gif](.img/step06d.gif)](#nolink)
+
+#### Loop Concept
+
+> [![.img/step06c.gif](.img/step06c.gif)](#nolink)
+>
+> [Click here to see loop animation frame-by-frame](https://github.com/atet/learn/blob/master/programming/.img/step06c/README.md#atet--learn--programming)
 
 * Computers work blazingly fast to our benefit; running the above loop finishes instantaneously
 * Let's see if we can push the limits by figuring out if 216,091 is a prime number (divisible only by 1 and itself)
