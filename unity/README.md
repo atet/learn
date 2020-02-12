@@ -6,7 +6,7 @@
 
 **Estimated time to completion: 15 minutes**<br>(excluding waiting times for downloads)
 
-* This introduction to Unity convers what's absolutely necessary to get you up and running
+* This introduction to Unity covers what's absolutely necessary to get you up and running
 * You are here because you want to **turn your dreams into reality** by developing games or productivity apps
 * We will be using Unity to make a simple Android application; advanced material is not covered here
 
@@ -42,7 +42,7 @@
 * An Android mobile phone is required to test your application
 * This tutorial was developed on Microsoft Windows 10, Unity 2019.2.15f1, and Visual Studio Code 1.38.1
    * Different versions of Unity may have slightly different menu placement, menu names, etc.
-   * Both Unity and Visual Studio Code is also available on Mac OS X and Linux
+   * Both Unity and Visual Studio Code are also available on Mac OS X and Linux
 
 
 [Back to Top](#table-of-contents)
@@ -55,7 +55,7 @@
 
 1. **Visual Studio Code** (a.k.a. VSCode)
    * Download and install Microsoft Visual Studio Code: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
-   * Remember where you installed VSCode
+   * **Remember where you installed VSCode for a later step**
 
 [![.img/step01a.png](.img/step01a.png)](#nolink)
 
@@ -98,7 +98,7 @@
 [![.img/step02b.png](.img/step02b.png)](#nolink)
 
 * After you project is created, you will be presented with the working environment
-* **Don't worry about all the different window panes and menu options for now, just follow along with the instructions**
+* **Don't worry about all the different windowpanes and menu options for now, just follow along with the instructions**
 
 [![.img/step02c.png](.img/step02c.png)](#nolink)
 
@@ -115,32 +115,33 @@
 
 ## 3. Simple Application
 
-**Our application will be a button that increments the number shown above it when pressed. We can do this in three simple steps**
+**Our application will be a button that increments the number shown above it when pressed; we can do this in three simple steps**
 
 1. **Create a Button**
-   * On the bottom-left window pane, right-click on `SampleScene` and select `GameObject` → `UI` → `Button`.
+   * On the bottom-left windowpane, right-click on `SampleScene` and select `GameObject` → `UI` → `Button`.
 
    [![.img/step03a.png](.img/step03a.png)](#nolink)
 
-   * **_Where is the button?_** On the bottom-left, double-click on `Button` and the top-left window pane will zoom to where the button exists (Note: Just because you can't immediately see the object you just created doesn't mean it doesn't exist)
+   * **_Where is the button?_** On the bottom-left, double-click on `Button` and the top-left windowpane will zoom to where the button exists
+      * **Note**: Just because you can't immediately see an object you just created doesn't mean it doesn't exist in the project
 
    [![.img/step03b.png](.img/step03b.png)](#nolink)
 
-   * We must manually drag the button in the top-left window pane into where the white outline is
-   * This brings the button into the actual view you will see when using the program (this is simulated in the top-center window pane with blue background)
+   * We must manually drag the button in the top-left windowpane into where the white outline is
+   * This brings the button into the actual view you will see when using the program (this is simulated in the top-center windowpane with blue background)
 
    [![.img/step03c.png](.img/step03c.png)](#nolink)
 
 2. **Create Text Box**
-   * On the bottom-left window pane, right-click on `SampleScene` and select `GameObject` → `UI` → `Text`
-   * If the text box doesn't appear within the white outline, drag it above the button
+   * On the bottom-left windowpane, right-click on `SampleScene` and select `GameObject` → `UI` → `Text`
+   * If the text box doesn't appear within the white outline, click and drag it above the button
 
    [![.img/step03d.png](.img/step03d.png)](#nolink)
 
 3. **Create Script**
-   * On the bottom-left window pane, right-click on `SampleScene` and select `GameObject` → `Create Empty`
-   * On the bottom-left window pane, left-click on the newly created `GameObject`
-   * Details of the `GameObject` are seen in the right-hand window pane, click on `Add Component` and in the small search bar, search for "`script`", and click on `New Script`
+   * On the bottom-left windowpane, right-click on `SampleScene` and select `GameObject` → `Create Empty`
+   * On the bottom-left windowpane, left-click on the newly created `GameObject`
+   * Details of the `GameObject` are seen in the right-hand windowpane, click on `Add Component` and in the small search bar, search for "`script`", and click on `New Script`
 
    [![.img/step03e.png](.img/step03e.png)](#nolink)
 
@@ -149,17 +150,17 @@
    [![.img/step03f.png](.img/step03f.png)](#nolink)
 
    * The script is now a component of the `GameObject`
-   * We are going to double-click on this newly created script in the bottom-center window pane and it will open in VSCode
+   * We are going to double-click on this newly created script in the bottom-center windowpane and it will open in VSCode
 
    [![.img/step03g.png](.img/step03g.png)](#nolink)
 
-   * Unity will provide a default template for every new script
    * If this is your first time opening a file in VSCode, it may download some extras to help read the specific programming language you're using
-   * Click on the `X` button on the bottom window pane once everything is finished downloading and installing
+   * Click on the `X` button on the bottom windowpane **once all the extras are finished downloading and installing**
+   * Unity will provide a default template for every new script
    
    [![.img/step03h.png](.img/step03h.png)](#nolink)
    
-   * For now, just erase everything and copy-paste the code below and save the file:
+   * For now, just erase the default template code and copy-paste the code below and save the file:
 
    ```cs
    using System.Collections;
@@ -194,7 +195,7 @@
 
    * Go back to Unity
       * Unity will take a moment to process the code you just saved in VSCode
-   * Clicking on `GameObject` again, you will now see two new boxes appear in the right-hand details window pane called `My Button` and `My Text` (these were not here before you copy-pasted and saved the script above)
+   * Clicking on `GameObject` again, you will now see two new boxes appear in the right-hand details windowpane called `My Button` and `My Text` (these were not here before you copy-pasted and saved the script above)
    * You must manually drag-and-drop from the bottom-left pane `Button` to `My Button` and `Text` to `My Text`
 
    [![.img/step03i.png](.img/step03i.png)](#nolink)
@@ -210,7 +211,7 @@
 
    [![.img/step04a.png](.img/step04a.png)](#nolink)
       
-   2. Select `Maximize On Play` so that other window panes are hidden during playmode
+   2. Select `Maximize On Play` so that other windowpanes are hidden during playmode
    
    [![.img/step04b.png](.img/step04b.png)](#nolink)
 
