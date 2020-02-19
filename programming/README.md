@@ -4,9 +4,9 @@
 
 # Introduction to Programming
 
-**Estimated time to completion: 15 minutes**
+**Estimated time to completion: 15 minutes**</br>No prior programming experience necessary!
 
-* This introduction to programming only covers what's absolutely necessary to get you up and running (no prior experience necessary)
+* This introduction to programming only covers what's absolutely necessary to get you up and running
 * We will be using **R Programming Language** to learn the critical building blocks of computer science
 
 --------------------------------------------------------------------------------------------------
@@ -34,9 +34,8 @@
 
 ## 0. Requirements
 
-**No prior programming experience necessary for this tutorial**
-
-* **You don't need to download or install anything**; we will be using a web-based programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
+* **No prior programming experience necessary for this tutorial**
+* **You don't need to download or install anything**; we will use this web-based programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
 
 [Back to Top](#table-of-contents)
 
@@ -46,13 +45,8 @@
 
 * Q: Which language should I start my journey with?
    * A: Start with the language that offers you immediate progress without being bogged down with installing and configuring stuff
-   * Programming languages are more similar than they are different; all share the same foundation of **_computer science theory_**
-* Q: So R language is the same as Python?
-   * A: The underlying theory of how things work is the same, just different syntax
-   * Sometimes things are identical: The following code prints out "`Hello World!`" in both R and Python:
-   ```r
-   print("Hello World!")
-   ```
+* Q: Is the **R language** used here the same as.. Python, JavaScript, etc.?
+   * A: Programming languages are more similar than they are different; all share the same foundation of **_computer science theory_**
 
 [Back to Top](#table-of-contents)
 
@@ -62,8 +56,8 @@
 
 **Let's get comfortable with your working environment for this tutorial**
 
-* Use your web browser to access the programming environment on my website<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
-* I recommend having these windows side-by-side during this tutorial:
+* Open a new browser window with the programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
+* Adjust the tutorial and programming windows to be side-by-side:
 
 [![.img/step00.png](.img/step00.png)](#nolink)
 
@@ -84,8 +78,6 @@
 >
 > [![.img/step02a.gif](.img/step02a.gif)](#nolink)
 
-
-
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
@@ -101,7 +93,6 @@
 > _We know that the variable `a` should be 50, but we would've had to calculate that from `a = h × w`_
 >
 > [![.img/step03a.png](.img/step03a.png)](#nolink)
-
 
 * Unlike the algebra homework in the previous example, there are helpful differences in computer programming:
    * The computer will handle remembering what values each variable is assigned and performing any calculations
@@ -143,13 +134,14 @@ print(var)
    * **Assignment operator**: Assigns a value to a variable
       * Note: You can use either "`=`" or "`<-`" in R for assignment
    * **Mathematical operators**:
-      Operator | Definition
-      --- | ---
-      `+` | Addition
-      `-` | Subtraction
-      `*` | Multiplication (asterisk, SHIFT+8)
-      `/` | Division (forward slash)
-      `^` | Exponent
+
+Operator | Definition
+--- | ---
+`+` | Addition
+`-` | Subtraction
+`*` | Multiplication (asterisk, SHIFT+8)
+`/` | Division (forward slash)
+`^` | Exponent
 
 * Remember that variables storing numbers can also use mathematical operators:
   * Note: We are using both options for assigment operator ("`=`" and "`<-`")
@@ -466,13 +458,13 @@ repeat{
 
 ## Other Languages
 
-* Regardless of the difference in syntax between languages, they will all share a common theory of how things work
+* Regardless of the difference in [syntax](https://www.google.com/search?q=syntax&oq=syntax) between languages, they will all share a common theory of how things work
 * All languages will have variables, operators, data types, data structures, and control structures
-* Here's an example of the similarities and differences in three popular programming languages
+* Here's an example of the similarities and differences in three popular programming languages:
 
-### **R Syntax**
+### **R Language**
 
-> The words "`Hello World!`" are stored in the variable `greeting` and then "printed" out
+> The words "`Hello World!`" are assigned to the variable `greeting` and then "printed" out
 >
 > ```
 > > greeting <- "Hello World!"
@@ -480,9 +472,9 @@ repeat{
 > [1] "Hello World!"
 > ```
 
-### **Python Syntax**
+### **Python**
 
-> The exact same thing as above was performed, but Python doesn't use `<-` as an assignment operator
+> The exact same thing as above was performed, but Python doesn't use the arrow ("`<-`") as an assignment operator
 >
 > ```
 > >>> greeting = "Hello World!"
@@ -490,7 +482,7 @@ repeat{
 > Hello World!
 > ```
 
-### **JavaScript Syntax**
+### **JavaScript**
 
 > The exact same thing as above was performed, but JavaScript has different syntax for printing to console
 >
