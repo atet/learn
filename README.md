@@ -4,9 +4,7 @@
 
 **Educational material I've authored for various science and technology topics**
 
-Thank you for checking out my series of short, project-based tutorials
-
-I hope you have fun learning some new skills
+I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
