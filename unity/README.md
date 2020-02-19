@@ -4,7 +4,7 @@
 
 # Introduction to Unity
 
-**Estimated time to completion: 15 minutes**<br>(excluding waiting times for downloads)
+**Estimated time to completion: 15 minutes**<br>(excluding waiting times for downloads and installs)
 
 * This introduction to Unity covers what's absolutely necessary to get you up and running
 * You are here because you want to **turn your dreams into reality** by developing games or productivity apps
@@ -40,10 +40,9 @@
 **You do _NOT_ need to know how to program to complete this tutorial**
 
 * An Android mobile phone is required to test your application
-* This tutorial was developed on Microsoft Windows 10, Unity 2019.2.15f1, and Visual Studio Code 1.38.1
+* This tutorial was developed on Microsoft Windows 10 and Unity 2019
    * Different versions of Unity may have slightly different menu placement, menu names, etc.
    * Both Unity and Visual Studio Code are also available on Mac OS X and Linux
-
 
 [Back to Top](#table-of-contents)
 
@@ -55,7 +54,7 @@
 
 1. **Visual Studio Code** (a.k.a. VSCode)
    * Download and install Microsoft Visual Studio Code: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
-   * **Remember where you installed VSCode for a later step**
+   * **Write down where you installed VSCode for a later step**
 
 [![.img/step01a.png](.img/step01a.png)](#nolink)
 
@@ -97,7 +96,7 @@
 
 [![.img/step02b.png](.img/step02b.png)](#nolink)
 
-* After you project is created, you will be presented with the working environment
+* After your project is created, you will be presented with the working environment
 * **Don't worry about all the different windowpanes and menu options for now, just follow along with the instructions**
 
 [![.img/step02c.png](.img/step02c.png)](#nolink)
@@ -154,20 +153,19 @@
 
    [![.img/step03g.png](.img/step03g.png)](#nolink)
 
-   * If this is your first time opening a file in VSCode, it may download some extras to help read the specific programming language you're using
-   * Click on the `X` button on the bottom windowpane **once all the extras are finished downloading and installing**
-   * Unity will provide a default template for every new script
+   * If this is your first time opening a file in VSCode, it may download some extras to help read the C# programming language that Unity uses
+      * **Once all the extras are finished downloading and installing**, click on the `X` button on the bottom windowpane
+   * Unity will provide a default template for every new script:
    
    [![.img/step03h.png](.img/step03h.png)](#nolink)
    
-   * For now, just erase the default template code and copy-paste the code below and save the file:
+   * For now, **just erase the default template code and copy-paste the code below** and save (`CTRL+S`) the file:
 
    ```cs
    using System.Collections;
    using System.Collections.Generic;
    using UnityEngine;
    using UnityEngine.UI;
-
    public class script : MonoBehaviour
    {
       public Button myButton;
@@ -185,10 +183,8 @@
                }
          );
       }
-
       void Update() // Update is called once per frame
       {
-         
       }
    }
    ```
@@ -225,6 +221,8 @@
 
 [![.img/step04d.png](.img/step04d.png)](#nolink)
 
+**You're almost done; let's install this application on your Android device**
+
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
@@ -254,8 +252,6 @@
 
 ## 6. Android Mobile Phone Installation
 
-**You should NEVER install unverified applications on your Android phone unless you have made them yourself and are confident that they do not contain viruses, etc. In the future, consider having test devices that are not linked to your social media, email accounts, SIM card, etc.**
-
 * Connect your Android phone to your computer to transfer the `test.apk` file over
    * You may have to change the USB connection type to `Media (MTP)` in order to move files from your computer to your phone
    * Through File Explorer on your computer, copy and paste `test.apk` on your phone (I made a folder named "`Unity`" to paste it into)
@@ -265,12 +261,14 @@
 
 [![.img/step06a.png](.img/step06a.png)](#nolink)
 
+**WARNING**: You should **NEVER** install unverified applications on your Android phone **unless you have made them yourself** and are confident they are safe
+
 * By default, Android will prevent you from installing applications from unknown sources, we will temporarily allow this just to install our application
 * Install will be blocked but you can click on `Settings` to go to `Security Settings`
 * Once in `Security Settings`, go under `Phone Administration` and click on the checkbox for `Unknown sources`
 * A pop up will appear and click on `Allow` applications from unknown sources (in this case, this is the application _you_ just made)
 
-**REMEMBER: Come back to settings to change this back to blocking application installs from unknown sources when you are done with this tutorial.**
+**REMEMBER**: After the tutorial, come back to `Security Settings` to change this back to blocking application installs from unknown sources
 
 [![.img/step06b.png](.img/step06b.png)](#nolink)
 
@@ -294,7 +292,7 @@
 * If you launched your application directly after installing, you'll get the Unity splash screen and then be presented with your application
    * If you did not launch after install, find "`New Unity Project`" on your device
 * Tap on the button and watch the numbers increment!
-   * The button and text box may be tiny, and you may have to be careful where you click, **but it should work**
+   * The button and text box may be tiny, **but it should work**
 
 [![.img/step07a.png](.img/step07a.png)](#nolink)
 
@@ -317,13 +315,17 @@
 
 **Now that you have a feel for the workflow of using Unity, the possibilities are endless**
 
-There are countless avenues you can pursue from here:
+* Design innovative and fun games
+* Master the C# programming language
+* Make productivity apps to help you succeed
 
-* Learn C# programming language
-* Become a game designer
-* Make productivity apps to help you at work
+**Clean Up**
 
-**REMINDER: Go back to settings to change back to blocking application installs from unknown sources when you are done with this tutorial**
+* If you make changes to this application, you should uninstall the current version first before installing the updated version
+   * On your Android device, go to `Settings` → `DEVICE` → `Apps`, find and select "`New Unity Project`" and click on `Uninstall`
+* You may want to erase the `test.apk` you made or start numbering these files with some sort of versioning system as you make changes, e.g. `test_V2.apk` or `test_2019-12-08.apk`
+
+**REMINDER**: Go back to `Security Settings` to change back to blocking application installs from unknown sources
 
 [Back to Top](#table-of-contents)
 
@@ -333,8 +335,8 @@ There are countless avenues you can pursue from here:
 
 Issue | Solution
 --- | ---
-Where is the button/menu item/etc.? |  There may be major differences between different versions of Unity. If you upgrade the Unity engine during development, you could break your application.
-I made some changes in Unity but it didn't seem to "Save" them | Any changes when Unity is in "Playmode" are not saved. I would recommend the following two changes in the first part of [4. Playmode Test](#4-playmode-test).
+Where is the button/menu item/etc.? | There may be major differences between versions of Unity: if you upgrade in the middle of development, you could break your application
+I made some changes in Unity but it didn't seem to "Save" them | Any changes when Unity is in "Playmode" are not saved; make these two changes in the [4. Playmode Test](#4-playmode-test) section to ensure that doesn't happen
 
 [Back to Top](#table-of-contents)
 
@@ -342,21 +344,23 @@ I made some changes in Unity but it didn't seem to "Save" them | Any changes whe
 
 ## Pro Tips
 
-* **Clean Up**
-   * If you make changes to this application, you should uninstall the current version first before installing the updated version
-   * On your Android device, go to `Settings` → `DEVICE` → `Apps`, find and select "`New Unity Project`" and click on `Uninstall`
-   * You may want to erase the `test.apk` or start numbering these files with some sort of versioning system as you make changes, e.g. `test_V2.apk` or `test_2019-12-08.apk`
 * **Q: Why are we developing in Unity for an Android application, couldn't we have just used Android Studio?**
-   * A: Unlike Android Studio, once you develop a project in Unity, it can also be built for iOS, PS4, Xbox One, Windows, MacOS, etc. 
-* You will frequently go back and forth between manipulating objects in the Unity graphical user interface (GUI, referred to as "Unity") program and programming in Visual Studio Code (referred to as "VSCode")
-* Motivation: A colleague of mine (veteran software engineer) once told me while they were learning Unity:
-   > Unity is.. peculiar...
+   * A: Unlike Android Studio, a Unity project can also be built for iOS, PS4, Xbox One, Windows, MacOS, etc. 
+* You will frequently go back and forth between manipulating objects in the Unity's graphical user interface and programming in Visual Studio Code
+* Consider having devices that are solely for testing that are not linked to your social media, email accounts, cellular SIM card, etc.
+
+> "_Unity is.. peculiar..._"
+>
+> Veteran software engineer colleague learning Unity
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
 ## Other Resources
+
+* This tutorial was developed on Microsoft Windows 10, Unity 2019.2.15f1, and Visual Studio Code 1.38.1
+   * Different versions of Unity may have slightly different menu placement, menu names, etc.
 
 Description | Link
 --- | ---
