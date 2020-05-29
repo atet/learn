@@ -1,4 +1,4 @@
-# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn#atet--learn) / [**_virtual_**](https://github.com/atet/learn/blob/master/virtual/README.md#atet--learn--virtual)
+# [atet](https://github.com/atet) / [learn](https://github.com/atet/learn#atet--learn) / [**_uml_**](https://github.com/atet/learn/blob/master/uml/README.md#atet--learn--uml)
 
 [![.img/logo_uml.png](.img/logo_uml.png)](#nolink)
 

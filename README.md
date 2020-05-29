@@ -15,6 +15,7 @@ I hope you have fun learning from my short, project-based tutorials
 * [IT and System Administration](#it-and-system-administration)
 * [Audio and Video Processing](#audio-and-video-processing)
 * [Computer Science](#computer-science)
+* [Project Management](#project-management)
 
 --------------------------------------------------------------------------------------------------
 
@@ -62,8 +63,16 @@ I hope you have fun learning from my short, project-based tutorials
 ### **Computer Science**
 
 1. [Introduction to Programming](https://github.com/atet/learn/blob/master/programming/README.md#atet--learn--programming)
-1. [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
-2. [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
+2. [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
+3. [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+### **Project Management**
+
+1. [Introduction to Unified Modeling Language](https://github.com/atet/learn/blob/master/uml/README.md#atet--learn--uml)
 
 [Back to Top](#table-of-contents)
 
