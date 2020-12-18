@@ -4,8 +4,6 @@
 
 # Introduction to MATLAB
 
-## _...via GNU Octave, a free, open source alternative_
-
 **Estimated time to completion: 15 minutes**</br>No prior programming experience necessary!
 
 * This introduction to programming only covers what's absolutely necessary to get you up and running
@@ -37,7 +35,7 @@
 ## 0. Requirements
 
 * **No prior programming experience necessary for this tutorial**
-* **You don't need to download or install anything**; we will use this web-based programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://octave-online.net" target="_blank">https://octave-online.net</a>
+* **You don't need to download or install anything**; we will use this web-based programming environment for Octave, a free alternative to the commercial MATLAB language<sup>[[1]](#acknowledgments)</sup>: <a href="https://octave-online.net" target="_blank">https://octave-online.net</a>
 
 [Back to Top](#table-of-contents)
 
@@ -477,7 +475,7 @@ repeat{
 
 ### **Python**
 
-> The exact same thing as above was performed, but Python doesn't use the arrow ("`<-`") as an assignment operator
+> The exact same thing as above was performed, but Python has different syntax for printing to console
 >
 > ```
 > >>> greeting = "Hello World!"
