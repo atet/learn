@@ -4,6 +4,8 @@
 
 # Introduction to MATLAB
 
+## _...via GNU Octave, a free, open source alternative_
+
 **Estimated time to completion: 15 minutes**</br>No prior programming experience necessary!
 
 * This introduction to programming only covers what's absolutely necessary to get you up and running
@@ -35,7 +37,7 @@
 ## 0. Requirements
 
 * **No prior programming experience necessary for this tutorial**
-* **You don't need to download or install anything**; we will use this web-based programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
+* **You don't need to download or install anything**; we will use this web-based programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://octave-online.net" target="_blank">https://octave-online.net</a>
 
 [Back to Top](#table-of-contents)
 
@@ -45,7 +47,7 @@
 
 * Q: Which language should I start my journey with?
    * A: Start with the language that offers you immediate progress without being bogged down with installing and configuring stuff
-* Q: Is the **R language** used here the same as.. Python, JavaScript, etc.?
+* Q: Is the **MATLAB language** used here the same as.. Python, JavaScript, etc.?
    * A: Programming languages are more similar than they are different; all share the same foundation of **_computer science theory_**
 
 [Back to Top](#table-of-contents)
@@ -56,7 +58,7 @@
 
 **Let's get comfortable with your working environment for this tutorial**
 
-* Open a new browser window with the programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://learn.athitkao.com/interactive_r.html" target="_blank">https://learn.athitkao.com/interactive_r.html</a>
+* Open a new browser window with the programming environment<sup>[[1]](#acknowledgments)</sup>: <a href="https://octave-online.net" target="_blank">https://octave-online.net</a>
 * Adjust the tutorial and programming windows to be side-by-side:
 
 [![.img/step00.png](.img/step00.png)](#nolink)
@@ -451,6 +453,7 @@ repeat{
 * I recommend going over this material one more time to solidify these concepts
 * You can continue to use the same web-based programming environment as you continue into advanced concepts; **no need to distract yourself with installing things** right now
 * There is so much free educational materials out on the internet, find the best content that fits your learning style
+* Though the free, open source [Octave language](https://www.gnu.org/software/octave/index) is extremely similar to the commercial, proprietary [MATLAB language](https://www.mathworks.com/pricing-licensing.html), there are notable differences explained here: [https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB](https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB)
 
 [Back to Top](#table-of-contents)
 
@@ -462,14 +465,14 @@ repeat{
 * All languages will have variables, operators, data types, data structures, and control structures
 * Here's an example of the similarities and differences in three popular programming languages:
 
-### **R Language**
+### **MATLAB**
 
 > The words "`Hello World!`" are assigned to the variable `greeting` and then "printed" out
 >
 > ```
-> > greeting <- "Hello World!"
-> > print(greeting)
-> [1] "Hello World!"
+> >> greeting = 'Hello World!'
+> >> fprintf(greeting)
+> Hello World!
 > ```
 
 ### **Python**
@@ -498,7 +501,7 @@ repeat{
 
 ## Acknowledgments
 
-1. Web-based R console by DataCamp: <a href="https://github.com/datacamp/datacamp-light" target="_blank">https://github.com/datacamp/datacamp-light</a>
+1. Web-based GNU Octave console by Octave Online: <a href="https://github.com/octave-online/octave-online-server" target="_blank">https://github.com/octave-online/octave-online-server</a>
 
 <a href="" target="_blank"></a>
 
