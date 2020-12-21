@@ -35,7 +35,7 @@
 ## 0. Requirements
 
 * **No prior programming experience necessary for this tutorial**
-* **You don't need to download or install anything**; we will use this web-based programming environment for Octave, a free alternative to the commercial MATLAB language<sup>[[1]](#acknowledgments)</sup>: <a href="https://octave-online.net" target="_blank">https://octave-online.net</a>
+* **You don't need to download or install anything**; we will use this web-based programming environment for **Octave**, a free alternative to the commercial MATLAB language<sup>[[1]](#acknowledgments)</sup>: <a href="https://octave-online.net" target="_blank">https://octave-online.net</a>
 
 [Back to Top](#table-of-contents)
 
@@ -61,22 +61,14 @@
 
 [![.img/step00.png](.img/step00.png)](#nolink)
 
-* In this programming environment, the left side is the "**script**" and the right side is the "**console**"
-* You can use either side to program, but results will only be printed out on the **console** side
-* Now let's **watch the following animations** to see each side in action:
+* In this programming environment:
+   * The wide right side is the "**Command Prompt**" where we will program
+   * The thin left right side is the "**Vars**" that shows all the information in memory
+* All commands will be input at the bottom of the Command Promptand the results will be printed above
+* Now let's **watch the following animation** to see this all in action:
    * Note: Every section has animated figures to help you with abstract concepts and guide you with coding
 
-### **Script** (Left Side)
-
-> _Multiple-lines of commands can be executed at once by clicking on the bottom-left **RUN** button<br>**NOTE: Ignore the "context menu"** that appears while you type for now)_
->
-> [![.img/step02b.gif](.img/step02b.gif)](#nolink)
-
-### **Console** (Right Side)
-
-> _Unlike the script side, individual commands are run line-by-line after pressing **ENTER** on your keyboard<br>**NOTE: Ignore the "context menu"** that appears while you type for now)_
->
-> [![.img/step02a.gif](.img/step02a.gif)](#nolink)
+[![.img/step02a.gif](.img/step02a.gif)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -102,22 +94,22 @@
 >
 > [![.img/step03b.png](.img/step03b.png)](#nolink)
 
-* If you were to re-write the above computation line-by-line in the R **console** area, you will see that R will automatically compute `height` multiplied by `width` for you when you print `area`:
+* If you were to re-write the above computation line-by-line in the **Command Prompt**, you will see that Octave will automatically compute `height` multiplied by `width` for you when you print `area`:
    * Note: The multiplication symbol in programming is the asterisk "`*`" (SHIFT+8)
 
 [![.img/step03c.gif](.img/step03c.gif)](#nolink)
 
 ### **Simple Variable Types**
 
-* The R language allows you to store different types of data such as **numbers** and **strings** (a.k.a. string of characters)
+* The Octave language allows you to store different types of data such as **numbers** and **strings** (a.k.a. string of characters)
 * Run the following code in the R **script** area to see the variable `var` store a number and then be overwritten with a string:
-   * Note: Strings must be enclosed in quotation marks
+   * Note: Strings must be enclosed in single quotation marks
 
-```r
+```matlab
 var = 5 * 10
-print(var)
-var = "Hello World!"
-print(var)
+disp(var)
+var = 'Hello World!'
+disp(var)
 ```
 
 [![.img/step03d.gif](.img/step03d.gif)](#nolink)
@@ -144,13 +136,12 @@ Operator | Definition
 `^` | Exponent
 
 * Remember that variables storing numbers can also use mathematical operators:
-  * Note: We are using both options for assigment operator ("`=`" and "`<-`")
 
-```r
-print(100 - 50)
+```matlab
+disp(100 - 50)
 num1 = 100
-num2 <- 50
-print(num1 - num2)
+num2 = 50
+disp(num1 - num2)
 ```
 
 [![.img/step04a.gif](.img/step04a.gif)](#nolink)
@@ -158,7 +149,9 @@ print(num1 - num2)
 ### **Relational Operators**
 
 * This class of operators encompass all the greater-than, less-than, and equals-to comparisons
-* Unlike mathematical operators, these will result in a **Boolean** data type (can be either "`TRUE`" or "`FALSE`")
+* Unlike mathematical operators, these will result in a **logical** data type that can be either `true` or `false` and are represented as numbers `1` or `0` respectively
+
+> NOTE: If you type out `true` or `false`, you will see that they get converted to their numeric form
 
 Operator | Definition
 --- | ---
@@ -167,51 +160,51 @@ Operator | Definition
 `<=` | Less than or equal to
 `>=` | Greater than or equal to
 `==` | Equal to
-`!=` | Not equal to
+`~=` | Not equal to
 
-```r
+```matlab
 10 <= 1
 num1 = 10
 num2 = 1
 num1 > num2
 num1 == num2
-num1 != num2
+num1 ~= num2
 ```
 
 [![.img/step04b.gif](.img/step04b.gif)](#nolink)
 
 ### **Logical Operators**
 
-* Piggybacking off the Boolean results (`TRUE`/`FALSE`) from relational operators, we can also compare Booleans  in logical operations
+* Piggybacking off the Boolean results (`true`/`false`) from relational operators, we can also compare Booleans  in logical operations
 
 Operator | Definition
 --- | ---
 `&&` | "And" both must be `TRUE`
 `\|\|` | "Or" at least one `TRUE`
 
-```r
-TRUE && TRUE
-TRUE && FALSE
-TRUE || TRUE
-TRUE || FALSE
+```matlab
+true && true
+true && false
+true || true
+true || false
 ```
 
 [![.img/step04c.gif](.img/step04c.gif)](#nolink)
 
-* We saw in the `!=` ("not equal to") relationship operator that the "`!`" means "not" a.k.a. "give me the opposite"
+* We saw in the `~=` ("not equal to") relationship operator that the "`~`" means "not" a.k.a. "give me the opposite"
 * Remember that the relationship operators will give Boolean results and those can be used with these logical operators
 
 Operator | Definition
 --- | ---
-`!` | "Not" gives the opposite
-`!TRUE` | `FALSE`
-`!FALSE` | `TRUE`
+`~` | "Not" gives the opposite
+`~true` | `false`
+`~false` | `true`
 
-```r
+```matlab
 num1 = 1
 num2 = 1
-num1 != num2
-!(num1 != num2)
+num1 ~= num2
+~(num1 ~= num2)
 ```
 
 [![.img/step04d.gif](.img/step04d.gif)](#nolink)
@@ -227,14 +220,14 @@ num1 != num2
 ### **Vector**
 
 * A variable can also represent a larger body of data
-* You can group many individual pieces of data into a **vector** using `c()` and even reference individual pieces by index number using square brackets `[]`:
-   * Note: Index numbers start from 1 in R
+* You can group many individual pieces of data into a **vector** using `[]` and even reference individual pieces by index number using square brackets `()`:
+   * Note: Index numbers start from 1 in MATLAB
 
-```r
-vec = c(7,8,9)
-print(vec)
-print(vec[1])
-print(vec[3])
+```matlab
+vec = [7 8 9]
+disp(vec)
+disp(vec(1))
+disp(vec(3))
 ```
 [![.img/step05a.gif](.img/step05a.gif)](#nolink)
 
@@ -245,16 +238,22 @@ print(vec[3])
 * We can easily add new data into a vector by including the previous vector in the new vector
 * Let's add some numbers in front of and at the end of an existing vector:
 
-```r
-vec = c(2, 3)
-print(vec)
-vec = c(1, vec)
-print(vec)
-vec = c(vec, 4)
-print(vec)
+```matlab
+vec = [2 3]
+disp(vec)
+vec = [1 vec]
+disp(vec)
+vec = [vec 4]
+disp(vec)
 ```
 
 [![.img/step05c.gif](.img/step05c.gif)](#nolink)
+
+---
+
+# TODO: Stopped here, need to merge R's Named Vector and List sections to MATLAB Structure Array
+
+---
 
 ### **Named Vector**
 
