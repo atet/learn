@@ -64,7 +64,7 @@ I hope you have fun learning from my short, project-based tutorials
 ### **Computer Science**
 
 1. [Introduction to Programming (in R)](https://github.com/atet/learn/blob/master/programming/README.md#atet--learn--programming)
-2. [Introduction to Programming (in MATLAB)](https://github.com/atet/learn/blob/master/matlab/README.md#atet--learn--matlab)
+2. [Introduction to Programming (in MATLAB)](https://github.com/atet/matlab/blob/master/README.md#atet--matlab)
 3. [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
 4. [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
 
