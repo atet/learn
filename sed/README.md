@@ -84,8 +84,9 @@
 
 ## 3. Example Files
 
-* Each line starts with "`$`" below, _type everything after this_
-* Let's start at your home directory (a.k.a. "`~`") and make a new empty directory to work from:
+* Start your command line terminal (see "[2. Preface](#2-preface)" for options)
+* Each line in the examples below starts with "`$`", _do not type this symbol, just type everything after this_
+* Let's start by navigating to your home directory (a.k.a. "`~`") and make a new empty directory to work from:
 
 ```
 $ cd ~
@@ -121,7 +122,7 @@ $ sed "s/Hello/Goodbye/" hello.txt
 Goodbye World! Hello, hello.
 ```
 
-* Looks like we didn't substitute all the occurrences of "Hello", let's use the global prefix "`g`" to signify this
+* Looks like we didn't substitute all the occurrences of "Hello", let's use the global suffix "`g`" to signify this
 
 ```
 $ sed "s/Hello/Goodbye/g" hello.txt
@@ -244,7 +245,7 @@ $ sed -e "s/ 1 /one/g" -ne "s/ 2 /two/gp" chuck.txt
 * We almost got it, just forgot to add spaces before and after the substitution:
 
 ```
-$ $ sed -e "s/ 1 / one /g" -e "s/ 2 / two /g" chuck.txt
+$ sed -e "s/ 1 / one /g" -e "s/ 2 / two /g" chuck.txt
 1. Chuck Norris can kill two stones with one bird.
 2. Death once had a near-Chuck-Norris experience.
 3. Chuck Norris can hear sign language.
@@ -330,7 +331,7 @@ $ sed -n '276,283p' chuck.html
 ```
 Title,Year,Actor,Executive Producer,Writer,Role
 .
-.
+. <NOT SHOWING ALL THE ROWS>
 .
 The Expendables 2,2012,Y,N,N,Booker "The Lone Wolf"
 ```
@@ -346,9 +347,9 @@ The Expendables 2,2012,Y,N,N,Booker "The Lone Wolf"
 
 * If you've noticed, there is a specific structure that HTML tables must adhere to
 * We are going to use `grep` to only extract the lines that have relevant HTML table information:
-   * HTML tags that define a table are `table`, `tr`, `th`, and `td`
+   * HTML tags that define a table are "`table`", "`tr`", "`th`", and "`td`"
    * Tags come in pairs, so a beginning and end of a table would be `<table>...</table>`
-   * Some tags that are not relevant to the end goal are not `grep`'ed over (e.g. `<head>`, `<style>`, etc. seen earlier in [6.1. Downloading example data](#61-downloading-example-data))
+   * Some tags that are not relevant to the end goal of this exercise and are not `grep`'ed over (e.g. `<head>`, `<style>`, etc. seen earlier in [6.1. Downloading example data](#61-downloading-example-data))
 
 ```
 $ grep -i -e "</*table\|</*tr\|</*th\|</*td" chuck.html > chuck2.html
@@ -375,7 +376,7 @@ $ head -n 10 chuck2.html
 `table` | Literal string "`table`", with "`grep -i`" makes it case insensitive
 `\\|` | Regex "or" (must be escaped with backslash)
 
-* Let's get rid of all the nested spacing; nesting is always a leading set of spaces or tabs before each line
+* Let's get rid of all the nested spacing, which is just leading spaces or tabs before nested line to make the structure easier to read
 
 ```
 $ sed "s/^[ \t]*//g" chuck2.html > chuck3.html
@@ -536,7 +537,7 @@ $ head -c 100 movies.json
       "genres":[]
    },
 .
-.
+. <NOT SHOWING ALL THE ROWS>
 .
    {
       "title":"Destroyer",
@@ -555,7 +556,7 @@ $ head -c 100 movies.json
 title,year,cast,genres
 After Dark in Central Park, 1900,,
 .
-.
+. <NOT SHOWING ALL THE ROWS>
 .
 Destroyer,2018,Nicole Kidman;Tatiana Maslany;Sebastian Stan;Toby Kebbell;Scoot McNairy,Crime;Thriller
 ```
