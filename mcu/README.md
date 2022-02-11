@@ -34,9 +34,10 @@
 
 ## 0. Requirements
 
-* This tutorial was developed on Microsoft Windows 10 with Windows Subsystem for Linux (WSL) using Ubuntu 18.04 LTS
-* If you are using MacOS, [your Terminal program is Bash](https://en.wikipedia.org/wiki/Terminal_(macOS))
-* Most Linux distributions use or can use Bash
+* This tutorial was developed on Microsoft Windows 10; the programs here are available for MacOS and Linux (such as Ubuntu Linux)
+* We will use a $4 Raspberry Pi Pico and a USB to micro-USB cable (recommend a cable with on/off switch):
+
+[![.img/step00.jpg](.img/step00.jpg)](#nolink)
 
 [Back to Top](#table-of-contents)
 
@@ -44,11 +45,11 @@
 
 ## 1. Installation
 
+We will use a Linux a command line interface (CLI) available on all major operating systems
+
 ### Windows 10
 
-* Windows Subsystem for Linux (WSL) is a fully supported Microsoft product for Windows 10, learn how to install it here: [https://docs.microsoft.com/en-us/windows/wsl/install-win10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-* Please choose Ubuntu 18.04 LTS as the distribution you use with WSL
-* WSL is only available for Windows 10
+* Windows Subsystem for Linux (WSL) is a fully supported Microsoft product for Windows 10, learn how to install it here: https://github.com/atet/wsl
 
 ### MacOS
 
@@ -56,7 +57,7 @@
 
 ### Linux
 
-* I recommend using Ubuntu 18.04 LTS
+* I recommend using Ubuntu 20.04 LTS
 
 [Back to Top](#table-of-contents)
 
