@@ -36,7 +36,7 @@ I hope you have fun learning from my short, project-based tutorials
 4. [Data Visualization: Theory and Application (in R)](http://learn.athitkao.com/presentation_datavis2.html)
 5. [Introduction to R Development Environments](https://github.com/atet/r_environment/blob/master/README.md#atet--r_environment)
 6. [Intermediate Programming and Data Products in R](https://github.com/atet/rmd_tutorial/blob/main/README.md#atet--rmd_tutorial)
-7. [Introduction to Regular Expressions](https://github.com/atet/learn/blob/master/regex/README.md#atet--learn--regex)
+7. [Introduction to Regular Expressions](https://github.com/atet/regex?tab=readme-ov-file#atet--regex)
 8. [Introduction to Stream Editor](https://github.com/atet/learn/blob/master/sed/README.md#atet--learn--sed)
 
 [Back to Top](#table-of-contents)
