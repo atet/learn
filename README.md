@@ -22,10 +22,15 @@ I hope you have fun learning from my short, project-based tutorials
 
 ## **Computer Science**
 
+### R Programming Language for R Statistical Computing (_and more!_)
+
 1. [Introduction to Programming (in R)](https://github.com/atet/programming?tab=readme-ov-file#atet--programming)
-2. [Introduction to Programming (in MATLAB)](https://github.com/atet/matlab?tab=readme-ov-file#atet--matlab)
-3. [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
-4. [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
+2. [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
+3. [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
+
+### MATLAB
+
+1. [Introduction to Programming (in MATLAB)](https://github.com/atet/matlab?tab=readme-ov-file#atet--matlab)
 
 [Back to Top](#table-of-contents)
 
@@ -35,19 +40,30 @@ I hope you have fun learning from my short, project-based tutorials
 
 ### Data Science
 
+#### Foundational
+
+1. [Introduction to R Development Environments](https://github.com/atet/r_environment?tab=readme-ov-file#atet--r_environment)
+2. [🚧 Free Data Sources 🚧](https://github.com/atet/data?tab=readme-ov-file#atet--data)
+3. [🚧 Straightforward Statistics 🚧](https://github.com/atet/stats?tab=readme-ov-file#atet--stats)
+
+#### Visualization
+
+1. [Data Visualization: Theory and Practice (in R)](http://learn.athitkao.com/presentation_datavis1.html)
+2. [Data Visualization: Theory and Application (in R)](http://learn.athitkao.com/presentation_datavis2.html)
+3. [Introduction to Tableau](https://github.com/atet/tableau?tab=readme-ov-file#atet--tableau)
+
+#### Data Structures and Manipulations
+
 1. [Introduction to SQL](https://github.com/atet/sql?tab=readme-ov-file#atet--git)
-2. [Introduction to Tableau](https://github.com/atet/tableau?tab=readme-ov-file#atet--tableau)
-3. [Data Visualization: Theory and Practice (in R)](http://learn.athitkao.com/presentation_datavis1.html)
-4. [Data Visualization: Theory and Application (in R)](http://learn.athitkao.com/presentation_datavis2.html)
-5. [Introduction to R Development Environments](https://github.com/atet/r_environment?tab=readme-ov-file#atet--r_environment)
-6. [Intermediate Programming and Data Products in R](https://github.com/atet/rmd_tutorial?tab=readme-ov-file#atet--rmd_tutorial)
-7. [Introduction to Regular Expressions](https://github.com/atet/regex?tab=readme-ov-file#atet--regex)
-8. [Introduction to Stream Editor](https://github.com/atet/sed?tab=readme-ov-file#atet--sed)
-9. [🚧 Handling CSV Files Through Code 🚧](https://github.com/atet/csv?tab=readme-ov-file#atet--csv)
-10. [🚧 Free Data Sources 🚧](https://github.com/atet/data?tab=readme-ov-file#atet--data)
-11. [🚧 String Manipulation in R 🚧](https://github.com/atet/r_string?tab=readme-ov-file#atet--r_string)
-12. [🚧 Data Structures in R 🚧](https://github.com/atet/r_Structures?tab=readme-ov-file#atet--r_structures)
-13. [🚧 Straightforward Statistics 🚧](https://github.com/atet/stats?tab=readme-ov-file#atet--stats)
+2. [Introduction to Regular Expressions](https://github.com/atet/regex?tab=readme-ov-file#atet--regex)
+3. [Introduction to Stream Editor](https://github.com/atet/sed?tab=readme-ov-file#atet--sed)
+4. [🚧 String Manipulation in R 🚧](https://github.com/atet/r_string?tab=readme-ov-file#atet--r_string)
+5. [🚧 Data Structures in R 🚧](https://github.com/atet/r_Structures?tab=readme-ov-file#atet--r_structures)
+6. [🚧 Handling CSV Files Through Code 🚧](https://github.com/atet/csv?tab=readme-ov-file#atet--csv)
+
+#### Data Products
+
+1. [Intermediate Programming and Data Products in R](https://github.com/atet/rmd_tutorial?tab=readme-ov-file#atet--rmd_tutorial)
 
 ### Machine Learning
 
@@ -70,7 +86,7 @@ I hope you have fun learning from my short, project-based tutorials
 ### Game Engines
 
 1. [Introduction to Godot Game Engine (in C#)](https://github.com/atet/godot?tab=readme-ov-file#atet--godot)
-2. [Introduction to Unity Game Engine](https://github.com/atet/unity?tab=readme-ov-file#atet--unity)
+2. [Introduction to Unity Game Engine (in C#)](https://github.com/atet/unity?tab=readme-ov-file#atet--unity)
 3. [Publishing on Google Play: Bigly's Shop Click](https://github.com/atet/mobile_app_marketing?tab=readme-ov-file#atet--mobile_app_marketing)
 
 ### [My Global Game Jam Projects](https://globalgamejam.org/users/atet)
@@ -126,7 +142,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 ## **3D Printing, Microcontrollers, and Robotics**
 
-## 3D Printing
+### 3D Printing
 
 1. [3D Printing for Beginners](https://github.com/atet/3dp?tab=readme-ov-file#atet--3dp)
 2. [3D Modeling with Blender for Beginners](https://github.com/atet/blender?tab=readme-ov-file#atet--blender)
