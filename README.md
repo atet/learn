@@ -135,7 +135,9 @@ I hope you have fun learning from my short, project-based tutorials
 
 1. [🚧 Microcontroller Quickstart 🚧](https://github.com/atet/mcu?tab=readme-ov-file#atet--mcu)
 
-### 🚧 Robotics 🚧
+### Robotics
+
+1. [🚧 Learn with Simple and Affordable Robotics Kits 🚧](https://github.com/atet/robot?tab=readme-ov-file#atet--robot)
 
 [Back to Top](#table-of-contents)
 
