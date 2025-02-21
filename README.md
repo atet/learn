@@ -15,7 +15,7 @@ I hope you have fun learning from my short, project-based tutorials
 * [Applications Development](#applications-development)
 * [IT and System Administration](#it-and-system-administration)
 * [Project Management and Professional Development](#project-management-and-professional-development)
-* [Audio and Video Processing](#audio-and-video-processing)
+* [Media Processing](#media-processing)
 * [3D Printing, Microcontrollers, and Robotics](#3d-printing-microcontrollers-and-robotics)
 
 --------------------------------------------------------------------------------------------------
@@ -132,7 +132,9 @@ I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
-## **Audio and Video Processing**
+## **Media Processing**
+
+### Audio and Video
 
 1. [Introduction to Screen Capture](https://github.com/atet/capture?tab=readme-ov-file#atet--capture)
 2. [Introduction to Video Transcoding](https://github.com/atet/codec?tab=readme-ov-file#atet--codec)
