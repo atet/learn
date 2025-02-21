@@ -22,13 +22,13 @@ I hope you have fun learning from my short, project-based tutorials
 
 ## **Computer Science**
 
-### R Programming Language for R Statistical Computing (_and more!_)
+### R Programming Language for Statistical Computing (_and more!_)
 
 1. [Introduction to Programming (in R)](https://github.com/atet/programming?tab=readme-ov-file#atet--programming)
 2. [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
 3. [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
 
-### MATLAB
+### MATLAB Programming Language
 
 1. [Introduction to Programming (in MATLAB)](https://github.com/atet/matlab?tab=readme-ov-file#atet--matlab)
 
