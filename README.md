@@ -43,7 +43,7 @@ I hope you have fun learning from my short, project-based tutorials
 6. [Intermediate Programming and Data Products in R](https://github.com/atet/rmd_tutorial?tab=readme-ov-file#atet--rmd_tutorial)
 7. [Introduction to Regular Expressions](https://github.com/atet/regex?tab=readme-ov-file#atet--regex)
 8. [Introduction to Stream Editor](https://github.com/atet/sed?tab=readme-ov-file#atet--sed)
-9. [Handling CSV Files Through Code](https://github.com/atet/csv?tab=readme-ov-file#atet--csv)
+9. [🚧 Handling CSV Files Through Code 🚧](https://github.com/atet/csv?tab=readme-ov-file#atet--csv)
 10. [🚧 Free Data Sources 🚧](https://github.com/atet/data?tab=readme-ov-file#atet--data)
 11. [🚧 String Manipulation in R 🚧](https://github.com/atet/r_string?tab=readme-ov-file#atet--r_string)
 12. [🚧 Data Structures in R 🚧](https://github.com/atet/r_Structures?tab=readme-ov-file#atet--r_structures)
@@ -59,7 +59,7 @@ I hope you have fun learning from my short, project-based tutorials
 1. [Introduction to (Local) Large Language Models](https://github.com/atet/llm?tab=readme-ov-file#atet--llm)
 2. [Quickstart for Text-to-Speech Voice Cloning](https://github.com/atet/tts?tab=readme-ov-file#atet--tts)
 3. [🚧 Prompt Engineering Fundamentals 🚧](https://github.com/atet/prompt?tab=readme-ov-file#atet--prompt)
-4. [Quickstart for Text-to-Image Generation](https://github.com/atet/tti?tab=readme-ov-file#atet--tti)
+4. [🚧 Quickstart for Text-to-Image Generation 🚧](https://github.com/atet/tti?tab=readme-ov-file#atet--tti)
 
 [Back to Top](#table-of-contents)
 
@@ -128,7 +128,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 ## 3D Printing
 
-1. [3D Printing for Beginners](https://github.com/atet/3ds?tab=readme-ov-file#atet--3ds)
+1. [3D Printing for Beginners](https://github.com/atet/3dp?tab=readme-ov-file#atet--3dp)
 2. [3D Modeling with Blender for Beginners](https://github.com/atet/blender?tab=readme-ov-file#atet--blender)
 
 ### Microcontrollers
