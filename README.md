@@ -126,6 +126,7 @@ I hope you have fun learning from my short, project-based tutorials
 ### Professional Development
 
 1. [Quickstart for Programmatic LaTeX Resumes and CVs in R](https://github.com/atet/vitae?tab=readme-ov-file#atet--vitae)
+2. [🚧 My Masters of Business Administration Journey 🚧](https://github.com/atet/mba?tab=readme-ov-file#atet--mba)
 
 [Back to Top](#table-of-contents)
 
