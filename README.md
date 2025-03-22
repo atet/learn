@@ -10,6 +10,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 ## Table of Contents
 
+* [Workshops, Presentations, and Publications](#workshops-presentations-and-publications)
 * [Computer Science](#computer-science)
 * [Data Science, Machine Learning, and Artificial Intelligence](#data-science-machine-learning-and-artificial-intelligence)
 * [Applications Development](#applications-development)
@@ -20,7 +21,28 @@ I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
-## **Computer Science**
+## Workshops, Presentations, and Publications
+
+- [MIT Keynote Representing Raytheon](https://github.com/atet/profile_mit_2023?tab=readme-ov-file#atet--profile_mit_2023)
+- [NIST Presentation for AI/ML in Cybersecurity](https://github.com/atet/profile_nist_2022?tab=readme-ov-file#2022-nist-nice-conference--expodemystifying-cybersecurity)
+- Machine Learning Workshop Series for [US Cyber Team](https://www.uscybergames.com/season-3-team):
+   - [Landing Your First Internship](https://youtu.be/wUOJu2b5R6I?t=1600)
+   - [Episode 1](https://github.com/atet/usct_s3e1?tab=readme-ov-file#atet--usct_s3e1)
+   - [Episode 2](https://github.com/atet/usct_s3e2?tab=readme-ov-file#atet--usct_s3e2)
+   - [Episode 3](https://github.com/atet/usct_s3e3?tab=readme-ov-file#atet--usct_s3e3)
+- [Podcast on AI/ML in Cybersecurity](https://youtu.be/v2Tj8Oc5S9o?t=120)
+- [Demystifying Biotechnology for Educators](https://github.com/atet/profile_ignited_2023?tab=readme-ov-file#2023-ignited-education-learning-community)
+- [Demystifying Cybersecurity for Educators](https://github.com/atet/profile_ignited_2022?tab=readme-ov-file#2022-ignited-educationcyber-curriculum)
+- [National Academy Foundation Panel](https://github.com/atet/profile_naf_2023?tab=readme-ov-file#atet--profile_naf_2023)
+- [Data Science Workshop Series for UCI Graduate Students](https://github.com/atet/workshops?tab=readme-ov-file#atet--workshops)
+- [Peer-Reviewed Publications](https://pubs.athitkao.com/)
+- [Notable Citations](https://github.com/atet/cite?tab=readme-ov-file#atet--cite)
+
+[Back to Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------
+
+## Computer Science
 
 ### R Programming Language for Statistical Computing (_and more!_)
 
@@ -36,7 +58,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
-## **Data Science, Machine Learning, and Artificial Intelligence**
+## Data Science, Machine Learning, and Artificial Intelligence
 
 ### Data Science
 
@@ -82,7 +104,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
-## **Applications Development**
+## Applications Development
 
 ### User Interfaces
 
@@ -107,7 +129,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
-## **IT and System Administration**
+## IT and System Administration
 
 1. [Installing Windows Subsystem for Linux](https://github.com/atet/wsl?tab=readme-ov-file#atet--wsl)
 2. [Introduction to Raspberry Pi](https://github.com/atet/raspberrypi?tab=readme-ov-file#atet--raspberrypi)
@@ -121,7 +143,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
-## **Project Management and Professional Development**
+## Project Management and Professional Development
 
 ### Project Management
 
@@ -137,7 +159,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
-## **Media Processing**
+## Media Processing
 
 ### Audio and Video
 
@@ -148,7 +170,7 @@ I hope you have fun learning from my short, project-based tutorials
 
 --------------------------------------------------------------------------------------------------
 
-## **3D Printing, Microcontrollers, and Robotics**
+## 3D Printing, Microcontrollers, and Robotics
 
 ### 3D Printing
 
