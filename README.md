@@ -73,15 +73,20 @@ I hope you have fun learning from my short, project-based tutorials
 ### Artificial Intelligence
 
 1. [Introduction to (Local) Large Language Models](https://github.com/atet/llm?tab=readme-ov-file#atet--llm)
-2. [Quickstart for Text-to-Speech Voice Cloning](https://github.com/atet/tts?tab=readme-ov-file#atet--tts)
-3. [🚧 Prompt Engineering Fundamentals 🚧](https://github.com/atet/prompt?tab=readme-ov-file#atet--prompt)
-4. [🚧 Quickstart for Text-to-Image Generation 🚧](https://github.com/atet/tti?tab=readme-ov-file#atet--tti)
+2. [AI Copilot Setup in 10 Minutes](https://github.com/atet/copilot?tab=readme-ov-file#atet--copilot)
+3. [Quickstart for Text-to-Speech Voice Cloning](https://github.com/atet/tts?tab=readme-ov-file#atet--tts)
+4. [🚧 Prompt Engineering Fundamentals 🚧](https://github.com/atet/prompt?tab=readme-ov-file#atet--prompt)
+5. [🚧 Quickstart for Text-to-Image Generation 🚧](https://github.com/atet/tti?tab=readme-ov-file#atet--tti)
 
 [Back to Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------
 
 ## **Applications Development**
+
+### User Interfaces
+
+1. [Quickest Flutter Setup Yet!](https://github.com/atet/flutter?tab=readme-ov-file#atet--flutter)
 
 ### Game Engines
 
