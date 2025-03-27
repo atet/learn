@@ -26,10 +26,10 @@ I hope you have fun learning from my short, project-based tutorials
 - [MIT Keynote Representing Raytheon](https://github.com/atet/profile_mit_2023?tab=readme-ov-file#atet--profile_mit_2023)
 - [NIST Presentation for AI/ML in Cybersecurity](https://github.com/atet/profile_nist_2022?tab=readme-ov-file#2022-nist-nice-conference--expodemystifying-cybersecurity)
 - Machine Learning Workshop Series for [US Cyber Team](https://www.uscybergames.com/season-3-team):
-   - [Landing Your First Internship](https://youtu.be/wUOJu2b5R6I?t=1600)
-   - [Episode 1](https://github.com/atet/usct_s3e1?tab=readme-ov-file#atet--usct_s3e1)
-   - [Episode 2](https://github.com/atet/usct_s3e2?tab=readme-ov-file#atet--usct_s3e2)
-   - [Episode 3](https://github.com/atet/usct_s3e3?tab=readme-ov-file#atet--usct_s3e3)
+   - [Season IV: Landing Your First Internship](https://youtu.be/wUOJu2b5R6I?t=1600)
+   - [Season III: Episode 1](https://github.com/atet/usct_s3e1?tab=readme-ov-file#atet--usct_s3e1)
+   - [Season III: Episode 2](https://github.com/atet/usct_s3e2?tab=readme-ov-file#atet--usct_s3e2)
+   - [Season III: Episode 3](https://github.com/atet/usct_s3e3?tab=readme-ov-file#atet--usct_s3e3)
 - [Podcast on AI/ML in Cybersecurity](https://youtu.be/v2Tj8Oc5S9o?t=120)
 - [Demystifying Biotechnology for Educators](https://github.com/atet/profile_ignited_2023?tab=readme-ov-file#2023-ignited-education-learning-community)
 - [Demystifying Cybersecurity for Educators](https://github.com/atet/profile_ignited_2022?tab=readme-ov-file#2022-ignited-educationcyber-curriculum)
@@ -46,13 +46,13 @@ I hope you have fun learning from my short, project-based tutorials
 
 ### R Programming Language for Statistical Computing (_and more!_)
 
-1. [Introduction to Programming (in R)](https://github.com/atet/programming?tab=readme-ov-file#atet--programming)
-2. [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
-3. [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
+- [Introduction to Programming (in R)](https://github.com/atet/programming?tab=readme-ov-file#atet--programming)
+- [Functions: Theory and Practice (in R)](http://learn.athitkao.com/presentation_functions1.html)
+- [Functions: Theory and Application (in R)](http://learn.athitkao.com/presentation_functions2.html)
 
 ### MATLAB Programming Language
 
-1. [Introduction to Programming (in MATLAB)](https://github.com/atet/matlab?tab=readme-ov-file#atet--matlab)
+- [Introduction to Programming (in MATLAB)](https://github.com/atet/matlab?tab=readme-ov-file#atet--matlab)
 
 [Back to Top](#table-of-contents)
 
@@ -64,41 +64,43 @@ I hope you have fun learning from my short, project-based tutorials
 
 #### Foundational
 
-1. [Introduction to R Development Environments](https://github.com/atet/r_environment?tab=readme-ov-file#atet--r_environment)
-2. [🚧 Free Data Sources 🚧](https://github.com/atet/data?tab=readme-ov-file#atet--data)
-3. [🚧 Straightforward Statistics 🚧](https://github.com/atet/stats?tab=readme-ov-file#atet--stats)
+- [Introduction to R Development Environments](https://github.com/atet/r_environment?tab=readme-ov-file#atet--r_environment)
+- [Containerized Python/JupyterLab Development Environment](https://github.com/atet/python?tab=readme-ov-file#atet--python)
+- [🚧 Free Data Sources 🚧](https://github.com/atet/data?tab=readme-ov-file#atet--data)
+- [🚧 Straightforward Statistics 🚧](https://github.com/atet/stats?tab=readme-ov-file#atet--stats)
 
 #### Visualization
 
-1. [Data Visualization: Theory and Practice (in R)](http://learn.athitkao.com/presentation_datavis1.html)
-2. [Data Visualization: Theory and Application (in R)](http://learn.athitkao.com/presentation_datavis2.html)
-3. [Introduction to Tableau](https://github.com/atet/tableau?tab=readme-ov-file#atet--tableau)
+- [Data Visualization: Theory and Practice (in R)](http://learn.athitkao.com/presentation_datavis1.html)
+- [Data Visualization: Theory and Application (in R)](http://learn.athitkao.com/presentation_datavis2.html)
+- [Introduction to Tableau](https://github.com/atet/tableau?tab=readme-ov-file#atet--tableau)
 
 #### Data Structures and Manipulations
 
-1. [Introduction to SQL](https://github.com/atet/sql?tab=readme-ov-file#atet--git)
-2. [Introduction to Regular Expressions](https://github.com/atet/regex?tab=readme-ov-file#atet--regex)
-3. [Introduction to Stream Editor](https://github.com/atet/sed?tab=readme-ov-file#atet--sed)
-4. [🚧 String Manipulation in R 🚧](https://github.com/atet/r_string?tab=readme-ov-file#atet--r_string)
-5. [🚧 Data Structures in R 🚧](https://github.com/atet/r_Structures?tab=readme-ov-file#atet--r_structures)
-6. [🚧 Handling CSV Files Through Code 🚧](https://github.com/atet/csv?tab=readme-ov-file#atet--csv)
+- [Introduction to SQL](https://github.com/atet/sql?tab=readme-ov-file#atet--git)
+- [Introduction to Regular Expressions](https://github.com/atet/regex?tab=readme-ov-file#atet--regex)
+- [Introduction to Stream Editor](https://github.com/atet/sed?tab=readme-ov-file#atet--sed)
+- [🚧 String Manipulation in R 🚧](https://github.com/atet/r_string?tab=readme-ov-file#atet--r_string)
+- [🚧 Data Structures in R 🚧](https://github.com/atet/r_Structures?tab=readme-ov-file#atet--r_structures)
+- [🚧 Handling CSV Files Through Code 🚧](https://github.com/atet/csv?tab=readme-ov-file#atet--csv)
 
 #### Data Products
 
-1. [Intermediate Programming and Data Products in R](https://github.com/atet/rmd_tutorial?tab=readme-ov-file#atet--rmd_tutorial)
+- [Intermediate Programming and Data Products in R](https://github.com/atet/rmd_tutorial?tab=readme-ov-file#atet--rmd_tutorial)
+- [*Also check out* ***Applications Development*** *for interactive data products*](#applications-development)
 
 ### Machine Learning
 
-1. [Quickstart to Machine Learning in Browser](https://github.com/atet/ml_maneuver?tab=readme-ov-file#atet--ml_maneuver)
-2. [🚧 Machine Learning Apps on Microcontrollers 🚧](https://github.com/atet/ml_mcu?tab=readme-ov-file#atet--ml_mcu)
+- [Quickstart to Machine Learning in Your Web Browser](https://github.com/atet/ml_maneuver?tab=readme-ov-file#atet--ml_maneuver)
+- [🚧 Machine Learning Apps on Microcontrollers 🚧](https://github.com/atet/ml_mcu?tab=readme-ov-file#atet--ml_mcu)
 
-### Artificial Intelligence
+### Artificial Intelligence Tools
 
-1. [Introduction to (Local) Large Language Models](https://github.com/atet/llm?tab=readme-ov-file#atet--llm)
-2. [AI Copilot Setup in 10 Minutes](https://github.com/atet/copilot?tab=readme-ov-file#atet--copilot)
-3. [Quickstart for Text-to-Speech Voice Cloning](https://github.com/atet/tts?tab=readme-ov-file#atet--tts)
-4. [🚧 Prompt Engineering Fundamentals 🚧](https://github.com/atet/prompt?tab=readme-ov-file#atet--prompt)
-5. [🚧 Quickstart for Text-to-Image Generation 🚧](https://github.com/atet/tti?tab=readme-ov-file#atet--tti)
+- [Introduction to (Local) Large Language Models](https://github.com/atet/llm?tab=readme-ov-file#atet--llm)
+- [AI Copilot Setup in Just 10 Minutes!](https://github.com/atet/copilot?tab=readme-ov-file#atet--copilot)
+- [Quickstart for Text-to-Speech Voice Cloning](https://github.com/atet/tts?tab=readme-ov-file#atet--tts)
+- [🚧 Prompt Engineering Fundamentals 🚧](https://github.com/atet/prompt?tab=readme-ov-file#atet--prompt)
+- [🚧 Quickstart for Text-to-Image Generation 🚧](https://github.com/atet/tti?tab=readme-ov-file#atet--tti)
 
 [Back to Top](#table-of-contents)
 
@@ -108,22 +110,23 @@ I hope you have fun learning from my short, project-based tutorials
 
 ### User Interfaces
 
-1. [Quickest Flutter Setup Yet!](https://github.com/atet/flutter?tab=readme-ov-file#atet--flutter)
+- [Quickest Flutter Setup Yet!](https://github.com/atet/flutter?tab=readme-ov-file#atet--flutter)
+- [Python and Streamlit Graphical User Interfaces](https://github.com/atet/python?tab=readme-ov-file#installing-streamlit-web-development-framework)
 
 ### Game Engines
 
-1. [Introduction to Godot Game Engine (in C#)](https://github.com/atet/godot?tab=readme-ov-file#atet--godot)
-2. [Introduction to Unity Game Engine (in C#)](https://github.com/atet/unity?tab=readme-ov-file#atet--unity)
-3. [Publishing on Google Play: Bigly's Shop Click](https://github.com/atet/mobile_app_marketing?tab=readme-ov-file#atet--mobile_app_marketing)
+- [Introduction to Godot Game Engine (in C#)](https://github.com/atet/godot?tab=readme-ov-file#atet--godot)
+- [Introduction to Unity Game Engine (in C#)](https://github.com/atet/unity?tab=readme-ov-file#atet--unity)
+- [Publishing on Google Play: Bigly's Shop Click](https://github.com/atet/mobile_app_marketing?tab=readme-ov-file#atet--mobile_app_marketing)
 
 ### [My Global Game Jam Projects](https://globalgamejam.org/users/atet)
 
-1. [GGJ2020: Backend Networking Code to Upload Game Images to Game's Website](https://github.com/atet/ggj2020?tab=readme-ov-file#atet--ggj2020)
-2. [GGJ2021: Astray - The Experience of Losing Your Parents Again](https://github.com/atet/ggj2021?tab=readme-ov-file#atet--ggj2021)
-3. [GGJ2022: Backend Large Language Model API](https://github.com/atet/ggj2022?tab=readme-ov-file#atet--ggj2022)
-4. [GGJ2023: Evil Roots - Sponsored by BRAWNDO, the Thirst Mutilator!!!](https://github.com/atet/ggj2023?tab=readme-ov-file#atet--ggj2023)
-5. [GGJ2024: Backend Multiplayer Framework](https://github.com/atet/ggj2024?tab=readme-ov-file#atet--ggj2024)
-6. [GGJ2025: Bubble-Busted Billionaire - With the Richest Human on Mars!](https://github.com/atet/ggj2025?tab=readme-ov-file#atet--ggj2025)
+- [GGJ2020: **Rapid Restoration** - Backend Networking Code](https://github.com/atet/ggj2020?tab=readme-ov-file#atet--ggj2020)
+- [GGJ2021: **Astray** - *The Experience of Losing Your Parents Again...*](https://github.com/atet/ggj2021?tab=readme-ov-file#atet--ggj2021)
+- [GGJ2022: **TinderBot** - Backend Large Language Model API](https://github.com/atet/ggj2022?tab=readme-ov-file#atet--ggj2022)
+- [GGJ2023: **Evil Roots** - *Sponsored by BRAWNDO, the Thirst Mutilator!!!*](https://github.com/atet/ggj2023?tab=readme-ov-file#atet--ggj2023)
+- [GGJ2024: **Mulit-QWOP-Boost** - Backend Multiplayer Framework](https://github.com/atet/ggj2024?tab=readme-ov-file#atet--ggj2024)
+- [GGJ2025: **Bubble-Busted Billionaire** - *With the Richest Human on Mars!*](https://github.com/atet/ggj2025?tab=readme-ov-file#atet--ggj2025)
 
 [Back to Top](#table-of-contents)
 
@@ -131,13 +134,13 @@ I hope you have fun learning from my short, project-based tutorials
 
 ## IT and System Administration
 
-1. [Installing Windows Subsystem for Linux](https://github.com/atet/wsl?tab=readme-ov-file#atet--wsl)
-2. [Introduction to Raspberry Pi](https://github.com/atet/raspberrypi?tab=readme-ov-file#atet--raspberrypi)
-3. [Introduction to Network Attached Storage](https://github.com/atet/nas?tab=readme-ov-file#atet--nas)
-4. [Introduction to Virtualization](https://github.com/atet/virtual?tab=readme-ov-file#atet--virtual)
-5. [Kubernetes for Beginners](https://github.com/atet/kube?tab=readme-ov-file#atet--kube)
-6. [Easy Nextflow Compute Workflow Management](https://github.com/atet/nextflow?tab=readme-ov-file#atet--nextflow)
-7. [SLURM Resource Management Basics](https://github.com/atet/slurm?tab=readme-ov-file#atet--slurm)
+- [Installing Windows Subsystem for Linux](https://github.com/atet/wsl?tab=readme-ov-file#atet--wsl)
+- [Introduction to Raspberry Pi](https://github.com/atet/raspberrypi?tab=readme-ov-file#atet--raspberrypi)
+- [Introduction to Network Attached Storage](https://github.com/atet/nas?tab=readme-ov-file#atet--nas)
+- [Introduction to Virtualization](https://github.com/atet/virtual?tab=readme-ov-file#atet--virtual)
+- [Kubernetes for Beginners](https://github.com/atet/kube?tab=readme-ov-file#atet--kube)
+- [Easy Nextflow Compute Workflow Management](https://github.com/atet/nextflow?tab=readme-ov-file#atet--nextflow)
+- [SLURM Resource Management Basics](https://github.com/atet/slurm?tab=readme-ov-file#atet--slurm)
 
 [Back to Top](#table-of-contents)
 
@@ -147,13 +150,14 @@ I hope you have fun learning from my short, project-based tutorials
 
 ### Project Management
 
-1. [Introduction to Git Version Control System](https://github.com/atet/git?tab=readme-ov-file#atet--git)
-2. [🚧 Introduction to Unified Modeling Language 🚧](https://github.com/atet/uml?tab=readme-ov-file#atet--uml)
+- [Introduction to Git Version Control System](https://github.com/atet/git?tab=readme-ov-file#atet--git)
+- [🚧 Introduction to Unified Modeling Language 🚧](https://github.com/atet/uml?tab=readme-ov-file#atet--uml)
 
 ### Professional Development
 
-1. [Quickstart for Programmatic LaTeX Resumes and CVs in R](https://github.com/atet/vitae?tab=readme-ov-file#atet--vitae)
-2. [🚧 My Masters of Business Administration Journey 🚧](https://github.com/atet/mba?tab=readme-ov-file#atet--mba)
+- [Quickstart for Programmatic LaTeX Resumes and CVs in R](https://github.com/atet/vitae?tab=readme-ov-file#atet--vitae)
+- [🚧 All Things About the Agile Methodology, Tools, and More 🚧](https://github.com/atet/agile?tab=readme-ov-file#atet--agile)
+- [🚧 My Masters of Business Administration Journey 🚧](https://github.com/atet/mba?tab=readme-ov-file#atet--mba)
 
 [Back to Top](#table-of-contents)
 
@@ -163,8 +167,8 @@ I hope you have fun learning from my short, project-based tutorials
 
 ### Audio and Video
 
-1. [Introduction to Screen Capture](https://github.com/atet/capture?tab=readme-ov-file#atet--capture)
-2. [Introduction to Video Transcoding](https://github.com/atet/codec?tab=readme-ov-file#atet--codec)
+- [Introduction to Screen Capture](https://github.com/atet/capture?tab=readme-ov-file#atet--capture)
+- [Introduction to Video Transcoding](https://github.com/atet/codec?tab=readme-ov-file#atet--codec)
 
 [Back to Top](#table-of-contents)
 
@@ -174,16 +178,16 @@ I hope you have fun learning from my short, project-based tutorials
 
 ### 3D Printing
 
-1. [3D Printing for Beginners](https://github.com/atet/3dp?tab=readme-ov-file#atet--3dp)
-2. [3D Modeling with Blender for Beginners](https://github.com/atet/blender?tab=readme-ov-file#atet--blender)
+- [3D Printing for Beginners](https://github.com/atet/3dp?tab=readme-ov-file#atet--3dp)
+- [3D Modeling with Blender for Beginners](https://github.com/atet/blender?tab=readme-ov-file#atet--blender)
 
 ### Microcontrollers
 
-1. [🚧 Microcontroller Quickstart 🚧](https://github.com/atet/mcu?tab=readme-ov-file#atet--mcu)
+- [🚧 Microcontroller Quickstart 🚧](https://github.com/atet/mcu?tab=readme-ov-file#atet--mcu)
 
 ### Robotics
 
-1. [🚧 Learn with Simple and Affordable Robotics Kits 🚧](https://github.com/atet/robot?tab=readme-ov-file#atet--robot)
+- [🚧 Learn with Simple and Affordable Robotics Kits 🚧](https://github.com/atet/robot?tab=readme-ov-file#atet--robot)
 
 [Back to Top](#table-of-contents)
 
