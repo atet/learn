@@ -126,7 +126,7 @@ I hope you have fun learning from my short, project-based tutorials
 - [GGJ2022: **TinderBot** - Backend Large Language Model API](https://github.com/atet/ggj2022?tab=readme-ov-file#atet--ggj2022)
 - [GGJ2023: **Evil Roots** - *Sponsored by BRAWNDO, the Thirst Mutilator!!!*](https://github.com/atet/ggj2023?tab=readme-ov-file#atet--ggj2023)
 - [GGJ2024: **Mulit-QWOP-Boost** - Backend Multiplayer Framework](https://github.com/atet/ggj2024?tab=readme-ov-file#atet--ggj2024)
-- [GGJ2025: **Bubble-Busted Billionaire** - *With the Richest Human on Mars!*](https://github.com/atet/ggj2025?tab=readme-ov-file#atet--ggj2025)
+- [GGJ2025: **Bubble-Busted Billionaire** - *With the Richest Human on Mars!*](https://www.higherthanmars.com/)
 
 [Back to Top](#table-of-contents)
 
